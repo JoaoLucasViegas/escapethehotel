@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://b3ppbp2ajjfxa"]
+
+[resource]
+resource_name = "CoffeeCart_01_mugs"
+shading_mode = 2
+albedo_color = Color(0.906332, 0.906332, 0.906332, 1)
+roughness = 0.154545
+texture_filter = 2
+disable_receive_shadows = true

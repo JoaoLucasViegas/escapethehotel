@@ -1,0 +1,411 @@
+[gd_scene load_steps=18 format=3 uid="uid://bjeyaeva141cx"]
+
+[ext_resource type="Script" uid="uid://b4oekceacbdpc" path="res://Scripts/level_manager.gd" id="1_gsv5v"]
+[ext_resource type="PackedScene" uid="uid://b55iprda1bad5" path="res://Prefabs/player.tscn" id="2_sivxp"]
+[ext_resource type="PackedScene" uid="uid://d3f0c3cf27e3y" path="res://Prefabs/enemy_base.tscn" id="3_q2fd6"]
+[ext_resource type="PackedScene" uid="uid://nprkm3o83t30" path="res://Prefabs/main/map/map.tscn" id="4_s8w8g"]
+[ext_resource type="Material" uid="uid://cpaactjle38od" path="res://Materials/hallway_light_colour.tres" id="5_ygbgv"]
+[ext_resource type="Script" uid="uid://b5kx0g8joqxl4" path="res://Scripts/ligth_source_dev.gd" id="6_h5w41"]
+[ext_resource type="PackedScene" uid="uid://1kq1pvayrvpj" path="res://Prefabs/components/light_source.tscn" id="7_jd4l3"]
+[ext_resource type="PackedScene" uid="uid://c0p2hb21a51mb" path="res://Prefabs/components/light_switch.tscn" id="8_oq6i6"]
+[ext_resource type="PackedScene" uid="uid://tc8rjo5gifrj" path="res://Prefabs/components/puzzle_instance.tscn" id="9_oohhc"]
+[ext_resource type="PackedScene" uid="uid://dlcl248djno47" path="res://Prefabs/puzzles/puzzle_sample.tscn" id="10_1stx8"]
+[ext_resource type="PackedScene" uid="uid://cawow7xuu3xb" path="res://Prefabs/components/unlockable_door.tscn" id="11_xdwih"]
+
+[sub_resource type="Curve3D" id="Curve3D_8j60k"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 21.1999, 0, 0.579067, 0, 0, 0, 0, 0, 0, 21.2505, 0, 16.4094, 0, 0, 0, 0, 0, 0, 35.0578, 0, 16.6117, 0, 0, 0, 0, 0, 0, 34.9061, 0, 0.882525),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[sub_resource type="Curve3D" id="Curve3D_fo5ed"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 37.0138, 0, -14.2859, 0, 0, 0, 0, 0, 0, 37.0138, 0, 1.10202, 0, 0, 0, 0, 0, 0, -3.41055, 0, 0.948021, 0, 0, 0, 0, 0, 0, -3.49614, 0, -14.1575, 0, 0, 0, 0, 0, 0, 20.6677, 0, -14.3543),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0)
+}
+point_count = 5
+
+[sub_resource type="Curve3D" id="Curve3D_5ukr8"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 36.7142, 0, 18.3713, 0, 0, 0, 0, 0, 0, -3.6024, 0, 18.4488, 0, 0, 0, 0, 0, 0, -3.60241, 0, -14.5023, 0, 0, 0, 0, 0, 0, 36.9468, 0, -14.4247),
+"tilts": PackedFloat32Array(0, 0, 0, 0)
+}
+point_count = 4
+
+[sub_resource type="Curve3D" id="Curve3D_0fj1v"]
+closed = true
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, 18.9708, 0, -1.5365, 0, 0, 0, 0, 0, 0, 4.23684, 0, -2.05576, 0, 0, 0, 0, 0, 0, 4.04212, 0, 14.2359, 0, 0, 0, 0, 0, 0, -20.8822, 0, 15.2745, 0, 0, 0, 0, 0, 0, -21.0121, 0, -1.66632, 0, 0, 0, 0, 0, 0, -21.3778, 0, -17.6421, 0, 0, 0, 0, 0, 0, 3.3518, 0, -17.707, 0, 0, 0, 0, 0, 0, 18.8646, 0, -18.0316),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 8
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_7yui6"]
+vertices = PackedVector3Array(-24.25, 0.5, -13, -19.25, 0.5, -13, -19.25, 0.5, -15, -17, 0.5, -15.25, -17, 0.5, -21.25, -24.25, 0.5, -21.25, 0, 0.5, -15.25, 0, 0.5, -21.25, 2.25, 0.5, -15, 5.25, 0.5, -15.25, 5, 0.5, -21.25, 2.25, 0.5, -6.5, 5.25, 0.5, -6.5, 16.25, 0.5, -15.5, 16.5, 0.5, -15, 21, 0.5, -15, 21, 0.5, -21.25, 15.75, 0.5, -12.75, 15.75, 0.5, -12, 16.5, 0.5, -11.75, 16.5, 0.5, -13, 16.5, 0.5, -4.75, 21, 0.5, -4.75, -18.25, 3.5, -14.25, -18.25, 3.5, -5, 1.25, 3.5, -5, 1.25, 3.5, -14.25, -18, 0.5, -14, -18, 0.5, -5.25, -9.25, 0.5, -5.25, -9.25, 0.5, -14, -7.75, 0.5, -14, -7.75, 0.5, -5.25, 1, 0.5, -5.25, 1, 0.5, -14, 15, 0.5, -11.75, 15, 0.5, -13, 10.25, 0.5, -10.25, 15, 0.5, -14, 7.5, 0.5, -14, 15, 0.5, -5.75, 15, 0.5, -7.5, 10.5, 0.5, -7.5, 7.5, 0.5, -5.75, 15, 0.5, -10.5, -24.25, 0.5, -6.25, -19.25, 0.5, -6.25, 11.25, 1.5, -9.5, 11.25, 1.5, -8.5, 15, 1.5, -8.5, 15, 1.5, -9.5, 5.25, 0.5, -4.5, 2.25, 0.5, -4.25, 0.25, 0.5, -4, 1.75, 0.5, 0.75, 5.5, 0.5, 0.75, 7.5, 0.5, -4.25, 2, 0.5, 2.75, 5.25, 0.5, 2.75, 7.5, 0.5, 0.75, 0, 0.5, 0.75, -19, 0.5, 0.5, -17.25, 0.5, 0.5, -17.25, 0.5, -4, -19.25, 0.5, -4.25, -24.25, 0.5, 2.25, -19.25, 0.5, 2.25, 16.25, 0.5, -4.25, 16.25, 0.5, 0.75, 16.5, 0.5, 3, 21, 0.5, 3, 14.25, 0.5, -4.25, 14.25, 0.5, 0.75, -15.75, 0.5, 0.5, -15.5, 0.5, 1.25, -11.75, 0.5, 1.25, -11.25, 0.5, 0.5, -11.25, 0.5, -4, -15.75, 0.5, 2, -17.75, 0.5, 2, -17.75, 0.5, 4, -17.75, 0.5, 8.25, -17.75, 0.5, 10.5, -15.75, 0.5, 10.5, -10.5, 0.5, 5, -10, 0.5, 4.75, -10, 0.5, 2, -11.5, 0.5, 2, -11.5, 0.5, 10.5, -15.5, 0.5, 11, -11.75, 0.5, 11, -18.5, 0.5, 4.25, -18.5, 0.5, 8, -10, 0.5, 10.5, -9.5, 3.25, 5.75, -9.5, 3.25, 6.75, -8.5, 3.5, 7, -8.5, 3.5, 5.5, 1, 3.5, 11, 1, 3.5, 1.75, -8.5, 3.5, 1.75, -8.5, 3.5, 11, 6.25, 3.5, 1.75, 6.25, 3.5, 11, 15.5, 3.5, 11, 15.5, 3.5, 1.75, -8, 0.5, 2, -8, 0.5, 10.75, 0.75, 0.5, 10.75, 0.75, 0.5, 2, 6.5, 0.5, 2, 6.5, 0.5, 10.75, 15.25, 0.5, 10.75, 15.25, 0.5, 2, -19.25, 0.5, 8.25, -19.25, 0.5, 4, -24.25, 0.5, 10, -19.25, 0.5, 10, 1.5, 0.5, 19.5, 5.75, 0.5, 19.5, 5.75, 0.5, 12, 5.25, 0.5, 11.75, 2, 0.5, 11.75, 1.5, 0.5, 12, 16.5, 0.5, 9.75, 21, 0.5, 9.75, 16.25, 0.5, 12, 21, 0.5, 19.5, -19, 0.5, 11.75, -15.25, 0.5, 19.5, -15.5, 0.5, 11.25, -15.75, 0.5, 11.75, -24.25, 0.5, 19.5, -10.25, 0.5, 19.5, -11.5, 0.5, 11.75, -10, 0.5, 11.75)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 2), PackedInt32Array(0, 5, 2), PackedInt32Array(2, 5, 4), PackedInt32Array(4, 7, 3), PackedInt32Array(3, 7, 6), PackedInt32Array(8, 6, 9), PackedInt32Array(9, 6, 10), PackedInt32Array(10, 6, 7), PackedInt32Array(11, 8, 12), PackedInt32Array(12, 8, 9), PackedInt32Array(14, 13, 15), PackedInt32Array(15, 13, 16), PackedInt32Array(9, 10, 13), PackedInt32Array(13, 10, 16), PackedInt32Array(17, 20, 18), PackedInt32Array(18, 20, 19), PackedInt32Array(21, 19, 22), PackedInt32Array(22, 19, 15), PackedInt32Array(20, 14, 15), PackedInt32Array(19, 20, 15), PackedInt32Array(26, 25, 23), PackedInt32Array(23, 25, 24), PackedInt32Array(30, 29, 27), PackedInt32Array(27, 29, 28), PackedInt32Array(34, 33, 31), PackedInt32Array(31, 33, 32), PackedInt32Array(18, 35, 17), PackedInt32Array(17, 35, 36), PackedInt32Array(36, 35, 37), PackedInt32Array(36, 37, 38), PackedInt32Array(38, 37, 39), PackedInt32Array(41, 40, 42), PackedInt32Array(42, 40, 43), PackedInt32Array(42, 43, 37), PackedInt32Array(37, 43, 39), PackedInt32Array(35, 44, 37), PackedInt32Array(0, 1, 45), PackedInt32Array(45, 1, 46), PackedInt32Array(50, 49, 47), PackedInt32Array(47, 49, 48), PackedInt32Array(12, 51, 11), PackedInt32Array(11, 51, 52), PackedInt32Array(52, 51, 53), PackedInt32Array(53, 51, 56), PackedInt32Array(53, 56, 55), PackedInt32Array(53, 55, 54), PackedInt32Array(57, 54, 58), PackedInt32Array(58, 54, 55), PackedInt32Array(56, 59, 55), PackedInt32Array(54, 60, 53), PackedInt32Array(62, 61, 63), PackedInt32Array(63, 61, 64), PackedInt32Array(66, 65, 61), PackedInt32Array(61, 65, 64), PackedInt32Array(64, 65, 45), PackedInt32Array(45, 46, 64), PackedInt32Array(21, 22, 67), PackedInt32Array(67, 22, 68), PackedInt32Array(68, 22, 69), PackedInt32Array(69, 22, 70), PackedInt32Array(67, 68, 71), PackedInt32Array(71, 68, 72), PackedInt32Array(56, 71, 59), PackedInt32Array(59, 71, 72), PackedInt32Array(75, 74, 73), PackedInt32Array(75, 73, 76), PackedInt32Array(76, 73, 77), PackedInt32Array(77, 73, 63), PackedInt32Array(73, 62, 63), PackedInt32Array(76, 77, 60), PackedInt32Array(60, 77, 53), PackedInt32Array(80, 79, 78), PackedInt32Array(83, 82, 81), PackedInt32Array(85, 84, 86), PackedInt32Array(86, 84, 87), PackedInt32Array(80, 78, 81), PackedInt32Array(81, 78, 83), PackedInt32Array(83, 78, 84), PackedInt32Array(83, 84, 88), PackedInt32Array(89, 83, 90), PackedInt32Array(90, 83, 88), PackedInt32Array(91, 80, 92), PackedInt32Array(92, 80, 81), PackedInt32Array(74, 75, 87), PackedInt32Array(84, 93, 88), PackedInt32Array(74, 87, 78), PackedInt32Array(78, 87, 84), PackedInt32Array(94, 97, 95), PackedInt32Array(95, 97, 96), PackedInt32Array(97, 99, 96), PackedInt32Array(96, 99, 98), PackedInt32Array(97, 100, 99), PackedInt32Array(98, 101, 96), PackedInt32Array(105, 104, 102), PackedInt32Array(102, 104, 103), PackedInt32Array(109, 108, 106), PackedInt32Array(106, 108, 107), PackedInt32Array(113, 112, 110), PackedInt32Array(110, 112, 111), PackedInt32Array(92, 114, 91), PackedInt32Array(91, 114, 115), PackedInt32Array(114, 116, 115), PackedInt32Array(115, 116, 65), PackedInt32Array(114, 117, 116), PackedInt32Array(65, 66, 115), PackedInt32Array(121, 120, 122), PackedInt32Array(122, 120, 123), PackedInt32Array(123, 120, 119), PackedInt32Array(123, 119, 118), PackedInt32Array(122, 57, 121), PackedInt32Array(121, 57, 58), PackedInt32Array(69, 70, 124), PackedInt32Array(124, 70, 125), PackedInt32Array(124, 125, 126), PackedInt32Array(126, 125, 127), PackedInt32Array(120, 126, 119), PackedInt32Array(119, 126, 127), PackedInt32Array(116, 117, 128), PackedInt32Array(131, 130, 129), PackedInt32Array(128, 131, 129), PackedInt32Array(116, 128, 132), PackedInt32Array(132, 128, 129), PackedInt32Array(89, 90, 130), PackedInt32Array(130, 90, 134), PackedInt32Array(130, 134, 129), PackedInt32Array(129, 134, 133), PackedInt32Array(134, 135, 133), PackedInt32Array(123, 118, 135), PackedInt32Array(135, 118, 133)]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5v1tr"]
+transparency = 4
+shading_mode = 2
+albedo_color = Color(1, 0.839216, 0.345098, 0.498039)
+emission_enabled = true
+emission = Color(1, 0.839216, 0.345098, 0.498039)
+distance_fade_mode = 1
+distance_fade_min_distance = 32.0
+distance_fade_max_distance = 0.0
+
+[node name="Game" type="Node3D" node_paths=PackedStringArray("player")]
+script = ExtResource("1_gsv5v")
+player = NodePath("Player")
+
+[node name="PlayerSpawn" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.10352, 2.19153, 0.0336809)
+
+[node name="Player" parent="." instance=ExtResource("2_sivxp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0887, 2.19153, -17.9191)
+
+[node name="EnemyPath" type="Node3D" parent="."]
+
+[node name="Path3D" type="Path3D" parent="EnemyPath"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.246, 1.25, -2.023)
+curve = SubResource("Curve3D_8j60k")
+
+[node name="Path3D2" type="Path3D" parent="EnemyPath"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.246, 1.25, -2.023)
+curve = SubResource("Curve3D_fo5ed")
+
+[node name="Path3D3" type="Path3D" parent="EnemyPath"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.246, 1.25, -2.023)
+curve = SubResource("Curve3D_5ukr8")
+
+[node name="Path3D4" type="Path3D" parent="EnemyPath"]
+curve = SubResource("Curve3D_0fj1v")
+
+[node name="RegionAI" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_7yui6")
+enter_cost = 1.0
+
+[node name="EnemyBase" parent="RegionAI" node_paths=PackedStringArray("player", "path_ai", "level_manager") instance=ExtResource("3_q2fd6")]
+transform = Transform3D(0.758737, 0, -0.651397, 0, 1, 0, 0.651397, 0, 0.758737, 21.0317, 3.39581, -5.36268)
+player = NodePath("../../Player")
+path_ai = NodePath("../../EnemyPath/Path3D")
+level_manager = NodePath("../..")
+timer_waypoint_ai = 0.5
+
+[node name="EnemyBase2" parent="RegionAI" node_paths=PackedStringArray("player", "path_ai", "level_manager") instance=ExtResource("3_q2fd6")]
+transform = Transform3D(0.758737, 0, -0.651397, 0, 1, 0, 0.651397, 0, 0.758737, 0.091958, 3.39581, -19.7895)
+player = NodePath("../../Player")
+path_ai = NodePath("../../EnemyPath/Path3D2")
+level_manager = NodePath("../..")
+timer_waypoint_ai = 3.0
+
+[node name="EnemyBase3" parent="RegionAI" node_paths=PackedStringArray("player", "path_ai", "level_manager") instance=ExtResource("3_q2fd6")]
+transform = Transform3D(-0.202702, 0, -0.979241, 0, 1, 0, 0.979241, 0, -0.202702, 21.0634, 3.39581, 18.8257)
+player = NodePath("../../Player")
+path_ai = NodePath("../../EnemyPath/Path3D3")
+level_manager = NodePath("../..")
+
+[node name="EnemyBase4" parent="RegionAI" node_paths=PackedStringArray("player", "path_ai", "level_manager") instance=ExtResource("3_q2fd6")]
+transform = Transform3D(-0.202702, 0, -0.979241, 0, 1, 0, 0.979241, 0, -0.202702, 19.3818, 3.39581, 6.0739)
+player = NodePath("../../Player")
+path_ai = NodePath("../../EnemyPath/Path3D4")
+level_manager = NodePath("../..")
+timer_waypoint_ai = 0.03
+
+[node name="Map" parent="RegionAI" instance=ExtResource("4_s8w8g")]
+visible = false
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="Inside" type="Node3D" parent="Lights"]
+
+[node name="HallLight1" type="MeshInstance3D" parent="Lights/Inside" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58031, 3.8, -1.67876)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight2" type="MeshInstance3D" parent="Lights/Inside" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.41969, 3.8, -1.67876)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight3" type="MeshInstance3D" parent="Lights/Inside" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4197, 3.8, -1.67876)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight4" type="MeshInstance3D" parent="Lights/Inside" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58031, 3.8, -10.6788)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight5" type="MeshInstance3D" parent="Lights/Inside" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5803, 3.8, -1.67876)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight6" type="MeshInstance3D" parent="Lights/Inside" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58031, 3.8, 7.32124)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="Top" type="Node3D" parent="Lights"]
+
+[node name="Top" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4197, 3.8, -1.67876)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight13" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4197, 3.8, -11.6788)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight14" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4197, 3.8, -18.6788)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight15" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4197, 3.8, -18.6788)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight16" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4197, 3.8, -18.6788)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight17" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5803, 3.8, -18.6788)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight18" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5803, 3.8, -18.6788)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight19" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5803, 3.8, -18.6788)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight20" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5803, 3.8, -9.67876)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight21" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5803, 3.8, -1.67876)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="Bottom" type="Node3D" parent="Lights"]
+
+[node name="Bottom" type="MeshInstance3D" parent="Lights/Bottom" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5803, 3.8, 15.3212)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight22" type="MeshInstance3D" parent="Lights/Bottom" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5803, 3.8, 6.32124)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight23" type="MeshInstance3D" parent="Lights/Bottom" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5803, 3.8, 14.3212)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight7" type="MeshInstance3D" parent="Lights/Bottom" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58031, 3.8, 15.3212)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight8" type="MeshInstance3D" parent="Lights/Bottom" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4197, 3.8, 15.3212)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight9" type="MeshInstance3D" parent="Lights/Bottom" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4197, 3.8, 15.3212)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight10" type="MeshInstance3D" parent="Lights/Bottom" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4197, 3.8, 15.3212)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="HallLight11" type="MeshInstance3D" parent="Lights/Bottom" groups=["Lights"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4197, 3.8, 7.32124)
+sorting_offset = -100.0
+material_override = ExtResource("5_ygbgv")
+cast_shadow = 0
+visibility_range_begin = 1.0
+visibility_range_end = 32.0
+script = ExtResource("6_h5w41")
+metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
+
+[node name="KitchenLight" parent="Lights" instance=ExtResource("7_jd4l3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.794, 3.8, 6.584)
+material_override = SubResource("StandardMaterial3D_5v1tr")
+
+[node name="AccOffice" parent="Lights" instance=ExtResource("7_jd4l3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.224, 1.5, -9.966)
+
+[node name="Switches" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" parent="Switches" node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("8_oq6i6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.659378, 1.07221, 0.777659)
+level_manager = NodePath("../..")
+obj_to_react = NodePath("../../Lights/Inside")
+
+[node name="MeshInstance3D2" parent="Switches" node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("8_oq6i6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9.50019, 1.07221, 11.7322)
+level_manager = NodePath("../..")
+obj_to_react = NodePath("../../Lights/Bottom")
+
+[node name="MeshInstance3D4" parent="Switches" node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("8_oq6i6")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.231, 1.07221, 1.8319)
+level_manager = NodePath("../..")
+obj_to_react = NodePath("../../Lights/Top")
+
+[node name="MeshInstance3D3" parent="Switches" node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("8_oq6i6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3993, 1.07221, -15.3644)
+level_manager = NodePath("../..")
+obj_to_react = NodePath("../../Lights/KitchenLight")
+
+[node name="Puzzles" type="Node3D" parent="."]
+
+[node name="PuzzleInstance" parent="Puzzles" node_paths=PackedStringArray("level_manager", "object_to_react", "item_required") instance=ExtResource("9_oohhc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7104, 0.992582, -12.2871)
+level_manager = NodePath("../..")
+object_to_react = NodePath("../../LockedDoor/DoorAccOffice")
+puzzle = ExtResource("10_1stx8")
+item_required = NodePath("../../EnemyPath/Path3D4")
+
+[node name="LockedDoor" type="Node3D" parent="."]
+
+[node name="DoorAccOffice" parent="LockedDoor" instance=ExtResource("11_xdwih")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6787, 1.06, -12.2695)

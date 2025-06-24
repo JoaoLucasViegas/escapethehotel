@@ -1,0 +1,36 @@
+[gd_resource type="ArrayMesh" load_steps=3 format=4 uid="uid://dtndqgoned4hr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_e6y0w"]
+cull_mode = 1
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_boxtw"]
+_surfaces = [{
+"aabb": AABB(-6.12323e-16, 0, -10, 10, 3, 10),
+"format": 34896613377,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAAAAIAAwAFAAEABAACAAYAAwAHAAUABwAEAAYABwAGAAUA"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 8,
+"vertex_data": PackedByteArray("AAD/////AAD//wAA//8AAAAAAAD//wAA////////AAAAAP//AAAAAP//AAAAAAAAAAAAAAAAAAD/////AAAAAA==")
+}]
+blend_shape_mode = 0
+
+[resource]
+resource_name = "kitchen_blender_Room"
+_surfaces = [{
+"aabb": AABB(-6.12323e-16, 0, -10, 10, 3, 10),
+"attribute_data": PackedByteArray("0AD7/xsOqdMbDvv/0ACp09AAqdMbDlinGw6p09AAWKfQAFinGw4GexsOWKfQAAZ70AAGexsOtU4bDgZ70AC1Tg=="),
+"format": 34896613399,
+"index_count": 24,
+"index_data": PackedByteArray("AAABAAIAAAADAAEABAAFAAYABAAHAAUACAAJAAoACAALAAkADAANAA4ADAAPAA0A"),
+"material": SubResource("StandardMaterial3D_e6y0w"),
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 16,
+"vertex_data": PackedByteArray("AAD//////7///wAA////vwAAAAD///+//////////7////////9U1f//AAAAAFTV//8AAP//VNX/////AABU1f////8AAP//AAAAAAAA/////wAAAAD//wAA//8AAP//AAD//wAAVNUAAAAA//9U1QAAAAAAAFTVAAD/////VNX/f/9//3//f/9//3//f/9/qqpVVaqqVVWqqlVVqqpUVf8//7//P/+//z//v/8//79VVaqqVVWqqlVVqqpUVaqq")
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_boxtw")

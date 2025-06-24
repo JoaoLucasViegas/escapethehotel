@@ -1,0 +1,79 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0uj43o1kocpw"]
+
+[ext_resource type="Script" uid="uid://bmknufffdq3o7" path="res://Scripts/credits_roll.gd" id="1_ghjh6"]
+[ext_resource type="Texture2D" uid="uid://uolakqhpy6fy" path="res://Textures/logo_vertical_monochrome_dark.png" id="2_ghjh6"]
+[ext_resource type="AudioStream" uid="uid://ctqrdk0yrww7y" path="res://Tracks/creditssong.mp3" id="3_ei81t"]
+
+[node name="Credits Roll" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ghjh6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(256, 224)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -136.0
+offset_right = 128.0
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ghjh6")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -148.0
+offset_top = -68.0
+offset_right = 148.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Made by
+JoaoLucasViegas - GarbageMonkey"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Leave" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -18.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "X"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ei81t")
+volume_db = -20.0
+pitch_scale = 0.84
+autoplay = true
+bus = &"MainMenu"
+parameters/looping = true
+
+[connection signal="pressed" from="Leave" to="." method="_on_leave_pressed"]

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bqra2td0dj5xi"]
+
+[ext_resource type="Texture2D" uid="uid://bfbbo2ikeyuup" path="res://Models/!OFFICE/sofa_02_1k.gltf/textures/sofa_02_diff_1k.jpg" id="1_74w61"]
+
+[resource]
+resource_name = "sofa_02"
+shading_mode = 2
+albedo_texture = ExtResource("1_74w61")
+texture_filter = 2
+disable_receive_shadows = true

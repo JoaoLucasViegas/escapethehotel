@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://dlcl248djno47"]
+
+[ext_resource type="Script" uid="uid://bd5wayefwldhm" path="res://Scripts/Puzzle/puzzle_sample.gd" id="2_v4gus"]
+
+[node name="GamePuzzle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_v4gus")
+
+[node name="LeavePuzzle" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -39.0
+offset_top = 12.0
+offset_right = -21.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "X"
+
+[connection signal="pressed" from="LeavePuzzle" to="." method="_on_leave_puzzle_pressed"]

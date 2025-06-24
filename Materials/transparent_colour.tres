@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://d5rupbj8c788"]
+
+[resource]
+transparency = 1
+depth_draw_mode = 2
+no_depth_test = true
+shading_mode = 0
+disable_ambient_light = true
+disable_fog = true
+albedo_color = Color(1, 1, 1, 0)
+disable_receive_shadows = true

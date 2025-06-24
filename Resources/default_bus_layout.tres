@@ -1,0 +1,51 @@
+[gd_resource type="AudioBusLayout" load_steps=5 format=3 uid="uid://btookd5db3xac"]
+
+[sub_resource type="AudioEffectLowShelfFilter" id="AudioEffectLowShelfFilter_nd2c6"]
+resource_name = "LowShelfFilter"
+cutoff_hz = 68.0
+resonance = 1.0
+gain = 0.0
+db = 3
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_nvyeh"]
+resource_name = "Reverb"
+room_size = 1.0
+damping = 1.0
+spread = 0.3
+hipass = 0.5
+wet = 0.08
+
+[sub_resource type="AudioEffectHighPassFilter" id="AudioEffectHighPassFilter_nvyeh"]
+resource_name = "HighPassFilter"
+cutoff_hz = 128.0
+resonance = 1.0
+db = 3
+
+[sub_resource type="AudioEffectLowShelfFilter" id="AudioEffectLowShelfFilter_nvyeh"]
+resource_name = "LowShelfFilter"
+cutoff_hz = 68.0
+resonance = 1.0
+gain = 0.0
+db = 3
+
+[resource]
+bus/1/name = &"SFX"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = 0.0
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectLowShelfFilter_nd2c6")
+bus/1/effect/0/enabled = true
+bus/2/name = &"MainMenu"
+bus/2/solo = false
+bus/2/mute = false
+bus/2/bypass_fx = false
+bus/2/volume_db = 0.0
+bus/2/send = &"Master"
+bus/2/effect/0/effect = SubResource("AudioEffectReverb_nvyeh")
+bus/2/effect/0/enabled = true
+bus/2/effect/1/effect = SubResource("AudioEffectHighPassFilter_nvyeh")
+bus/2/effect/1/enabled = false
+bus/2/effect/2/effect = SubResource("AudioEffectLowShelfFilter_nvyeh")
+bus/2/effect/2/enabled = true

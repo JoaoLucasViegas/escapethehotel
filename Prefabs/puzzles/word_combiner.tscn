@@ -1,0 +1,125 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmg1xxegbw1xu"]
+
+[ext_resource type="Script" uid="uid://b6ybodxuq1k00" path="res://Scripts/Puzzle/word_combiner.gd" id="1_8wybq"]
+[ext_resource type="AudioStream" uid="uid://tt0vplmbkapw" path="res://Tracks/sfx/button_pressed.ogg" id="2_q7n6j"]
+
+[node name="Key" type="Control"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_8wybq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.431373)
+
+[node name="Words" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Words"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "eat"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label2" type="Label" parent="Words"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "the"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label3" type="Label" parent="Words"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "dog"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="Label4" type="Label" parent="Words"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "alone"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="UpWord" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -10.5
+offset_right = 10.5
+offset_bottom = 31.0
+grow_horizontal = 2
+text = "/\\"
+
+[node name="DownWord" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -10.5
+offset_top = -31.0
+offset_right = 10.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "\\/"
+
+[node name="KeySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_q7n6j")
+volume_db = -12.0
+pitch_scale = 1.3
+bus = &"SFX"
+
+[connection signal="pressed" from="UpWord" to="." method="_on_up_word_pressed"]
+[connection signal="pressed" from="DownWord" to="." method="_on_down_word_pressed"]

@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cponbkt75om27"]
+
+[ext_resource type="Texture2D" uid="uid://j3if2l8nysa7" path="res://Models/!KITCHEN/CoffeeCart_01_1k.gltf/textures/CoffeeCart_01_props_diff_1k.jpg" id="1_eyrxk"]
+
+[resource]
+resource_name = "CoffeeCart_01_props"
+shading_mode = 2
+albedo_texture = ExtResource("1_eyrxk")
+texture_filter = 2
+disable_receive_shadows = true

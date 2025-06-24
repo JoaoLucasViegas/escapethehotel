@@ -1,0 +1,138 @@
+[gd_scene load_steps=6 format=3 uid="uid://deht477rygtnl"]
+
+[ext_resource type="Script" uid="uid://bd5wayefwldhm" path="res://Scripts/Puzzle/puzzle_sample.gd" id="2_v4gus"]
+[ext_resource type="Script" uid="uid://dhnsk2wo1oyy4" path="res://Scripts/Puzzle/fork_door.gd" id="2_wph18"]
+[ext_resource type="Texture2D" uid="uid://bfmqsakqwu54y" path="res://Textures/base_rectangle.svg" id="3_qp1ix"]
+[ext_resource type="Texture2D" uid="uid://duom0aqqhprhp" path="res://Textures/key.svg" id="4_244ih"]
+[ext_resource type="Texture2D" uid="uid://c0fmgpsw0hy5g" path="res://Textures/fork.svg" id="4_qp1ix"]
+
+[node name="GamePuzzle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_v4gus")
+
+[node name="ForkDoor" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_wph18")
+
+[node name="DoorTextureRect" type="TextureRect" parent="ForkDoor"]
+self_modulate = Color(0.569745, 0.368194, 0.176836, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -102.0
+offset_right = 64.0
+offset_bottom = 103.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_qp1ix")
+
+[node name="Fork" type="Control" parent="ForkDoor/DoorTextureRect"]
+z_index = 17
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -62.51
+offset_right = 5.0
+offset_bottom = -52.51
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(5, 5)
+
+[node name="Fork" type="Sprite2D" parent="ForkDoor/DoorTextureRect/Fork"]
+visible = false
+position = Vector2(7.48022, 8.3597)
+rotation = 0.0937923
+scale = Vector2(0.653894, 0.730127)
+texture = ExtResource("4_qp1ix")
+offset = Vector2(52.2915, 48.5046)
+
+[node name="Key" type="Control" parent="ForkDoor/DoorTextureRect"]
+z_index = 17
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = -62.51
+offset_right = 5.0
+offset_bottom = -52.51
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(5, 5)
+
+[node name="Key" type="Sprite2D" parent="ForkDoor/DoorTextureRect/Key"]
+visible = false
+position = Vector2(3.74775, -0.391276)
+rotation = 0.252499
+scale = Vector2(0.63362, 0.5176)
+texture = ExtResource("4_244ih")
+offset = Vector2(51.8257, 56.7314)
+
+[node name="DoorGrab" type="Control" parent="ForkDoor"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.0
+offset_top = -8.0
+offset_right = -13.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="ForkDoor/DoorGrab"]
+z_index = 3
+position = Vector2(14, 21)
+scale = Vector2(0.391667, 0.875)
+texture = ExtResource("3_qp1ix")
+
+[node name="Sprite2D" type="Sprite2D" parent="ForkDoor/DoorGrab/Sprite2D"]
+self_modulate = Color(0, 0, 0, 1)
+z_index = 3
+position = Vector2(2.55318, 26.2857)
+scale = Vector2(0.583155, 0.287446)
+texture = ExtResource("3_qp1ix")
+
+[node name="Texture" type="Sprite2D" parent="ForkDoor/DoorGrab"]
+modulate = Color(0.533037, 0.533037, 0.533037, 1)
+z_index = 5
+rotation = -1.5708
+scale = Vector2(0.183052, 0.968325)
+texture = ExtResource("3_qp1ix")
+offset = Vector2(1, 65)
+
+[node name="LeavePuzzle" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -39.0
+offset_top = 12.0
+offset_right = -21.0
+offset_bottom = 43.0
+grow_horizontal = 0
+text = "X"
+
+[connection signal="pressed" from="LeavePuzzle" to="." method="_on_leave_puzzle_pressed"]

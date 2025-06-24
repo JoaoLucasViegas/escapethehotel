@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://dbbaawt44oor8"]
+
+[ext_resource type="Texture2D" uid="uid://utuy1q4rc206" path="res://Models/!SAFE/brass_vase_03_1k.gltf/textures/brass_vase_03_diff_1k.jpg" id="1_f71eo"]
+
+[resource]
+resource_name = "brass_vase_03"
+shading_mode = 2
+albedo_texture = ExtResource("1_f71eo")
+texture_filter = 2
+disable_receive_shadows = true

@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://jca7hetyir1r"]
+
+[ext_resource type="Texture2D" uid="uid://1d2cg53auua3" path="res://Models/saferoom_Metal_Aluminum_Anodized_.jpg" id="1_05au2"]
+
+[resource]
+resource_name = "Metal_Aluminum_Anodized_.001"
+cull_mode = 2
+shading_mode = 2
+albedo_texture = ExtResource("1_05au2")
+metallic = 1.0
+metallic_texture_channel = 4
+roughness_texture = ExtResource("1_05au2")
+roughness_texture_channel = 4
+rim_enabled = true
+rim = 0.0
+rim_tint = 1.0
+texture_filter = 0

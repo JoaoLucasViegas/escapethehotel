@@ -1,0 +1,58 @@
+[gd_resource type="Environment" load_steps=8 format=3 uid="uid://dyukwcmgie1h5"]
+
+[ext_resource type="FastNoiseLite" uid="uid://csla7y844wgjg" path="res://Resources/sky_cloud_noise.tres" id="1_34o15"]
+
+[sub_resource type="Gradient" id="Gradient_i6evw"]
+interpolation_mode = 1
+interpolation_color_space = 2
+offsets = PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.391452, 0.263169, 0.172149, 1, 0.667798, 0.616244, 0.478074, 1, 0.903849, 0.739375, 0.766011, 1, 0.89059, 0.89059, 0.89059, 1, 0.840532, 0.977446, 1, 1)
+metadata/_snap_enabled = true
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_o0e2m"]
+gradient = SubResource("Gradient_i6evw")
+width = 3
+use_hdr = true
+
+[sub_resource type="Gradient" id="Gradient_5a7ea"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.5, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.176419, 0.176419, 0.176419, 1)
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8j60k"]
+invert = true
+in_3d_space = true
+generate_mipmaps = false
+seamless = true
+normalize = false
+color_ramp = SubResource("Gradient_5a7ea")
+noise = ExtResource("1_34o15")
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo5ed"]
+sky_top_color = Color(0.0263388, 0.0295508, 0.0746159, 1)
+sky_horizon_color = Color(0.0565218, 0.0619995, 0.125966, 1)
+sky_energy_multiplier = 2.5
+sky_cover = SubResource("NoiseTexture2D_8j60k")
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0, 0, 0, 1)
+sun_angle_max = 3.0
+sun_curve = 5.5
+
+[sub_resource type="Sky" id="Sky_5ukr8"]
+sky_material = SubResource("ProceduralSkyMaterial_fo5ed")
+
+[resource]
+background_mode = 2
+sky = SubResource("Sky_5ukr8")
+glow_intensity = 4.82
+glow_bloom = 0.06
+glow_hdr_scale = 4.0
+glow_hdr_luminance_cap = 242.26
+fog_enabled = true
+fog_light_color = Color(0.201527, 0.201527, 0.201527, 1)
+fog_light_energy = 4.0
+fog_aerial_perspective = 1.0
+fog_sky_affect = 0.0
+fog_height_density = -0.1
+adjustment_enabled = true
+adjustment_color_correction = SubResource("GradientTexture1D_o0e2m")

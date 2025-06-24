@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ca4xoa3rimgys"]
+
+[ext_resource type="Texture2D" uid="uid://duom0aqqhprhp" path="res://Textures/key.svg" id="1_3fn6n"]
+
+[resource]
+transparency = 2
+alpha_scissor_threshold = 0.7
+alpha_antialiasing_mode = 0
+shading_mode = 0
+albedo_texture = ExtResource("1_3fn6n")

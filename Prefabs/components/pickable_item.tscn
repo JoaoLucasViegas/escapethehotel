@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5brjql2vjsgl"]
+
+[ext_resource type="Script" uid="uid://dk4er8tnnh2k3" path="res://Scripts/line_of_sight.gd" id="1_0mth4"]
+[ext_resource type="Script" uid="uid://ctwdceredrydi" path="res://Scripts/pickable_item.gd" id="1_hya7b"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_hya7b"]
+radius = 1.0
+
+[node name="PickableItem" type="Node3D"]
+script = ExtResource("1_hya7b")
+metadata/_edit_group_ = true
+
+[node name="AreaSight" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 10
+script = ExtResource("1_0mth4")
+metadata/_custom_type_script = "uid://dk4er8tnnh2k3"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaSight"]
+shape = SubResource("SphereShape3D_hya7b")
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+visible = false
+billboard = 1
+text = "Press E to pick"
+font_size = 224

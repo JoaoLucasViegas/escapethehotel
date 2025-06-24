@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ba0a4f155vt0p"]
+
+[ext_resource type="Texture2D" uid="uid://bl5tw6yyoaiop" path="res://Models/!STORAGE/Barrel_02_1k.gltf/textures/Barrel_02_diff_1k.jpg" id="1_tmp4i"]
+
+[resource]
+resource_name = "Barrel_02"
+shading_mode = 2
+albedo_texture = ExtResource("1_tmp4i")
+texture_filter = 2
+disable_receive_shadows = true
