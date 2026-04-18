@@ -1,4 +1,4 @@
-extends Node3D
+class_name DoorLevel extends Node3D
 
 @onready var door_area = $AreaSight
 @onready var door_label = $Label3D
@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 			if is_final:
 				Global.emit_game_end()
 
-func react():
+func unlock():
 	is_unlocked = true
 	if not is_final:
 		$UnlockSound.play()

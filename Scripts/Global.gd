@@ -19,6 +19,7 @@ func startGame():
 	pass_code = generatePassCode()
 	vault_code = generatePassCode()
 	passphrase = generateCombineWords()
+	DevTools.consoleText(passphrase_ui)
 
 func emit_game_over():
 	emit_signal("GameOver")

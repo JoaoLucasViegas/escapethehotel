@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bjeyaeva141cx"]
+[gd_scene format=3 uid="uid://bjeyaeva141cx"]
 
 [ext_resource type="Script" uid="uid://b4oekceacbdpc" path="res://Scripts/level_manager.gd" id="1_gsv5v"]
 [ext_resource type="PackedScene" uid="uid://b55iprda1bad5" path="res://Prefabs/player.tscn" id="2_sivxp"]
@@ -58,72 +58,71 @@ distance_fade_mode = 1
 distance_fade_min_distance = 32.0
 distance_fade_max_distance = 0.0
 
-[node name="Game" type="Node3D" node_paths=PackedStringArray("player")]
+[node name="Game" type="Node3D" unique_id=1767779911]
 script = ExtResource("1_gsv5v")
-player = NodePath("Player")
 
-[node name="PlayerSpawn" type="Marker3D" parent="."]
+[node name="PlayerSpawn" type="Marker3D" parent="." unique_id=1717223430]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.10352, 2.19153, 0.0336809)
 
-[node name="Player" parent="." instance=ExtResource("2_sivxp")]
+[node name="Player" parent="." unique_id=864577994 instance=ExtResource("2_sivxp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.0887, 2.19153, -17.9191)
 
-[node name="EnemyPath" type="Node3D" parent="."]
+[node name="EnemyPath" type="Node3D" parent="." unique_id=658851259]
 
-[node name="Path3D" type="Path3D" parent="EnemyPath"]
+[node name="Path3D" type="Path3D" parent="EnemyPath" unique_id=948999668]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.246, 1.25, -2.023)
 curve = SubResource("Curve3D_8j60k")
 
-[node name="Path3D2" type="Path3D" parent="EnemyPath"]
+[node name="Path3D2" type="Path3D" parent="EnemyPath" unique_id=1393154292]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.246, 1.25, -2.023)
 curve = SubResource("Curve3D_fo5ed")
 
-[node name="Path3D3" type="Path3D" parent="EnemyPath"]
+[node name="Path3D3" type="Path3D" parent="EnemyPath" unique_id=1266433579]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.246, 1.25, -2.023)
 curve = SubResource("Curve3D_5ukr8")
 
-[node name="Path3D4" type="Path3D" parent="EnemyPath"]
+[node name="Path3D4" type="Path3D" parent="EnemyPath" unique_id=1539424460]
 curve = SubResource("Curve3D_0fj1v")
 
-[node name="RegionAI" type="NavigationRegion3D" parent="."]
+[node name="RegionAI" type="NavigationRegion3D" parent="." unique_id=1673658862]
 navigation_mesh = SubResource("NavigationMesh_7yui6")
 enter_cost = 1.0
 
-[node name="EnemyBase" parent="RegionAI" node_paths=PackedStringArray("player", "path_ai", "level_manager") instance=ExtResource("3_q2fd6")]
+[node name="EnemyBase" parent="RegionAI" unique_id=284471793 node_paths=PackedStringArray("player", "path_ai", "level_manager") instance=ExtResource("3_q2fd6")]
 transform = Transform3D(0.758737, 0, -0.651397, 0, 1, 0, 0.651397, 0, 0.758737, 21.0317, 3.39581, -5.36268)
 player = NodePath("../../Player")
 path_ai = NodePath("../../EnemyPath/Path3D")
 level_manager = NodePath("../..")
 timer_waypoint_ai = 0.5
 
-[node name="EnemyBase2" parent="RegionAI" node_paths=PackedStringArray("player", "path_ai", "level_manager") instance=ExtResource("3_q2fd6")]
+[node name="EnemyBase2" parent="RegionAI" unique_id=168423447 node_paths=PackedStringArray("player", "path_ai", "level_manager") instance=ExtResource("3_q2fd6")]
 transform = Transform3D(0.758737, 0, -0.651397, 0, 1, 0, 0.651397, 0, 0.758737, 0.091958, 3.39581, -19.7895)
 player = NodePath("../../Player")
 path_ai = NodePath("../../EnemyPath/Path3D2")
 level_manager = NodePath("../..")
 timer_waypoint_ai = 3.0
 
-[node name="EnemyBase3" parent="RegionAI" node_paths=PackedStringArray("player", "path_ai", "level_manager") instance=ExtResource("3_q2fd6")]
+[node name="EnemyBase3" parent="RegionAI" unique_id=2147013665 node_paths=PackedStringArray("player", "path_ai", "level_manager") instance=ExtResource("3_q2fd6")]
 transform = Transform3D(-0.202702, 0, -0.979241, 0, 1, 0, 0.979241, 0, -0.202702, 21.0634, 3.39581, 18.8257)
 player = NodePath("../../Player")
 path_ai = NodePath("../../EnemyPath/Path3D3")
 level_manager = NodePath("../..")
 
-[node name="EnemyBase4" parent="RegionAI" node_paths=PackedStringArray("player", "path_ai", "level_manager") instance=ExtResource("3_q2fd6")]
+[node name="EnemyBase4" parent="RegionAI" unique_id=1340487980 node_paths=PackedStringArray("player", "path_ai", "level_manager") instance=ExtResource("3_q2fd6")]
 transform = Transform3D(-0.202702, 0, -0.979241, 0, 1, 0, 0.979241, 0, -0.202702, 19.3818, 3.39581, 6.0739)
 player = NodePath("../../Player")
 path_ai = NodePath("../../EnemyPath/Path3D4")
 level_manager = NodePath("../..")
 timer_waypoint_ai = 0.03
 
-[node name="Map" parent="RegionAI" instance=ExtResource("4_s8w8g")]
+[node name="Map" parent="RegionAI" unique_id=1467618093 instance=ExtResource("4_s8w8g")]
 visible = false
 
-[node name="Lights" type="Node3D" parent="."]
+[node name="Lights" type="Node3D" parent="." unique_id=620464028]
 
-[node name="Inside" type="Node3D" parent="Lights"]
+[node name="Inside" type="Node3D" parent="Lights" unique_id=962146046]
 
-[node name="HallLight1" type="MeshInstance3D" parent="Lights/Inside" groups=["Lights"]]
+[node name="HallLight1" type="MeshInstance3D" parent="Lights/Inside" unique_id=151466193 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58031, 3.8, -1.67876)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -133,7 +132,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight2" type="MeshInstance3D" parent="Lights/Inside" groups=["Lights"]]
+[node name="HallLight2" type="MeshInstance3D" parent="Lights/Inside" unique_id=1866362619 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.41969, 3.8, -1.67876)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -143,7 +142,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight3" type="MeshInstance3D" parent="Lights/Inside" groups=["Lights"]]
+[node name="HallLight3" type="MeshInstance3D" parent="Lights/Inside" unique_id=366951432 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4197, 3.8, -1.67876)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -153,7 +152,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight4" type="MeshInstance3D" parent="Lights/Inside" groups=["Lights"]]
+[node name="HallLight4" type="MeshInstance3D" parent="Lights/Inside" unique_id=872079112 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58031, 3.8, -10.6788)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -163,7 +162,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight5" type="MeshInstance3D" parent="Lights/Inside" groups=["Lights"]]
+[node name="HallLight5" type="MeshInstance3D" parent="Lights/Inside" unique_id=1192844829 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5803, 3.8, -1.67876)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -173,7 +172,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight6" type="MeshInstance3D" parent="Lights/Inside" groups=["Lights"]]
+[node name="HallLight6" type="MeshInstance3D" parent="Lights/Inside" unique_id=1106209053 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58031, 3.8, 7.32124)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -183,9 +182,9 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="Top" type="Node3D" parent="Lights"]
+[node name="Top" type="Node3D" parent="Lights" unique_id=156419791]
 
-[node name="Top" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+[node name="Top" type="MeshInstance3D" parent="Lights/Top" unique_id=1102062785 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4197, 3.8, -1.67876)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -195,7 +194,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight13" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+[node name="HallLight13" type="MeshInstance3D" parent="Lights/Top" unique_id=866374658 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4197, 3.8, -11.6788)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -205,7 +204,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight14" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+[node name="HallLight14" type="MeshInstance3D" parent="Lights/Top" unique_id=1542032280 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4197, 3.8, -18.6788)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -215,7 +214,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight15" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+[node name="HallLight15" type="MeshInstance3D" parent="Lights/Top" unique_id=471745732 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4197, 3.8, -18.6788)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -225,7 +224,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight16" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+[node name="HallLight16" type="MeshInstance3D" parent="Lights/Top" unique_id=160916092 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4197, 3.8, -18.6788)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -235,7 +234,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight17" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+[node name="HallLight17" type="MeshInstance3D" parent="Lights/Top" unique_id=2044565515 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5803, 3.8, -18.6788)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -245,7 +244,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight18" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+[node name="HallLight18" type="MeshInstance3D" parent="Lights/Top" unique_id=1814146730 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5803, 3.8, -18.6788)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -255,7 +254,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight19" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+[node name="HallLight19" type="MeshInstance3D" parent="Lights/Top" unique_id=219416476 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5803, 3.8, -18.6788)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -265,7 +264,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight20" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+[node name="HallLight20" type="MeshInstance3D" parent="Lights/Top" unique_id=2040991282 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5803, 3.8, -9.67876)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -275,7 +274,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight21" type="MeshInstance3D" parent="Lights/Top" groups=["Lights"]]
+[node name="HallLight21" type="MeshInstance3D" parent="Lights/Top" unique_id=142574256 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5803, 3.8, -1.67876)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -285,9 +284,9 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="Bottom" type="Node3D" parent="Lights"]
+[node name="Bottom" type="Node3D" parent="Lights" unique_id=133140424]
 
-[node name="Bottom" type="MeshInstance3D" parent="Lights/Bottom" groups=["Lights"]]
+[node name="Bottom" type="MeshInstance3D" parent="Lights/Bottom" unique_id=419655217 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5803, 3.8, 15.3212)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -297,7 +296,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight22" type="MeshInstance3D" parent="Lights/Bottom" groups=["Lights"]]
+[node name="HallLight22" type="MeshInstance3D" parent="Lights/Bottom" unique_id=1231698335 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5803, 3.8, 6.32124)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -307,7 +306,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight23" type="MeshInstance3D" parent="Lights/Bottom" groups=["Lights"]]
+[node name="HallLight23" type="MeshInstance3D" parent="Lights/Bottom" unique_id=768849119 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5803, 3.8, 14.3212)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -317,7 +316,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight7" type="MeshInstance3D" parent="Lights/Bottom" groups=["Lights"]]
+[node name="HallLight7" type="MeshInstance3D" parent="Lights/Bottom" unique_id=1867168706 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58031, 3.8, 15.3212)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -327,7 +326,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight8" type="MeshInstance3D" parent="Lights/Bottom" groups=["Lights"]]
+[node name="HallLight8" type="MeshInstance3D" parent="Lights/Bottom" unique_id=303438575 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4197, 3.8, 15.3212)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -337,7 +336,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight9" type="MeshInstance3D" parent="Lights/Bottom" groups=["Lights"]]
+[node name="HallLight9" type="MeshInstance3D" parent="Lights/Bottom" unique_id=2067935529 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4197, 3.8, 15.3212)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -347,7 +346,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight10" type="MeshInstance3D" parent="Lights/Bottom" groups=["Lights"]]
+[node name="HallLight10" type="MeshInstance3D" parent="Lights/Bottom" unique_id=505131175 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4197, 3.8, 15.3212)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -357,7 +356,7 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight11" type="MeshInstance3D" parent="Lights/Bottom" groups=["Lights"]]
+[node name="HallLight11" type="MeshInstance3D" parent="Lights/Bottom" unique_id=91905038 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4197, 3.8, 7.32124)
 sorting_offset = -100.0
 material_override = ExtResource("5_ygbgv")
@@ -367,45 +366,45 @@ visibility_range_end = 32.0
 script = ExtResource("6_h5w41")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="KitchenLight" parent="Lights" instance=ExtResource("7_jd4l3")]
+[node name="KitchenLight" parent="Lights" unique_id=541514044 instance=ExtResource("7_jd4l3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.794, 3.8, 6.584)
 material_override = SubResource("StandardMaterial3D_5v1tr")
 
-[node name="AccOffice" parent="Lights" instance=ExtResource("7_jd4l3")]
+[node name="AccOffice" parent="Lights" unique_id=646638617 instance=ExtResource("7_jd4l3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.224, 1.5, -9.966)
 
-[node name="Switches" type="Node3D" parent="."]
+[node name="Switches" type="Node3D" parent="." unique_id=1651358636]
 
-[node name="MeshInstance3D" parent="Switches" node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("8_oq6i6")]
+[node name="MeshInstance3D" parent="Switches" unique_id=726064149 node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("8_oq6i6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.659378, 1.07221, 0.777659)
 level_manager = NodePath("../..")
 obj_to_react = NodePath("../../Lights/Inside")
 
-[node name="MeshInstance3D2" parent="Switches" node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("8_oq6i6")]
+[node name="MeshInstance3D2" parent="Switches" unique_id=1883534209 node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("8_oq6i6")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -9.50019, 1.07221, 11.7322)
 level_manager = NodePath("../..")
 obj_to_react = NodePath("../../Lights/Bottom")
 
-[node name="MeshInstance3D4" parent="Switches" node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("8_oq6i6")]
+[node name="MeshInstance3D4" parent="Switches" unique_id=1519111637 node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("8_oq6i6")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.231, 1.07221, 1.8319)
 level_manager = NodePath("../..")
 obj_to_react = NodePath("../../Lights/Top")
 
-[node name="MeshInstance3D3" parent="Switches" node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("8_oq6i6")]
+[node name="MeshInstance3D3" parent="Switches" unique_id=1166660038 node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("8_oq6i6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.3993, 1.07221, -15.3644)
 level_manager = NodePath("../..")
 obj_to_react = NodePath("../../Lights/KitchenLight")
 
-[node name="Puzzles" type="Node3D" parent="."]
+[node name="Puzzles" type="Node3D" parent="." unique_id=1566894925]
 
-[node name="PuzzleInstance" parent="Puzzles" node_paths=PackedStringArray("level_manager", "object_to_react", "item_required") instance=ExtResource("9_oohhc")]
+[node name="PuzzleInstance" parent="Puzzles" unique_id=645738348 node_paths=PackedStringArray("level_manager", "object_to_react", "item_required") instance=ExtResource("9_oohhc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.7104, 0.992582, -12.2871)
 level_manager = NodePath("../..")
 object_to_react = NodePath("../../LockedDoor/DoorAccOffice")
 puzzle = ExtResource("10_1stx8")
 item_required = NodePath("../../EnemyPath/Path3D4")
 
-[node name="LockedDoor" type="Node3D" parent="."]
+[node name="LockedDoor" type="Node3D" parent="." unique_id=356535646]
 
-[node name="DoorAccOffice" parent="LockedDoor" instance=ExtResource("11_xdwih")]
+[node name="DoorAccOffice" parent="LockedDoor" unique_id=93489972 instance=ExtResource("11_xdwih")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6787, 1.06, -12.2695)

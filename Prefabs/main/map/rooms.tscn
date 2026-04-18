@@ -1,31 +1,31 @@
-[gd_scene load_steps=247 format=4 uid="uid://cajpqvkilq2dl"]
+[gd_scene format=4 uid="uid://cajpqvkilq2dl"]
 
-[ext_resource type="Texture2D" uid="uid://do2opt2fhdvql" path="res://Models/kitchen_blender_ground_texture.jpg" id="2_nf172"]
-[ext_resource type="Texture2D" uid="uid://clu7dgvl01vsa" path="res://Models/acc_office_Wood_Cherry_Original_.jpg" id="2_nk103"]
-[ext_resource type="Texture2D" uid="uid://bsdfetyuw3n80" path="res://Models/storage_Sketchy_Brick_Multi_.jpg" id="3_7fapf"]
-[ext_resource type="Texture2D" uid="uid://dq0npwu4ag0dn" path="res://Models/chief_office_Wood_Cherry_Original_.jpg" id="3_20jll"]
-[ext_resource type="Texture2D" uid="uid://bgyvnfkas822s" path="res://Models/!OFFICE/modern_arm_chair_01_1k.gltf/textures/modern_arm_chair_01_legs_diff_1k.jpg" id="3_l1fsx"]
-[ext_resource type="Texture2D" uid="uid://nn3yu3mqohn8" path="res://Models/bedroom_Wood__Floor_.jpg" id="3_xwsbe"]
-[ext_resource type="Texture2D" uid="uid://v2065j0ehh00" path="res://Models/chief_office_Wood_Floor_Parquet_.jpg" id="4_0j3fl"]
-[ext_resource type="Texture2D" uid="uid://dxfm32emasr16" path="res://Models/bedroom_Wood_Plywood_Knots_.jpg" id="4_7fapf"]
-[ext_resource type="Texture2D" uid="uid://cutiufbuhviqf" path="res://Models/!OFFICE/modern_arm_chair_01_1k.gltf/textures/modern_arm_chair_01_pillow_diff_1k.jpg" id="4_rbtqc"]
-[ext_resource type="PackedScene" uid="uid://7nkgt1va02jx" path="res://Models/!OFFICE/Television_01_1k.gltf/Television_01_1k.gltf" id="4_vppcg"]
-[ext_resource type="Texture2D" uid="uid://7ygnda8fb1iv" path="res://Models/acc_office_Stone_Masonry_Multi_.jpg" id="4_vrqeg"]
-[ext_resource type="Texture2D" uid="uid://puf4ntnb7ho3" path="res://Models/bedroom_Textile_Rug_Stripes_.jpg" id="5_k4gmh"]
-[ext_resource type="Texture2D" uid="uid://bmwosqjn1qwh7" path="res://Models/!PROP/potted_plant_04_1k.gltf/textures/potted_plant_04_diff_1k.jpg" id="5_l1fsx"]
+[ext_resource type="Texture2D" uid="uid://brqvcl8tmndar" path="res://Models/kitchen_blender_ground_texture.jpg" id="2_nf172"]
+[ext_resource type="Texture2D" uid="uid://c6gstsmqsa7li" path="res://Models/acc_office_Wood_Cherry_Original_.jpg" id="2_nk103"]
+[ext_resource type="Texture2D" uid="uid://cdpuwvk7x8v" path="res://Models/storage_Sketchy_Brick_Multi_.jpg" id="3_7fapf"]
+[ext_resource type="Texture2D" uid="uid://d4ds4kemfok8y" path="res://Models/chief_office_Wood_Cherry_Original_.jpg" id="3_20jll"]
+[ext_resource type="Texture2D" uid="uid://cpyb88h2ensut" path="res://Models/!OFFICE/modern_arm_chair_01_1k.gltf/textures/modern_arm_chair_01_legs_diff_1k.jpg" id="3_l1fsx"]
+[ext_resource type="Texture2D" uid="uid://b5py0jvcqvc6e" path="res://Models/bedroom_Wood__Floor_.jpg" id="3_xwsbe"]
+[ext_resource type="Texture2D" uid="uid://cmimb77uy1oof" path="res://Models/chief_office_Wood_Floor_Parquet_.jpg" id="4_0j3fl"]
+[ext_resource type="Texture2D" uid="uid://bog84andrcwy" path="res://Models/bedroom_Wood_Plywood_Knots_.jpg" id="4_7fapf"]
+[ext_resource type="Texture2D" uid="uid://ciyjvmh4yyoeu" path="res://Models/!OFFICE/modern_arm_chair_01_1k.gltf/textures/modern_arm_chair_01_pillow_diff_1k.jpg" id="4_rbtqc"]
+[ext_resource type="PackedScene" uid="uid://c7nunugc3fvpx" path="res://Models/!OFFICE/Television_01_1k.gltf/Television_01_1k.gltf" id="4_vppcg"]
+[ext_resource type="Texture2D" uid="uid://befr2cbclwxfp" path="res://Models/acc_office_Stone_Masonry_Multi_.jpg" id="4_vrqeg"]
+[ext_resource type="Texture2D" uid="uid://bbigfcya6tkea" path="res://Models/bedroom_Textile_Rug_Stripes_.jpg" id="5_k4gmh"]
+[ext_resource type="Texture2D" uid="uid://dw8ca57pel4f5" path="res://Models/!PROP/potted_plant_04_1k.gltf/textures/potted_plant_04_diff_1k.jpg" id="5_l1fsx"]
 [ext_resource type="Material" uid="uid://c0q7qad2n1xv" path="res://Materials/interactable_obj_colour.tres" id="5_yjsda"]
-[ext_resource type="Texture2D" uid="uid://dagh34ada025h" path="res://Models/bedroom_Carpet_Loop_Pattern_.jpg" id="6_4f3l5"]
-[ext_resource type="PackedScene" uid="uid://cwii70thq18j5" path="res://Models/!OFFICE/marble_bust_01_1k.gltf/marble_bust_01_1k.gltf" id="8_ctn0t"]
-[ext_resource type="PackedScene" uid="uid://d12uma5aw71wl" path="res://Models/!STORAGE/Barrel_01_1k.gltf/Barrel_01_1k.gltf" id="9_16tik"]
-[ext_resource type="PackedScene" uid="uid://ta1oibxhy80u" path="res://Models/!STORAGE/Barrel_02_1k.gltf/Barrel_02_1k.gltf" id="10_c4rph"]
-[ext_resource type="PackedScene" uid="uid://1fxot2kqb8uq" path="res://Models/!OFFICE/sofa_02_1k.gltf/sofa_02_1k.gltf" id="12_77x8l"]
-[ext_resource type="Texture2D" uid="uid://5fhk46v2skon" path="res://Models/saferoom_Metal_Aluminum_Anodized__0.jpg" id="12_k4gmh"]
-[ext_resource type="Texture2D" uid="uid://1d2cg53auua3" path="res://Models/saferoom_Metal_Aluminum_Anodized_.jpg" id="13_4f3l5"]
+[ext_resource type="Texture2D" uid="uid://bfsnpk0t2ea5l" path="res://Models/bedroom_Carpet_Loop_Pattern_.jpg" id="6_4f3l5"]
+[ext_resource type="PackedScene" uid="uid://ck2eprwn0ik1e" path="res://Models/!OFFICE/marble_bust_01_1k.gltf/marble_bust_01_1k.gltf" id="8_ctn0t"]
+[ext_resource type="PackedScene" uid="uid://b2pet4n83m7cu" path="res://Models/!STORAGE/Barrel_01_1k.gltf/Barrel_01_1k.gltf" id="9_16tik"]
+[ext_resource type="PackedScene" uid="uid://c1bw5agwh2clx" path="res://Models/!STORAGE/Barrel_02_1k.gltf/Barrel_02_1k.gltf" id="10_c4rph"]
+[ext_resource type="PackedScene" uid="uid://cs54re84f75la" path="res://Models/!OFFICE/sofa_02_1k.gltf/sofa_02_1k.gltf" id="12_77x8l"]
+[ext_resource type="Texture2D" uid="uid://702pdm4tha2i" path="res://Models/saferoom_Metal_Aluminum_Anodized__0.jpg" id="12_k4gmh"]
+[ext_resource type="Texture2D" uid="uid://brc2m1hks2evu" path="res://Models/saferoom_Metal_Aluminum_Anodized_.jpg" id="13_4f3l5"]
 [ext_resource type="Material" uid="uid://jca7hetyir1r" path="res://Materials/vault_colour.tres" id="14_b0j03"]
-[ext_resource type="PackedScene" uid="uid://bsl68sftequri" path="res://Models/!SAFE/brass_vase_03_1k.gltf/brass_vase_03_1k.gltf" id="15_0nhi8"]
-[ext_resource type="PackedScene" uid="uid://cq4b0mf7t4t2l" path="res://Models/!KITCHEN/CoffeeCart_01_1k.gltf/CoffeeCart_01_1k.gltf" id="16_7ra2w"]
-[ext_resource type="PackedScene" uid="uid://dw41iuifych5q" path="res://Models/!KITCHEN/electric_stove_1k.gltf/electric_stove_1k.gltf" id="17_4p1xj"]
-[ext_resource type="Texture2D" uid="uid://bx4rix16fqmt6" path="res://Models/!OFFICE/Television_01_1k.gltf/textures/Television_01_diff_1k.jpg" id="20_rbtqc"]
+[ext_resource type="PackedScene" uid="uid://bbjvrt0lh1e7x" path="res://Models/!SAFE/brass_vase_03_1k.gltf/brass_vase_03_1k.gltf" id="15_0nhi8"]
+[ext_resource type="PackedScene" uid="uid://b0dgaxicp88ja" path="res://Models/!KITCHEN/CoffeeCart_01_1k.gltf/CoffeeCart_01_1k.gltf" id="16_7ra2w"]
+[ext_resource type="PackedScene" uid="uid://mg24xgbvt55k" path="res://Models/!KITCHEN/electric_stove_1k.gltf/electric_stove_1k.gltf" id="17_4p1xj"]
+[ext_resource type="Texture2D" uid="uid://bffp3njoxwbfw" path="res://Models/!OFFICE/Television_01_1k.gltf/textures/Television_01_diff_1k.jpg" id="20_rbtqc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvbla"]
 
@@ -3069,740 +3069,671 @@ size = Vector3(154.446, 93.0054, 43.1263)
 [sub_resource type="BoxShape3D" id="BoxShape3D_q6cfv"]
 size = Vector3(157.434, 93.0054, 45.667)
 
-[node name="Rooms" type="Node3D"]
+[node name="Rooms" type="Node3D" unique_id=2083465719]
 metadata/_edit_lock_ = true
 
-[node name="AccountOffice" type="Node3D" parent="."]
+[node name="AccountOffice" type="Node3D" parent="." unique_id=1211070414]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.764, 1.5, -9.871)
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="acc_office" type="Node3D" parent="AccountOffice"]
+[node name="acc_office" type="Node3D" parent="AccountOffice" unique_id=109431471]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -1.5, 5)
 
-[node name="Shelves1" type="MeshInstance3D" parent="AccountOffice/acc_office"]
+[node name="Shelves1" type="MeshInstance3D" parent="AccountOffice/acc_office" unique_id=21563309]
 transform = Transform3D(4, 0, 0, 0, 1.3887, 0, 0, 0, 2.9, 5.8, 0, -1)
 material_override = ExtResource("5_yjsda")
 mesh = SubResource("ArrayMesh_1hbn7")
-skeleton = NodePath("")
 
-[node name="Shelves1_001" type="MeshInstance3D" parent="AccountOffice/acc_office"]
+[node name="Shelves1_001" type="MeshInstance3D" parent="AccountOffice/acc_office" unique_id=1074830645]
 transform = Transform3D(2.74824, 0, 0, 0, 1.45, 0, 0, 0, 2.9, 0.2, 0, -1)
 material_override = ExtResource("5_yjsda")
 mesh = SubResource("ArrayMesh_wadsy")
-skeleton = NodePath("")
 
-[node name="Walls" type="MeshInstance3D" parent="AccountOffice/acc_office"]
+[node name="Walls" type="MeshInstance3D" parent="AccountOffice/acc_office" unique_id=483644868]
 transform = Transform3D(0.0254, 0, 0, 0, 0.0254, 0, 0, 0, 0.0254, 0, 0, 0)
 mesh = SubResource("ArrayMesh_2qhnx")
-skeleton = NodePath("")
 
-[node name="Desk" type="MeshInstance3D" parent="AccountOffice/acc_office"]
+[node name="Desk" type="MeshInstance3D" parent="AccountOffice/acc_office" unique_id=1753980520]
 transform = Transform3D(0.0254, 0, 0, 0, 0.0254, 0, 0, 0, 0.0254, 0, 0, 0)
 mesh = SubResource("ArrayMesh_fe8ll")
-skeleton = NodePath("")
 
-[node name="Cabinet" type="MeshInstance3D" parent="AccountOffice/acc_office"]
+[node name="Cabinet" type="MeshInstance3D" parent="AccountOffice/acc_office" unique_id=455600228]
 transform = Transform3D(0.0254, 0, 0, 0, 0.0254, 0, 0, 0, 0.0254, 0, 0, 0)
 mesh = SubResource("ArrayMesh_irx7e")
-skeleton = NodePath("")
 
-[node name="Cabinet_001" type="MeshInstance3D" parent="AccountOffice/acc_office"]
+[node name="Cabinet_001" type="MeshInstance3D" parent="AccountOffice/acc_office" unique_id=2092948119]
 transform = Transform3D(0.0254, 0, 0, 0, 0.0254, 0, 0, 0, 0.0254, 0, 0, 0)
 mesh = SubResource("ArrayMesh_ub3b0")
-skeleton = NodePath("")
 
-[node name="Cabinet_002" type="MeshInstance3D" parent="AccountOffice/acc_office"]
+[node name="Cabinet_002" type="MeshInstance3D" parent="AccountOffice/acc_office" unique_id=1856757969]
 transform = Transform3D(0.0254, 0, 0, 0, 0.0254, 0, 0, 0, 0.0254, 0, 0, 0)
 mesh = SubResource("ArrayMesh_x61fv")
-skeleton = NodePath("")
 
-[node name="chair" type="Node3D" parent="AccountOffice"]
+[node name="chair" type="Node3D" parent="AccountOffice" unique_id=476076095]
 transform = Transform3D(0.0168857, 0, -1.4999, 0, 1.5, 0, 1.4999, 0, 0.0168857, 2.08261, -1.61991, -2.49632)
 
-[node name="modern_arm_chair_01" type="MeshInstance3D" parent="AccountOffice/chair"]
+[node name="modern_arm_chair_01" type="MeshInstance3D" parent="AccountOffice/chair" unique_id=139121700]
 mesh = SubResource("ArrayMesh_mm0sk")
 
-[node name="plant" type="Node3D" parent="AccountOffice"]
+[node name="plant" type="Node3D" parent="AccountOffice" unique_id=1805726678]
 transform = Transform3D(8, 0, 0, 0, 8, 0, 0, 0, 8, 3.93959, -1.48528, -4.02661)
 
-[node name="potted_plant_04_ground" type="MeshInstance3D" parent="AccountOffice/plant"]
+[node name="potted_plant_04_ground" type="MeshInstance3D" parent="AccountOffice/plant" unique_id=510668668]
 mesh = SubResource("ArrayMesh_te7n1")
 
-[node name="potted_plant_04_plant" type="MeshInstance3D" parent="AccountOffice/plant"]
+[node name="potted_plant_04_plant" type="MeshInstance3D" parent="AccountOffice/plant" unique_id=458465199]
 mesh = SubResource("ArrayMesh_mrdnv")
-skeleton = NodePath("")
 
-[node name="potted_plant_04_pot" type="MeshInstance3D" parent="AccountOffice/plant"]
+[node name="potted_plant_04_pot" type="MeshInstance3D" parent="AccountOffice/plant" unique_id=1403699354]
 mesh = SubResource("ArrayMesh_8dxuu")
 
-[node name="ChiefOffice" type="Node3D" parent="."]
+[node name="ChiefOffice" type="Node3D" parent="." unique_id=1846001561]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.8144, 1.5, 6.36414)
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
-[node name="chief_office" type="Node3D" parent="ChiefOffice"]
+[node name="chief_office" type="Node3D" parent="ChiefOffice" unique_id=828386607]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -1.5, 5)
 
-[node name="Walls" type="MeshInstance3D" parent="ChiefOffice/chief_office"]
+[node name="Walls" type="MeshInstance3D" parent="ChiefOffice/chief_office" unique_id=1596586558]
 transform = Transform3D(0.0254, 0, 0, 0, 0.0254, 0, 0, 0, 0.0254, 0, 0, 0)
 mesh = SubResource("ArrayMesh_n10m3")
-skeleton = NodePath("")
 
-[node name="Table" type="MeshInstance3D" parent="ChiefOffice/chief_office"]
+[node name="Table" type="MeshInstance3D" parent="ChiefOffice/chief_office" unique_id=1192434310]
 transform = Transform3D(0.0254, 0, 0, 0, 0.0254, 0, 0, 0, 0.0254, 0, 0, 0)
 mesh = SubResource("ArrayMesh_6ixjv")
-skeleton = NodePath("")
 
-[node name="Cabinet" type="MeshInstance3D" parent="ChiefOffice/chief_office"]
+[node name="Cabinet" type="MeshInstance3D" parent="ChiefOffice/chief_office" unique_id=92356820]
 transform = Transform3D(0.0254, 0, 0, 0, 0.0254, 0, 0, 0, 0.0254, 0, 0, 0)
 mesh = SubResource("ArrayMesh_4f3l5")
-skeleton = NodePath("")
 
-[node name="Cabinet2" type="MeshInstance3D" parent="ChiefOffice/chief_office/Cabinet"]
+[node name="Cabinet2" type="MeshInstance3D" parent="ChiefOffice/chief_office/Cabinet" unique_id=12405382]
 mesh = SubResource("ArrayMesh_77x8l")
-skeleton = NodePath("")
 
-[node name="Cabinet3" type="MeshInstance3D" parent="ChiefOffice/chief_office/Cabinet"]
+[node name="Cabinet3" type="MeshInstance3D" parent="ChiefOffice/chief_office/Cabinet" unique_id=571473972]
 mesh = SubResource("ArrayMesh_7ra2w")
-skeleton = NodePath("")
 
-[node name="Shelves1" type="MeshInstance3D" parent="ChiefOffice/chief_office"]
+[node name="Shelves1" type="MeshInstance3D" parent="ChiefOffice/chief_office" unique_id=938316434]
 transform = Transform3D(5.79404, 0, 0, 0, 1.4, 0, 0, 0, 2.8, 3.8, 0, -1)
 material_override = ExtResource("5_yjsda")
 mesh = SubResource("ArrayMesh_ejdsk")
-skeleton = NodePath("")
 
-[node name="ControlDoor" type="MeshInstance3D" parent="ChiefOffice/chief_office"]
+[node name="ControlDoor" type="MeshInstance3D" parent="ChiefOffice/chief_office" unique_id=89658665]
 transform = Transform3D(0.0254, 0, 0, 0, 0.0254, 0, 0, 0, 0.0254, 0.963839, 1.20467, 0.0499997)
 mesh = SubResource("ArrayMesh_gugvi")
-skeleton = NodePath("")
 
-[node name="group_1" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor"]
+[node name="group_1" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor" unique_id=12307343]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8147e-06, 0, 0)
 mesh = SubResource("ArrayMesh_dyt2d")
-skeleton = NodePath("")
 
-[node name="Display" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor"]
+[node name="Display" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor" unique_id=2071023811]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -37.9464, -47.4278, -1.96849)
 mesh = SubResource("ArrayMesh_cr4wr")
-skeleton = NodePath("")
 
-[node name="group_2" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor"]
+[node name="group_2" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor" unique_id=550140123]
 mesh = SubResource("ArrayMesh_lt6xd")
-skeleton = NodePath("")
 
-[node name="group_3" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor"]
+[node name="group_3" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor" unique_id=2091661099]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.787399, 0.787399, 0)
 mesh = SubResource("ArrayMesh_7swdb")
-skeleton = NodePath("")
 
-[node name="group_4" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor"]
+[node name="group_4" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor" unique_id=483499815]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 0.787399, 0.787411, -1.18109)
 mesh = SubResource("ArrayMesh_u30op")
-skeleton = NodePath("")
 
-[node name="group_5" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor"]
+[node name="group_5" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor" unique_id=1330440245]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.787399, 0.787418, 0)
 mesh = SubResource("ArrayMesh_nfpx1")
-skeleton = NodePath("")
 
-[node name="group_6" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor"]
+[node name="group_6" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor" unique_id=488352452]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 1.98964, 2.36223, 0)
 mesh = SubResource("ArrayMesh_ldrfb")
-skeleton = NodePath("")
 
-[node name="group_6_001" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor"]
+[node name="group_6_001" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor" unique_id=1089507759]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 1.98964, 2.36223, 0)
 mesh = SubResource("ArrayMesh_13ok7")
-skeleton = NodePath("")
 
-[node name="group_6_002" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor"]
+[node name="group_6_002" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor" unique_id=579756512]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 1.98964, 2.36223, 0)
 mesh = SubResource("ArrayMesh_o2425")
-skeleton = NodePath("")
 
-[node name="group_6_003" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor"]
+[node name="group_6_003" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor" unique_id=1335477387]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 1.98964, 2.36223, 0)
 mesh = SubResource("ArrayMesh_wuymu")
-skeleton = NodePath("")
 
-[node name="group_6_004" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor"]
+[node name="group_6_004" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor" unique_id=1121469812]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 1.98964, 2.36223, 0)
 mesh = SubResource("ArrayMesh_fr2le")
-skeleton = NodePath("")
 
-[node name="group_6_005" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor"]
+[node name="group_6_005" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor" unique_id=769388986]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 1.98964, 2.36223, 0)
 mesh = SubResource("ArrayMesh_fpna6")
-skeleton = NodePath("")
 
-[node name="group_6_006" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor"]
+[node name="group_6_006" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor" unique_id=503134235]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 1.98964, 2.36223, 0)
 mesh = SubResource("ArrayMesh_d1w40")
-skeleton = NodePath("")
 
-[node name="group_6_007" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor"]
+[node name="group_6_007" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor" unique_id=2115917356]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 1.98964, 2.36223, 0)
 mesh = SubResource("ArrayMesh_hkb80")
-skeleton = NodePath("")
 
-[node name="group_6_008" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor"]
+[node name="group_6_008" type="MeshInstance3D" parent="ChiefOffice/chief_office/ControlDoor" unique_id=1137032602]
 transform = Transform3D(1, 0, 0, 0, 0, -1, 0, 1, 0, 1.98964, 2.36223, 0)
 mesh = SubResource("ArrayMesh_vw11w")
-skeleton = NodePath("")
 
-[node name="Vault" type="MeshInstance3D" parent="ChiefOffice/chief_office"]
+[node name="Vault" type="MeshInstance3D" parent="ChiefOffice/chief_office" unique_id=1673745954]
 transform = Transform3D(0.0254, 0, 0, 0, 0.0254, 0, 0, 0, 0.0254, 3.71724, 1.48, -8.71093)
 mesh = SubResource("ArrayMesh_nsblr")
-skeleton = NodePath("")
 
-[node name="Vault" type="MeshInstance3D" parent="ChiefOffice/chief_office/Vault"]
+[node name="Vault" type="MeshInstance3D" parent="ChiefOffice/chief_office/Vault" unique_id=1929703509]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -146.348, -58.2677, 342.95)
 material_override = ExtResource("5_yjsda")
 mesh = SubResource("ArrayMesh_4p1xj")
-skeleton = NodePath("")
 
-[node name="Vault2" type="MeshInstance3D" parent="ChiefOffice/chief_office/Vault"]
+[node name="Vault2" type="MeshInstance3D" parent="ChiefOffice/chief_office/Vault" unique_id=1933160859]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -146.348, -58.2677, 342.95)
 material_override = ExtResource("5_yjsda")
 mesh = SubResource("ArrayMesh_vppcg")
-skeleton = NodePath("")
 
-[node name="Vault3" type="MeshInstance3D" parent="ChiefOffice/chief_office/Vault"]
+[node name="Vault3" type="MeshInstance3D" parent="ChiefOffice/chief_office/Vault" unique_id=1212897503]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -146.348, -58.2677, 342.95)
 material_override = ExtResource("5_yjsda")
 mesh = SubResource("ArrayMesh_uko1r")
-skeleton = NodePath("")
 
-[node name="Vault4" type="MeshInstance3D" parent="ChiefOffice/chief_office/Vault"]
+[node name="Vault4" type="MeshInstance3D" parent="ChiefOffice/chief_office/Vault" unique_id=1938380801]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -146.348, -58.2677, 342.95)
 material_override = ExtResource("5_yjsda")
 mesh = SubResource("ArrayMesh_14762")
-skeleton = NodePath("")
 
-[node name="Vault5" type="MeshInstance3D" parent="ChiefOffice/chief_office/Vault"]
+[node name="Vault5" type="MeshInstance3D" parent="ChiefOffice/chief_office/Vault" unique_id=761895683]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -146.348, -58.2677, 342.95)
 material_override = ExtResource("5_yjsda")
 mesh = SubResource("ArrayMesh_yb262")
-skeleton = NodePath("")
 
-[node name="Vault6" type="MeshInstance3D" parent="ChiefOffice/chief_office/Vault"]
+[node name="Vault6" type="MeshInstance3D" parent="ChiefOffice/chief_office/Vault" unique_id=1226255932]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -146.348, -58.2677, 342.95)
 material_override = ExtResource("5_yjsda")
 mesh = SubResource("ArrayMesh_7x38h")
-skeleton = NodePath("")
 
-[node name="Vault7" type="MeshInstance3D" parent="ChiefOffice/chief_office/Vault"]
+[node name="Vault7" type="MeshInstance3D" parent="ChiefOffice/chief_office/Vault" unique_id=1452902607]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -146.348, -58.2677, 342.95)
 material_override = ExtResource("5_yjsda")
 mesh = SubResource("ArrayMesh_u5q5p")
-skeleton = NodePath("")
 
-[node name="Vault8" type="MeshInstance3D" parent="ChiefOffice/chief_office/Vault"]
+[node name="Vault8" type="MeshInstance3D" parent="ChiefOffice/chief_office/Vault" unique_id=639693749]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -146.348, -58.2677, 342.95)
 material_override = ExtResource("5_yjsda")
 mesh = SubResource("ArrayMesh_xwarl")
-skeleton = NodePath("")
 
-[node name="chair2" type="Node3D" parent="ChiefOffice"]
+[node name="chair2" type="Node3D" parent="ChiefOffice" unique_id=1194569632]
 transform = Transform3D(0.952877, 0, -0.884322, 0, 1.3, 0, 0.884322, 0, 0.952877, 3.34254, -1.40485, -2.22561)
 
-[node name="modern_arm_chair_01" type="MeshInstance3D" parent="ChiefOffice/chair2"]
+[node name="modern_arm_chair_01" type="MeshInstance3D" parent="ChiefOffice/chair2" unique_id=188077846]
 mesh = SubResource("ArrayMesh_mm0sk")
 skeleton = NodePath("../../chair2")
 
-[node name="Storage" type="Node3D" parent="."]
+[node name="Storage" type="Node3D" parent="." unique_id=709630360]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.4579, 1.5, -9.67281)
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="storage" type="Node3D" parent="Storage"]
+[node name="storage" type="Node3D" parent="Storage" unique_id=1199714363]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -1.5, 5)
 
-[node name="SketchUp" type="Node3D" parent="Storage/storage"]
+[node name="SketchUp" type="Node3D" parent="Storage/storage" unique_id=1544781498]
 transform = Transform3D(0.0254, 0, 0, 0, 0.0254, 0, 0, 0, 0.0254, 0, 0, 0)
 
-[node name="instance_0_001" type="MeshInstance3D" parent="Storage/storage/SketchUp"]
+[node name="instance_0_001" type="MeshInstance3D" parent="Storage/storage/SketchUp" unique_id=329387204]
 mesh = SubResource("ArrayMesh_xi3oq")
-skeleton = NodePath("")
 
-[node name="Barrel_01_1k" parent="Storage" instance=ExtResource("9_16tik")]
+[node name="Barrel_01_1k" parent="Storage" unique_id=122670622 instance=ExtResource("9_16tik")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3.94847, -1.31117, -4.03906)
 
-[node name="Barrel_01_1k2" parent="Storage" instance=ExtResource("9_16tik")]
+[node name="Barrel_01_1k2" parent="Storage" unique_id=1691315613 instance=ExtResource("9_16tik")]
 transform = Transform3D(0.650641, 0, -1.89121, 0, 2, 0, 1.89121, 0, 0.650641, -3.94847, -1.31117, -2.54818)
 
-[node name="Barrel_02_1k" parent="Storage" instance=ExtResource("10_c4rph")]
+[node name="Barrel_02_1k" parent="Storage" unique_id=1365105210 instance=ExtResource("10_c4rph")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -3.10712, -1.52617, -3.28237)
 
-[node name="Barrel_01_1k3" parent="Storage" instance=ExtResource("9_16tik")]
+[node name="Barrel_01_1k3" parent="Storage" unique_id=1312834196 instance=ExtResource("9_16tik")]
 transform = Transform3D(1.43431, 0, 1.39383, 0, 2, 0, -1.39383, 0, 1.43431, -1.15971, -1.31117, 1.46839)
 
-[node name="Barrel_01_1k4" parent="Storage" instance=ExtResource("9_16tik")]
+[node name="Barrel_01_1k4" parent="Storage" unique_id=1743574539 instance=ExtResource("9_16tik")]
 transform = Transform3D(1.78462, 0, -0.902845, 0, 2, 0, 0.902845, 0, 1.78462, -0.12069, -1.31117, 2.53758)
 
-[node name="Barrel_02_1k11" parent="Storage" instance=ExtResource("10_c4rph")]
+[node name="Barrel_02_1k11" parent="Storage" unique_id=1200110540 instance=ExtResource("10_c4rph")]
 transform = Transform3D(1.43431, 0, 1.39383, 0, 2, 0, -1.39383, 0, 1.43431, -0.0289774, -1.52617, 1.4247)
 
-[node name="Barrel_02_1k2" parent="Storage" instance=ExtResource("10_c4rph")]
+[node name="Barrel_02_1k2" parent="Storage" unique_id=624764891 instance=ExtResource("10_c4rph")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0.376698, -1.52617, -3.87505)
 
-[node name="Barrel_02_1k3" parent="Storage" instance=ExtResource("10_c4rph")]
+[node name="Barrel_02_1k3" parent="Storage" unique_id=2076406773 instance=ExtResource("10_c4rph")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.888824, -1.52617, -3.87505)
 
-[node name="Barrel_02_1k4" parent="Storage" instance=ExtResource("10_c4rph")]
+[node name="Barrel_02_1k4" parent="Storage" unique_id=1692298880 instance=ExtResource("10_c4rph")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.338041, -1.52617, -3.09323)
 
-[node name="Barrel_02_1k5" parent="Storage" instance=ExtResource("10_c4rph")]
+[node name="Barrel_02_1k5" parent="Storage" unique_id=1575290223 instance=ExtResource("10_c4rph")]
 transform = Transform3D(0.968917, 0, -1.74963, 0, 2, 0, 1.74963, 0, 0.968917, -0.457254, -1.52617, 3.98722)
 
-[node name="Barrel_02_1k6" parent="Storage" instance=ExtResource("10_c4rph")]
+[node name="Barrel_02_1k6" parent="Storage" unique_id=1437197953 instance=ExtResource("10_c4rph")]
 transform = Transform3D(0.968917, 0, -1.74963, 0, 2, 0, 1.74963, 0, 0.968917, -1.07035, -1.52617, 2.88012)
 
-[node name="Barrel_02_1k7" parent="Storage" instance=ExtResource("10_c4rph")]
+[node name="Barrel_02_1k7" parent="Storage" unique_id=351001901 instance=ExtResource("10_c4rph")]
 transform = Transform3D(0.968917, 0, -1.74963, 0, 2, 0, 1.74963, 0, 0.968917, -1.48746, -1.52617, 3.74072)
 
-[node name="Barrel_02_1k8" parent="Storage" instance=ExtResource("10_c4rph")]
+[node name="Barrel_02_1k8" parent="Storage" unique_id=1595023636 instance=ExtResource("10_c4rph")]
 transform = Transform3D(0.968917, 0, -1.74963, 0, 2, 0, 1.74963, 0, 0.968917, 3.84579, -1.52617, 1.78115)
 
-[node name="Barrel_02_1k9" parent="Storage" instance=ExtResource("10_c4rph")]
+[node name="Barrel_02_1k9" parent="Storage" unique_id=403885447 instance=ExtResource("10_c4rph")]
 transform = Transform3D(0.968917, 0, -1.74963, 0, 2, 0, 1.74963, 0, 0.968917, 3.2327, -1.52617, 0.674049)
 
-[node name="Barrel_02_1k10" parent="Storage" instance=ExtResource("10_c4rph")]
+[node name="Barrel_02_1k10" parent="Storage" unique_id=1884538965 instance=ExtResource("10_c4rph")]
 transform = Transform3D(0.968917, 0, -1.74963, 0, 2, 0, 1.74963, 0, 0.968917, 2.81558, -1.52617, 1.53464)
 
-[node name="Bedroom" type="Node3D" parent="."]
+[node name="Bedroom" type="Node3D" parent="." unique_id=566337983]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.55582, 1.5, 6.25173)
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="bedroom" type="Node3D" parent="Bedroom"]
+[node name="bedroom" type="Node3D" parent="Bedroom" unique_id=492220951]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -1.5, 5)
 
-[node name="SketchUp" type="Node3D" parent="Bedroom/bedroom"]
+[node name="SketchUp" type="Node3D" parent="Bedroom/bedroom" unique_id=1125209644]
 transform = Transform3D(0.0254, 0, 0, 0, 0.0254, 0, 0, 0, 0.0254, 0, 0, 0)
 
-[node name="instance_0_001" type="MeshInstance3D" parent="Bedroom/bedroom/SketchUp"]
+[node name="instance_0_001" type="MeshInstance3D" parent="Bedroom/bedroom/SketchUp" unique_id=1340873847]
 mesh = SubResource("ArrayMesh_uid22")
-skeleton = NodePath("")
 
-[node name="instance_0_002" type="MeshInstance3D" parent="Bedroom/bedroom/SketchUp"]
+[node name="instance_0_002" type="MeshInstance3D" parent="Bedroom/bedroom/SketchUp" unique_id=1716874264]
 mesh = SubResource("ArrayMesh_podt2")
-skeleton = NodePath("")
 
-[node name="instance_0_003" type="MeshInstance3D" parent="Bedroom/bedroom/SketchUp"]
+[node name="instance_0_003" type="MeshInstance3D" parent="Bedroom/bedroom/SketchUp" unique_id=822536104]
 mesh = SubResource("ArrayMesh_clinc")
-skeleton = NodePath("")
 
-[node name="instance_1_001" type="MeshInstance3D" parent="Bedroom/bedroom/SketchUp"]
+[node name="instance_1_001" type="MeshInstance3D" parent="Bedroom/bedroom/SketchUp" unique_id=154703040]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.847, 0, -9.44882)
 mesh = SubResource("ArrayMesh_xb3bj")
-skeleton = NodePath("")
 
-[node name="instance_1_003" type="MeshInstance3D" parent="Bedroom/bedroom/SketchUp"]
+[node name="instance_1_003" type="MeshInstance3D" parent="Bedroom/bedroom/SketchUp" unique_id=1333203782]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.847, 0, -9.44882)
 mesh = SubResource("ArrayMesh_wc52x")
-skeleton = NodePath("")
 
-[node name="instance_1_004" type="MeshInstance3D" parent="Bedroom/bedroom/SketchUp"]
+[node name="instance_1_004" type="MeshInstance3D" parent="Bedroom/bedroom/SketchUp" unique_id=1947546373]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.847, 0, -9.44882)
 mesh = SubResource("ArrayMesh_oqo6x")
-skeleton = NodePath("")
 
-[node name="sofa_02_1k" parent="Bedroom" instance=ExtResource("12_77x8l")]
+[node name="sofa_02_1k" parent="Bedroom" unique_id=365233199 instance=ExtResource("12_77x8l")]
 transform = Transform3D(1.49999, 0, -0.00615225, 0, 1.5, 0, 0.00615225, 0, 1.49999, 2.93925, -1.47205, 1.23028)
 
-[node name="SafeRoom" type="Node3D" parent="."]
+[node name="SafeRoom" type="Node3D" parent="." unique_id=1838597342]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.5728, 1.5, -9.68023)
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
-[node name="saferoom" type="Node3D" parent="SafeRoom"]
+[node name="saferoom" type="Node3D" parent="SafeRoom" unique_id=333542612]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -1.5, 5)
 
-[node name="SketchUp" type="Node3D" parent="SafeRoom/saferoom"]
+[node name="SketchUp" type="Node3D" parent="SafeRoom/saferoom" unique_id=596740702]
 transform = Transform3D(0.0254, 0, 0, 0, 0.0254, 0, 0, 0, 0.0254, 0, 0, 0)
 
-[node name="instance_1" type="MeshInstance3D" parent="SafeRoom/saferoom/SketchUp"]
+[node name="instance_1" type="MeshInstance3D" parent="SafeRoom/saferoom/SketchUp" unique_id=890682912]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 mesh = SubResource("ArrayMesh_2moyd")
 
-[node name="instance_1_002" type="MeshInstance3D" parent="SafeRoom/saferoom/SketchUp"]
+[node name="instance_1_002" type="MeshInstance3D" parent="SafeRoom/saferoom/SketchUp" unique_id=1570255517]
 mesh = SubResource("ArrayMesh_k4gmh")
 
-[node name="blend_export" parent="SafeRoom" instance=ExtResource("15_0nhi8")]
+[node name="blend_export" parent="SafeRoom" unique_id=365980196 instance=ExtResource("15_0nhi8")]
 transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -3.11967, -1.50299, -3.23388)
 
-[node name="blend_export2" parent="SafeRoom" instance=ExtResource("15_0nhi8")]
+[node name="blend_export2" parent="SafeRoom" unique_id=188141046 instance=ExtResource("15_0nhi8")]
 transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -3.45924, -1.50299, -1.91433)
 
-[node name="blend_export3" parent="SafeRoom" instance=ExtResource("15_0nhi8")]
+[node name="blend_export3" parent="SafeRoom" unique_id=1160516449 instance=ExtResource("15_0nhi8")]
 transform = Transform3D(12, 0, 0, 0, 12, 0, 0, 0, 12, -2.35383, -1.50299, -2.38105)
 
-[node name="blend_export4" parent="SafeRoom" instance=ExtResource("15_0nhi8")]
+[node name="blend_export4" parent="SafeRoom" unique_id=1764574201 instance=ExtResource("15_0nhi8")]
 transform = Transform3D(2.14563, 0, 11.8066, 0, 12, 0, -11.8066, 0, 2.14563, 2.40037, -1.50299, -0.467391)
 
-[node name="blend_export5" parent="SafeRoom" instance=ExtResource("15_0nhi8")]
+[node name="blend_export5" parent="SafeRoom" unique_id=415825589 instance=ExtResource("15_0nhi8")]
 transform = Transform3D(2.14563, 0, 11.8066, 0, 12, 0, -11.8066, 0, 2.14563, 3.63793, -1.50299, 0.102647)
 
-[node name="blend_export6" parent="SafeRoom" instance=ExtResource("15_0nhi8")]
+[node name="blend_export6" parent="SafeRoom" unique_id=48145916 instance=ExtResource("15_0nhi8")]
 transform = Transform3D(2.14563, 0, 11.8066, 0, 12, 0, -11.8066, 0, 2.14563, 3.37638, -1.50299, -1.06839)
 
-[node name="blend_export7" parent="SafeRoom" instance=ExtResource("15_0nhi8")]
+[node name="blend_export7" parent="SafeRoom" unique_id=628624397 instance=ExtResource("15_0nhi8")]
 transform = Transform3D(-10.7369, 0, 5.35906, 0, 12, 0, -5.35906, 0, -10.7369, -3.37435, -1.50299, 0.468072)
 
-[node name="blend_export8" parent="SafeRoom" instance=ExtResource("15_0nhi8")]
+[node name="blend_export8" parent="SafeRoom" unique_id=1303441120 instance=ExtResource("15_0nhi8")]
 transform = Transform3D(-10.7369, 0, 5.35906, 0, 12, 0, -5.35906, 0, -10.7369, -2.48123, -1.50299, -0.560928)
 
-[node name="blend_export9" parent="SafeRoom" instance=ExtResource("15_0nhi8")]
+[node name="blend_export9" parent="SafeRoom" unique_id=668615234 instance=ExtResource("15_0nhi8")]
 transform = Transform3D(-10.7369, 0, 5.35906, 0, 12, 0, -5.35906, 0, -10.7369, -3.67871, -1.50299, -0.636992)
 
-[node name="blend_export10" parent="SafeRoom" instance=ExtResource("15_0nhi8")]
+[node name="blend_export10" parent="SafeRoom" unique_id=1363063771 instance=ExtResource("15_0nhi8")]
 transform = Transform3D(-11.8773, 0, -1.71196, 0, 12, 0, 1.71196, 0, -11.8773, 3.48242, -1.50299, -2.3146)
 
-[node name="blend_export11" parent="SafeRoom" instance=ExtResource("15_0nhi8")]
+[node name="blend_export11" parent="SafeRoom" unique_id=1738775004 instance=ExtResource("15_0nhi8")]
 transform = Transform3D(-11.8773, 0, -1.71196, 0, 12, 0, 1.71196, 0, -11.8773, 3.63027, -1.50299, -3.6691)
 
-[node name="blend_export12" parent="SafeRoom" instance=ExtResource("15_0nhi8")]
+[node name="blend_export12" parent="SafeRoom" unique_id=103475409 instance=ExtResource("15_0nhi8")]
 transform = Transform3D(-11.8773, 0, -1.71196, 0, 12, 0, 1.71196, 0, -11.8773, 2.60276, -1.50299, -3.04945)
 
-[node name="Kitchen" type="Node3D" parent="."]
+[node name="Kitchen" type="Node3D" parent="." unique_id=2145107833]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.671, 1.5, 6.244)
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
-[node name="kitchen_blender" type="Node3D" parent="Kitchen"]
+[node name="kitchen_blender" type="Node3D" parent="Kitchen" unique_id=17759830]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -1.5, 5)
 
-[node name="Cube" type="MeshInstance3D" parent="Kitchen/kitchen_blender"]
+[node name="Cube" type="MeshInstance3D" parent="Kitchen/kitchen_blender" unique_id=1127086402]
 transform = Transform3D(0.9, 0, 0, 0, 0.490966, 0, 0, 0, 0.490966, 5.1, 0.516323, -9.3)
 material_override = ExtResource("5_yjsda")
 mesh = SubResource("ArrayMesh_bypsp")
-skeleton = NodePath("")
 
-[node name="SketchUp_001" type="MeshInstance3D" parent="Kitchen/kitchen_blender"]
+[node name="SketchUp_001" type="MeshInstance3D" parent="Kitchen/kitchen_blender" unique_id=1166994171]
 transform = Transform3D(0.0254, 0, 0, 0, 0.0254, 0, 0, 0, 0.0254, 0, 0, 0)
 mesh = SubResource("ArrayMesh_vnu57")
-skeleton = NodePath("")
 
-[node name="CoffeeCart_01_1k" parent="Kitchen" instance=ExtResource("16_7ra2w")]
+[node name="CoffeeCart_01_1k" parent="Kitchen" unique_id=163013829 instance=ExtResource("16_7ra2w")]
 transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 2.82587, -1.7806, -4.52846)
 
-[node name="electric_stove_1k" parent="Kitchen" instance=ExtResource("17_4p1xj")]
+[node name="electric_stove_1k" parent="Kitchen" unique_id=1321278451 instance=ExtResource("17_4p1xj")]
 transform = Transform3D(4, 0, 0, 0, 2, 0, 0, 0, 2, -2.97686, -1.50196, -4.19733)
 
-[node name="Misc" type="Node3D" parent="."]
+[node name="Misc" type="Node3D" parent="." unique_id=1842785906]
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
-[node name="AccOffice" type="Node3D" parent="Misc"]
+[node name="AccOffice" type="Node3D" parent="Misc" unique_id=1528642050]
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="Ground" type="MeshInstance3D" parent="Misc/AccOffice"]
+[node name="Ground" type="MeshInstance3D" parent="Misc/AccOffice" unique_id=170789978]
 transform = Transform3D(-1.11027e-09, 0, -0.0254, 0, 0.0254, 0, 0.0254, 0, -1.11027e-09, 5.764, 0.1, -14.871)
 mesh = SubResource("ArrayMesh_teeo5")
-skeleton = NodePath("")
 
-[node name="Door" type="MeshInstance3D" parent="Misc/AccOffice"]
+[node name="Door" type="MeshInstance3D" parent="Misc/AccOffice" unique_id=1449783215]
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 15.6898, 1.05, -13.2889)
 visible = false
 mesh = SubResource("ArrayMesh_1c3ww")
-skeleton = NodePath("")
 
-[node name="Handle_Back" type="MeshInstance3D" parent="Misc/AccOffice/Door"]
+[node name="Handle_Back" type="MeshInstance3D" parent="Misc/AccOffice/Door" unique_id=2031050382]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.776, 0, -0.00665026)
 mesh = SubResource("ArrayMesh_ls1s0")
-skeleton = NodePath("")
 
-[node name="Handle_Front" type="MeshInstance3D" parent="Misc/AccOffice/Door"]
+[node name="Handle_Front" type="MeshInstance3D" parent="Misc/AccOffice/Door" unique_id=762421147]
 transform = Transform3D(1, 0, 0, 0, -1, 8.74228e-08, 0, -8.74228e-08, -1, -1.776, 0, -0.0230001)
 mesh = SubResource("ArrayMesh_dm426")
-skeleton = NodePath("")
 
-[node name="DoorFrame" type="MeshInstance3D" parent="Misc/AccOffice"]
+[node name="DoorFrame" type="MeshInstance3D" parent="Misc/AccOffice" unique_id=502146133]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 15.664, 0, -12.371)
 mesh = SubResource("ArrayMesh_4igv5")
-skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Misc/AccOffice"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Misc/AccOffice" unique_id=1755867803]
 transform = Transform3D(-1.11027e-09, 0, -0.0254, 0, 0.0254, 0, 0.0254, 0, -1.11027e-09, 5.764, 0, -14.871)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Misc/AccOffice/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Misc/AccOffice/StaticBody3D" unique_id=1017804117]
 shape = SubResource("ConcavePolygonShape3D_nk103")
 
-[node name="CollisionShape3D5" type="CollisionShape3D" parent="Misc/AccOffice/StaticBody3D"]
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Misc/AccOffice/StaticBody3D" unique_id=7792606]
 transform = Transform3D(157.48, 0, 1.64846e-12, 0, 54.6732, 0, -2.27374e-12, 0, 114.173, 228.346, 0, -39.3701)
 shape = SubResource("ConcavePolygonShape3D_b0j03")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Misc/AccOffice/StaticBody3D"]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Misc/AccOffice/StaticBody3D" unique_id=881631185]
 transform = Transform3D(108.198, 0, 1.81899e-12, 0, 57.0866, 0, -1.81899e-12, 0, 114.173, 7.87402, 0, -39.3701)
 shape = SubResource("ConcavePolygonShape3D_77x8l")
 
-[node name="CollisionShape3D6" type="CollisionShape3D" parent="Misc/AccOffice/StaticBody3D"]
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Misc/AccOffice/StaticBody3D" unique_id=445736927]
 transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_0nhi8")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Misc/AccOffice/StaticBody3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Misc/AccOffice/StaticBody3D" unique_id=1801854132]
 transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_7ra2w")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Misc/AccOffice/StaticBody3D"]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Misc/AccOffice/StaticBody3D" unique_id=652667175]
 transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_4p1xj")
 
-[node name="CollisionShape3D7" type="CollisionShape3D" parent="Misc/AccOffice/StaticBody3D"]
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Misc/AccOffice/StaticBody3D" unique_id=1946821596]
 transform = Transform3D(1, 0, 1.42109e-14, 0, 1, 0, -1.42109e-14, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_vppcg")
 
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="Misc/AccOffice/StaticBody3D"]
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Misc/AccOffice/StaticBody3D" unique_id=618456047]
 transform = Transform3D(1.00002, 0, -5.79092e-13, 0, 1.00002, 0, 5.79092e-13, 0, 1.00002, 320.722, 51.003, -329.885)
 shape = SubResource("BoxShape3D_16tik")
 
-[node name="Television_01_1k" type="Node3D" parent="Misc/AccOffice"]
+[node name="Television_01_1k" type="Node3D" parent="Misc/AccOffice" unique_id=1054058705]
 transform = Transform3D(1.41794, 0, -1.41048, 0, 2, 0, 1.41048, 0, 1.41794, 14.6346, 1.02552, -9.20477)
 
-[node name="Television_01" type="MeshInstance3D" parent="Misc/AccOffice/Television_01_1k"]
+[node name="Television_01" type="MeshInstance3D" parent="Misc/AccOffice/Television_01_1k" unique_id=40824041]
 mesh = SubResource("ArrayMesh_0rsp8")
 
-[node name="potted_plant_04_1k2" type="Node3D" parent="Misc/AccOffice"]
+[node name="potted_plant_04_1k2" type="Node3D" parent="Misc/AccOffice" unique_id=694903998]
 transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, 6.54689, 1.36696, -11.4341)
 
-[node name="potted_plant_04_ground" type="MeshInstance3D" parent="Misc/AccOffice/potted_plant_04_1k2"]
+[node name="potted_plant_04_ground" type="MeshInstance3D" parent="Misc/AccOffice/potted_plant_04_1k2" unique_id=1981768794]
 mesh = SubResource("ArrayMesh_te7n1")
 
-[node name="potted_plant_04_plant" type="MeshInstance3D" parent="Misc/AccOffice/potted_plant_04_1k2"]
+[node name="potted_plant_04_plant" type="MeshInstance3D" parent="Misc/AccOffice/potted_plant_04_1k2" unique_id=1167317059]
 mesh = SubResource("ArrayMesh_mrdnv")
-skeleton = NodePath("")
 
-[node name="potted_plant_04_pot" type="MeshInstance3D" parent="Misc/AccOffice/potted_plant_04_1k2"]
+[node name="potted_plant_04_pot" type="MeshInstance3D" parent="Misc/AccOffice/potted_plant_04_1k2" unique_id=1378214790]
 mesh = SubResource("ArrayMesh_8dxuu")
 
-[node name="ChiefOffice" type="Node3D" parent="Misc"]
+[node name="ChiefOffice" type="Node3D" parent="Misc" unique_id=1602405679]
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
-[node name="DoorFrame" type="MeshInstance3D" parent="Misc/ChiefOffice"]
+[node name="DoorFrame" type="MeshInstance3D" parent="Misc/ChiefOffice" unique_id=1924677732]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 5.9, 0, 3.85)
 mesh = SubResource("ArrayMesh_4igv5")
-skeleton = NodePath("")
 
-[node name="Floor" type="MeshInstance3D" parent="Misc/ChiefOffice"]
+[node name="Floor" type="MeshInstance3D" parent="Misc/ChiefOffice" unique_id=1108196675]
 transform = Transform3D(-1.11027e-09, 0, -0.0254, 0, 0.0254, 0, 0.0254, 0, -1.11027e-09, 5.8144, 0.1, 1.36414)
 mesh = SubResource("ArrayMesh_7fapf")
-skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Misc/ChiefOffice"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Misc/ChiefOffice" unique_id=1083921995]
 transform = Transform3D(-1.11027e-09, 0, -0.0254, 0, 0.0254, 0, 0.0254, 0, -1.11027e-09, 5.8144, 0, 1.36414)
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Misc/ChiefOffice/StaticBody3D"]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Misc/ChiefOffice/StaticBody3D" unique_id=583000150]
 shape = SubResource("ConcavePolygonShape3D_u5q5p")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Misc/ChiefOffice/StaticBody3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Misc/ChiefOffice/StaticBody3D" unique_id=479862136]
 shape = SubResource("ConcavePolygonShape3D_ctn0t")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Misc/ChiefOffice/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Misc/ChiefOffice/StaticBody3D" unique_id=1661945361]
 shape = SubResource("ConcavePolygonShape3D_16tik")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Misc/ChiefOffice/StaticBody3D"]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Misc/ChiefOffice/StaticBody3D" unique_id=2035458135]
 transform = Transform3D(228.112, 0, 0, 0, 55.1181, 0, 0, 0, 110.236, 149.606, 0, -39.3701)
 shape = SubResource("ConcavePolygonShape3D_c4rph")
 
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="Misc/ChiefOffice/StaticBody3D"]
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Misc/ChiefOffice/StaticBody3D" unique_id=596372646]
 transform = Transform3D(1.00002, 0, -5.79092e-13, 0, 1.00002, 0, 5.79092e-13, 0, 1.00002, 325.936, 51.003, -288.642)
 shape = SubResource("BoxShape3D_c4rph")
 
-[node name="Television_01_1k" parent="Misc/ChiefOffice" instance=ExtResource("4_vppcg")]
+[node name="Television_01_1k" parent="Misc/ChiefOffice" unique_id=164982111 instance=ExtResource("4_vppcg")]
 transform = Transform3D(1.49783, 0, -0.0805694, 0, 1.5, 0, 0.0805694, 0, 1.49783, 13.1978, 1.18165, 7.92024)
 
-[node name="marble_bust_01_1k" parent="Misc/ChiefOffice" instance=ExtResource("8_ctn0t")]
+[node name="marble_bust_01_1k" parent="Misc/ChiefOffice" unique_id=564941439 instance=ExtResource("8_ctn0t")]
 transform = Transform3D(1.55128, 0, -1.26235, 0, 2, 0, 1.26235, 0, 1.55128, 14.9508, 1.96158, 2.63927)
 
-[node name="marble_bust_01_1k2" parent="Misc/ChiefOffice" instance=ExtResource("8_ctn0t")]
+[node name="marble_bust_01_1k2" parent="Misc/ChiefOffice" unique_id=1166374163 instance=ExtResource("8_ctn0t")]
 transform = Transform3D(-0.875675, 0, 1.79811, 0, 2, 0, -1.79811, 0, -0.875675, 14.9508, 1.96158, 3.83685)
 
-[node name="marble_bust_01_1k3" parent="Misc/ChiefOffice" instance=ExtResource("8_ctn0t")]
+[node name="marble_bust_01_1k3" parent="Misc/ChiefOffice" unique_id=422241959 instance=ExtResource("8_ctn0t")]
 transform = Transform3D(1.71717, 0, 1.02534, 0, 2, 0, -1.02534, 0, 1.71717, 14.9508, 1.96158, 4.96743)
 
-[node name="Storage" type="Node3D" parent="Misc"]
+[node name="Storage" type="Node3D" parent="Misc" unique_id=2030821421]
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="DoorFrame" type="MeshInstance3D" parent="Misc/Storage"]
+[node name="DoorFrame" type="MeshInstance3D" parent="Misc/Storage" unique_id=2055071759]
 transform = Transform3D(1, 0, -4.37114e-08, 0, 1, 0, 4.37114e-08, 0, 1, -0.965017, 0, -4.75127)
 mesh = SubResource("ArrayMesh_d3ax4")
-skeleton = NodePath("")
 
-[node name="Floor" type="MeshInstance3D" parent="Misc/Storage"]
+[node name="Floor" type="MeshInstance3D" parent="Misc/Storage" unique_id=1508513402]
 transform = Transform3D(-1.11027e-09, 0, -0.0254, 0, 0.0254, 0, 0.0254, 0, -1.11027e-09, -8.458, 0.1, -14.673)
 mesh = SubResource("ArrayMesh_jm2qm")
-skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Misc/Storage"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Misc/Storage" unique_id=2050318040]
 transform = Transform3D(-1.11027e-09, 0, -0.0254, 0, 0.0254, 0, 0.0254, 0, -1.11027e-09, -8.4579, 0, -14.6728)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Misc/Storage/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Misc/Storage/StaticBody3D" unique_id=525874371]
 shape = SubResource("ConcavePolygonShape3D_4f3l5")
 
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="Misc/Storage/StaticBody3D"]
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Misc/Storage/StaticBody3D" unique_id=2141807310]
 transform = Transform3D(1.00002, 0, -5.79092e-13, 0, 1.00002, 0, 5.79092e-13, 0, 1.00002, 337.464, 51.003, -146.916)
 shape = SubResource("BoxShape3D_l1fsx")
 
-[node name="CollisionShape3D9" type="CollisionShape3D" parent="Misc/Storage/StaticBody3D"]
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Misc/Storage/StaticBody3D" unique_id=760736713]
 transform = Transform3D(1.00002, 0, -5.79092e-13, 0, 1.00002, 0, 5.79092e-13, 0, 1.00002, 167.214, 51.003, -82.9861)
 shape = SubResource("BoxShape3D_rbtqc")
 
-[node name="CollisionShape3D10" type="CollisionShape3D" parent="Misc/Storage/StaticBody3D"]
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="Misc/Storage/StaticBody3D" unique_id=1815616341]
 transform = Transform3D(1.00002, 0, -5.79092e-13, 0, 1.00002, 0, 5.79092e-13, 0, 1.00002, 187.064, 51.003, -332.734)
 shape = SubResource("BoxShape3D_nokcj")
 
-[node name="CollisionShape3D11" type="CollisionShape3D" parent="Misc/Storage/StaticBody3D"]
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="Misc/Storage/StaticBody3D" unique_id=602808987]
 transform = Transform3D(1.00002, 0, -5.79092e-13, 0, 1.00002, 0, 5.79092e-13, 0, 1.00002, 55.4174, 51.003, -326.751)
 shape = SubResource("BoxShape3D_2moyd")
 
-[node name="Bedroom" type="Node3D" parent="Misc"]
+[node name="Bedroom" type="Node3D" parent="Misc" unique_id=933448447]
 metadata/_edit_lock_ = true
 metadata/_edit_group_ = true
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Misc/Bedroom"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Misc/Bedroom" unique_id=595959151]
 transform = Transform3D(-1.11027e-09, 0, -0.0254, 0, 0.0254, 0, 0.0254, 0, -1.11027e-09, -8.31582, 0, 1.90824)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Misc/Bedroom/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Misc/Bedroom/StaticBody3D" unique_id=423317476]
 shape = SubResource("ConcavePolygonShape3D_xwsbe")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Misc/Bedroom/StaticBody3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Misc/Bedroom/StaticBody3D" unique_id=1650302005]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, -25.847, 0, 9.44879)
 shape = SubResource("ConcavePolygonShape3D_7fapf")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Misc/Bedroom/StaticBody3D"]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Misc/Bedroom/StaticBody3D" unique_id=788007807]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, -25.847, 0, 9.44879)
 shape = SubResource("ConcavePolygonShape3D_k4gmh")
 
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="Misc/Bedroom/StaticBody3D"]
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Misc/Bedroom/StaticBody3D" unique_id=2113380427]
 transform = Transform3D(1.00002, 0, -5.79092e-13, 0, 1.00002, 0, 5.79092e-13, 0, 1.00002, 296.758, 51.0031, -142.395)
 shape = SubResource("BoxShape3D_mm0sk")
 
-[node name="Floor" type="MeshInstance3D" parent="Misc/Bedroom"]
+[node name="Floor" type="MeshInstance3D" parent="Misc/Bedroom" unique_id=1011843098]
 transform = Transform3D(-1.11027e-09, 0, -0.0254, 0, 0.0254, 0, 0.0254, 0, -1.11027e-09, -8.556, 0.1, 1.252)
 mesh = SubResource("ArrayMesh_b0j03")
-skeleton = NodePath("")
 
-[node name="DoorFrame" type="MeshInstance3D" parent="Misc/Bedroom"]
+[node name="DoorFrame" type="MeshInstance3D" parent="Misc/Bedroom" unique_id=1924962207]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.34703, 0, 6.25278)
 mesh = SubResource("ArrayMesh_eo0fg")
-skeleton = NodePath("")
 
-[node name="Television_01_1k" parent="Misc/Bedroom" instance=ExtResource("4_vppcg")]
+[node name="Television_01_1k" parent="Misc/Bedroom" unique_id=467101725 instance=ExtResource("4_vppcg")]
 transform = Transform3D(-0.0846944, 0.737597, 1.45334, 0.0214829, 2.90791, -0.368642, -2.99873, 0, -0.0436882, -8.35232, 1.9037, 9.39896)
 
-[node name="Safe" type="Node3D" parent="Misc"]
+[node name="Safe" type="Node3D" parent="Misc" unique_id=1629940972]
 metadata/_edit_group_ = true
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Misc/Safe"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Misc/Safe" unique_id=1429355053]
 transform = Transform3D(-1.11027e-09, 0, -0.0254, 0, 0.0254, 0, 0.0254, 0, -1.11027e-09, -18.5728, 0, -14.6802)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Misc/Safe/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Misc/Safe/StaticBody3D" unique_id=176494129]
 shape = SubResource("ConcavePolygonShape3D_l1fsx")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="Misc/Safe/StaticBody3D"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Misc/Safe/StaticBody3D" unique_id=1867291386]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_rbtqc")
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="Misc/Safe/StaticBody3D"]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Misc/Safe/StaticBody3D" unique_id=1425776734]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_nokcj")
 
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="Misc/Safe/StaticBody3D"]
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Misc/Safe/StaticBody3D" unique_id=96455460]
 transform = Transform3D(1.00002, 0, -5.79092e-13, 0, 1.00002, 0, 5.79092e-13, 0, 1.00002, 319.68, 51.003, -268.057)
 shape = SubResource("BoxShape3D_te7n1")
 
-[node name="CollisionShape3D9" type="CollisionShape3D" parent="Misc/Safe/StaticBody3D"]
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Misc/Safe/StaticBody3D" unique_id=17070134]
 transform = Transform3D(1.00002, 0, -1.05516e-12, 0, 1.00002, 0, 1.05516e-12, 0, 1.00002, 72.838, 51.003, -199.807)
 shape = SubResource("BoxShape3D_iwwl6")
 
-[node name="Door" type="Node3D" parent="Misc/Safe"]
+[node name="Door" type="Node3D" parent="Misc/Safe" unique_id=1551711892]
 transform = Transform3D(-1.11027e-09, 0, -0.0254, 0, 0.0254, 0, 0.0254, 0, -1.11027e-09, -18.5728, 0, -7.18023)
 visible = false
 
-[node name="instance_0_006" type="MeshInstance3D" parent="Misc/Safe/Door"]
+[node name="instance_0_006" type="MeshInstance3D" parent="Misc/Safe/Door" unique_id=1701902125]
 transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, 0, -98)
 mesh = SubResource("ArrayMesh_l1fsx")
 
-[node name="instance_0_007" type="MeshInstance3D" parent="Misc/Safe/Door/instance_0_006"]
+[node name="instance_0_007" type="MeshInstance3D" parent="Misc/Safe/Door/instance_0_006" unique_id=1783522166]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 material_override = ExtResource("14_b0j03")
 mesh = SubResource("ArrayMesh_g1a7m")
-skeleton = NodePath("")
 
-[node name="instance_0_008" type="MeshInstance3D" parent="Misc/Safe/Door/instance_0_006"]
+[node name="instance_0_008" type="MeshInstance3D" parent="Misc/Safe/Door/instance_0_006" unique_id=966708846]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 material_override = ExtResource("14_b0j03")
 mesh = SubResource("ArrayMesh_65hwh")
-skeleton = NodePath("")
 
-[node name="instance_0_009" type="MeshInstance3D" parent="Misc/Safe/Door/instance_0_006"]
+[node name="instance_0_009" type="MeshInstance3D" parent="Misc/Safe/Door/instance_0_006" unique_id=591542575]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 material_override = ExtResource("14_b0j03")
 mesh = SubResource("ArrayMesh_2rs38")
-skeleton = NodePath("")
 
-[node name="instance_0_010" type="MeshInstance3D" parent="Misc/Safe/Door/instance_0_006"]
+[node name="instance_0_010" type="MeshInstance3D" parent="Misc/Safe/Door/instance_0_006" unique_id=2058586180]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 material_override = ExtResource("14_b0j03")
 mesh = SubResource("ArrayMesh_pyjk3")
-skeleton = NodePath("")
 
-[node name="instance_0_011" type="MeshInstance3D" parent="Misc/Safe/Door/instance_0_006"]
+[node name="instance_0_011" type="MeshInstance3D" parent="Misc/Safe/Door/instance_0_006" unique_id=307121654]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 material_override = ExtResource("14_b0j03")
 mesh = SubResource("ArrayMesh_3q0ae")
-skeleton = NodePath("")
 
-[node name="Kitchen" type="Node3D" parent="Misc"]
+[node name="Kitchen" type="Node3D" parent="Misc" unique_id=1381819295]
 metadata/_edit_group_ = true
 metadata/_edit_lock_ = true
 
-[node name="Door_Group" type="Node3D" parent="Misc/Kitchen"]
+[node name="Door_Group" type="Node3D" parent="Misc/Kitchen" unique_id=485002028]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -18.571, 0, 6.244)
 
-[node name="DoorFrame" type="MeshInstance3D" parent="Misc/Kitchen/Door_Group"]
+[node name="DoorFrame" type="MeshInstance3D" parent="Misc/Kitchen/Door_Group" unique_id=673218763]
 mesh = SubResource("ArrayMesh_jyma3")
-skeleton = NodePath("")
 
-[node name="Door_Group_001" type="Node3D" parent="Misc/Kitchen"]
+[node name="Door_Group_001" type="Node3D" parent="Misc/Kitchen" unique_id=1721782260]
 transform = Transform3D(-1, 0, 4.37114e-08, 0, 1, 0, -4.37114e-08, 0, -1, -13.671, 0, 1.344)
 
-[node name="DoorFrame_001" type="MeshInstance3D" parent="Misc/Kitchen/Door_Group_001"]
+[node name="DoorFrame_001" type="MeshInstance3D" parent="Misc/Kitchen/Door_Group_001" unique_id=941376925]
 mesh = SubResource("ArrayMesh_k6s5o")
-skeleton = NodePath("")
 
-[node name="Door_Group_002" type="Node3D" parent="Misc/Kitchen"]
+[node name="Door_Group_002" type="Node3D" parent="Misc/Kitchen" unique_id=248546314]
 transform = Transform3D(1, 0, -4.37114e-08, 0, 1, 0, 4.37114e-08, 0, 1, -13.671, 0, 11.144)
 
-[node name="DoorFrame_002" type="MeshInstance3D" parent="Misc/Kitchen/Door_Group_002"]
+[node name="DoorFrame_002" type="MeshInstance3D" parent="Misc/Kitchen/Door_Group_002" unique_id=696569482]
 mesh = SubResource("ArrayMesh_dirae")
-skeleton = NodePath("")
 
-[node name="SketchUp" type="MeshInstance3D" parent="Misc/Kitchen"]
+[node name="SketchUp" type="MeshInstance3D" parent="Misc/Kitchen" unique_id=977686681]
 transform = Transform3D(-1.11027e-09, 0, -0.0254, 0, 0.0254, 0, 0.0254, 0, -1.11027e-09, -18.671, 0.03, 1.244)
 mesh = SubResource("ArrayMesh_f7rpn")
-skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Misc/Kitchen"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Misc/Kitchen" unique_id=1137862905]
 transform = Transform3D(-1.11027e-09, 0, -0.0254, 0, 0.0254, 0, 0.0254, 0, -1.11027e-09, -18.671, 0, 1.244)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Misc/Kitchen/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Misc/Kitchen/StaticBody3D" unique_id=181994686]
 shape = SubResource("ConcavePolygonShape3D_nf172")
 
-[node name="CollisionShape3D4" type="CollisionShape3D" parent="Misc/Kitchen/StaticBody3D"]
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Misc/Kitchen/StaticBody3D" unique_id=583052100]
 transform = Transform3D(35.4331, 0, 2.84217e-13, 0, 19.3294, 0, -5.68434e-13, 0, 19.3294, 200.787, 20.3277, -366.142)
 shape = SubResource("ConcavePolygonShape3D_te7n1")
 
-[node name="CollisionShape3D8" type="CollisionShape3D" parent="Misc/Kitchen/StaticBody3D"]
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Misc/Kitchen/StaticBody3D" unique_id=305458507]
 transform = Transform3D(1.00002, 0, -8.52651e-13, 0, 1.00002, 0, 8.52651e-13, 0, 1.00002, 309.854, 51.003, -365.464)
 shape = SubResource("BoxShape3D_mrdnv")
 
-[node name="CollisionShape3D9" type="CollisionShape3D" parent="Misc/Kitchen/StaticBody3D"]
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Misc/Kitchen/StaticBody3D" unique_id=1387515669]
 transform = Transform3D(1.00002, 0, -5.79092e-13, 0, 1.00002, 0, 5.79092e-13, 0, 1.00002, 87.552, 51.003, -364.493)
 shape = SubResource("BoxShape3D_q6cfv")

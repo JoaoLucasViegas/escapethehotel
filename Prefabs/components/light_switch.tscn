@@ -1,13 +1,14 @@
-[gd_scene load_steps=13 format=4 uid="uid://c0p2hb21a51mb"]
+[gd_scene format=4 uid="uid://c0p2hb21a51mb"]
 
 [ext_resource type="Material" uid="uid://d3cie2f20tnur" path="res://Materials/interactable_colour.tres" id="1_ah15r"]
 [ext_resource type="Script" uid="uid://cp3hqjq0w1rvn" path="res://Scripts/broken_obj.gd" id="1_rwb3p"]
 [ext_resource type="Script" uid="uid://dk4er8tnnh2k3" path="res://Scripts/line_of_sight.gd" id="2_ah15r"]
-[ext_resource type="Texture2D" uid="uid://bc81lba4bq5c5" path="res://Models/!PROP/power_box_01_1k.gltf/textures/power_box_01_diff_1k.jpg" id="4_n1dkp"]
+[ext_resource type="Texture2D" uid="uid://iwye1iv2irhw" path="res://Models/!PROP/power_box_01_1k.gltf/textures/power_box_01_diff_1k.jpg" id="4_n1dkp"]
 [ext_resource type="Material" uid="uid://demxtlqf0hty1" path="res://Models/!PROP/power_box_01_1k.gltf/power_box_01.tres" id="4_yj6tp"]
-[ext_resource type="Texture2D" uid="uid://ddwwrft5klhwa" path="res://Models/!PROP/power_box_01_1k.gltf/textures/power_box_01_arm_1k.jpg" id="5_llk0m"]
-[ext_resource type="Texture2D" uid="uid://c164uws47ra7x" path="res://Models/!PROP/power_box_01_1k.gltf/textures/power_box_01_nor_gl_1k.jpg" id="6_yj6tp"]
-[ext_resource type="AudioStream" uid="uid://chu1w6tagvv6n" path="res://Tracks/sfx/power_switch.ogg" id="7_llk0m"]
+[ext_resource type="Texture2D" uid="uid://dhvhp6jqfh1rm" path="res://Models/!PROP/power_box_01_1k.gltf/textures/power_box_01_arm_1k.jpg" id="5_llk0m"]
+[ext_resource type="Texture2D" uid="uid://bkf413ffa5j0w" path="res://Models/!PROP/power_box_01_1k.gltf/textures/power_box_01_nor_gl_1k.jpg" id="6_yj6tp"]
+[ext_resource type="AudioStream" uid="uid://d3ewww8joxcnw" path="res://Tracks/sfx/power_switch.ogg" id="7_llk0m"]
+[ext_resource type="Texture2D" uid="uid://b25cicckyi6ra" path="res://Textures/bomb.svg" id="9_7my3d"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ah15r"]
 size = Vector3(2, 2, 2)
@@ -58,38 +59,44 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_j08m0")
 
-[node name="MeshInstance3D" type="MeshInstance3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" unique_id=1396109532]
 material_override = ExtResource("1_ah15r")
 script = ExtResource("1_rwb3p")
 is_broken = true
 
-[node name="AreaSight" type="Area3D" parent="."]
+[node name="AreaSight" type="Area3D" parent="." unique_id=537747566]
 collision_layer = 0
 collision_mask = 10
 script = ExtResource("2_ah15r")
 metadata/_custom_type_script = "uid://dk4er8tnnh2k3"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaSight"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaSight" unique_id=621511770]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.75)
 shape = SubResource("BoxShape3D_ah15r")
 
-[node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+[node name="Label3D" type="Label3D" parent="." unique_id=1540305651]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 visible = false
 billboard = 1
+no_depth_test = true
 text = "Press E to sabotage"
-font_size = 224
+font_size = 56
 
-[node name="power_box_01_1k" type="Node3D" parent="."]
+[node name="power_box_01_1k" type="Node3D" parent="." unique_id=1306244754]
 transform = Transform3D(-3, 0, -8.78041e-07, 0, 2.5, 0, 4.52987e-07, 0, -5.815, 0, 0.5, 0.25)
 
-[node name="power_box_01_box" type="MeshInstance3D" parent="power_box_01_1k"]
+[node name="power_box_01_box" type="MeshInstance3D" parent="power_box_01_1k" unique_id=869669983]
 material_override = ExtResource("4_yj6tp")
 mesh = SubResource("ArrayMesh_bkgfj")
-skeleton = NodePath("")
 
-[node name="Switch" type="AudioStreamPlayer" parent="."]
+[node name="Switch" type="AudioStreamPlayer" parent="." unique_id=396081534]
 stream = ExtResource("7_llk0m")
-volume_db = -80.0
+volume_db = -9.2
 pitch_scale = 0.72
 bus = &"SFX"
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=874939355]
+billboard = 1
+no_depth_test = true
+render_priority = -5
+texture = ExtResource("9_7my3d")

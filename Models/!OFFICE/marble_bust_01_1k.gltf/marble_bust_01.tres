@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bxqxdkang540b"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bxqxdkang540b"]
 
-[ext_resource type="Texture2D" uid="uid://cy7dqcs080q3x" path="res://Models/!OFFICE/marble_bust_01_1k.gltf/textures/marble_bust_01_diff_1k.jpg" id="1_al26m"]
+[ext_resource type="Texture2D" uid="uid://bkjb3a6m7txmi" path="res://Models/!OFFICE/marble_bust_01_1k.gltf/textures/marble_bust_01_diff_1k.jpg" id="1_al26m"]
 
 [resource]
 resource_name = "marble_bust_01"

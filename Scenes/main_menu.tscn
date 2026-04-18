@@ -1,15 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7wueksvkwaar"]
+[gd_scene format=3 uid="uid://c7wueksvkwaar"]
 
 [ext_resource type="Script" uid="uid://gql53cdi2xxt" path="res://Scripts/main_menu.gd" id="1_28flt"]
-[ext_resource type="Texture2D" uid="uid://dc2uiq0kls1ri" path="res://Textures/game_logo.png" id="2_1ehe0"]
-[ext_resource type="AudioStream" uid="uid://bcfm1a6sgj0x3" path="res://Tracks/theme_menu.ogg" id="3_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://b544riwee6b1q" path="res://Textures/game_logo.png" id="2_1ehe0"]
+[ext_resource type="AudioStream" uid="uid://c4m0301so0q6q" path="res://Tracks/theme_menu.ogg" id="3_ce3w2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_erv1k"]
 font_size = 36
 
 [sub_resource type="LabelSettings" id="LabelSettings_28flt"]
 
-[node name="Main Menu" type="Control"]
+[node name="Main Menu" type="Control" unique_id=431485190]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,7 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_28flt")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=184086809]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,7 +27,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.509804, 0, 0.00784314, 1)
 
-[node name="GameLogo" type="TextureRect" parent="ColorRect"]
+[node name="GameLogo" type="TextureRect" parent="ColorRect" unique_id=1071835742]
 custom_minimum_size = Vector2(256, 224)
 layout_mode = 1
 anchors_preset = 5
@@ -43,7 +43,7 @@ texture = ExtResource("2_1ehe0")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="NewGameBtn" type="Button" parent="."]
+[node name="NewGameBtn" type="Button" parent="." unique_id=297396694]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -59,7 +59,7 @@ grow_vertical = 2
 text = "New Game"
 flat = true
 
-[node name="CreditsBtn" type="Button" parent="."]
+[node name="CreditsBtn" type="Button" parent="." unique_id=1404966443]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -75,7 +75,7 @@ grow_vertical = 2
 text = "Credits"
 flat = true
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." unique_id=211108139]
 visible = false
 layout_mode = 1
 anchors_preset = 10
@@ -88,7 +88,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 1
 
-[node name="Label2" type="Label" parent="."]
+[node name="Label2" type="Label" parent="." unique_id=536875441]
 visible = false
 layout_mode = 1
 anchors_preset = 10
@@ -102,7 +102,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 1
 
-[node name="Track" type="AudioStreamPlayer" parent="."]
+[node name="Track" type="AudioStreamPlayer" parent="." unique_id=1784067805]
 stream = ExtResource("3_ce3w2")
 volume_db = -14.0
 autoplay = true

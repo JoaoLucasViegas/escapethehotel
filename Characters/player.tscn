@@ -1,6 +1,6 @@
-[gd_scene load_steps=41 format=4 uid="uid://81lqxs4in7k5"]
+[gd_scene format=4 uid="uid://81lqxs4in7k5"]
 
-[ext_resource type="Texture2D" uid="uid://bmnopjgnog2u4" path="res://Characters/Textures/colormap.png" id="1_eovys"]
+[ext_resource type="Texture2D" uid="uid://67h7ejws03yh" path="res://Characters/Textures/colormap.png" id="1_eovys"]
 [ext_resource type="Script" uid="uid://e2peevlwxx4t" path="res://Scripts/Characters/model_manager.gd" id="1_vb825"]
 [ext_resource type="Material" uid="uid://bm0bgfw6qjrxr" path="res://Characters/Material/colormap.tres" id="2_vb825"]
 
@@ -2710,15 +2710,15 @@ _data = {
 &"wheelchair-sit": SubResource("Animation_1oaa8")
 }
 
-[node name="Model" type="Node3D" node_paths=PackedStringArray("animationPlayer")]
+[node name="Model" type="Node3D" unique_id=2117608677 node_paths=PackedStringArray("animationPlayer")]
 script = ExtResource("1_vb825")
 animationPlayer = NodePath("character-female-b2/AnimationPlayer")
 
-[node name="character-female-b2" type="Node3D" parent="."]
+[node name="character-female-b2" type="Node3D" parent="." unique_id=1841417695]
 
-[node name="character-female-b" type="Node3D" parent="character-female-b2"]
+[node name="character-female-b" type="Node3D" parent="character-female-b2" unique_id=931161243]
 
-[node name="Skeleton3D" type="Skeleton3D" parent="character-female-b2/character-female-b"]
+[node name="Skeleton3D" type="Skeleton3D" parent="character-female-b2/character-female-b" unique_id=548784021]
 bones/0/name = "root"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -2769,18 +2769,18 @@ bones/6/position = Vector3(1.81969e-09, 0.167, 0.0263888)
 bones/6/rotation = Quaternion(0, 0, 0, 1)
 bones/6/scale = Vector3(1, 1, 1)
 
-[node name="body-mesh" type="MeshInstance3D" parent="character-female-b2/character-female-b/Skeleton3D"]
+[node name="body-mesh" type="MeshInstance3D" parent="character-female-b2/character-female-b/Skeleton3D" unique_id=601277566]
 material_override = SubResource("StandardMaterial3D_65n15")
 mesh = SubResource("ArrayMesh_14opg")
 skin = SubResource("Skin_m6g3g")
+skeleton = NodePath("..")
 
-[node name="head-mesh" type="MeshInstance3D" parent="character-female-b2/character-female-b/Skeleton3D"]
+[node name="head-mesh" type="MeshInstance3D" parent="character-female-b2/character-female-b/Skeleton3D" unique_id=1451131180]
 material_override = SubResource("StandardMaterial3D_65n15")
 mesh = SubResource("ArrayMesh_en585")
 skin = SubResource("Skin_m6g3g")
+skeleton = NodePath("..")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="character-female-b2"]
-libraries = {
-&"": SubResource("AnimationLibrary_wt3xp")
-}
-autoplay = "walk"
+[node name="AnimationPlayer" type="AnimationPlayer" parent="character-female-b2" unique_id=608904337]
+libraries/ = SubResource("AnimationLibrary_wt3xp")
+autoplay = &"walk"

@@ -1,4 +1,4 @@
-[gd_resource type="Environment" load_steps=8 format=3 uid="uid://cpi16834cvtyk"]
+[gd_resource type="Environment" format=3 uid="uid://cpi16834cvtyk"]
 
 [ext_resource type="FastNoiseLite" uid="uid://csla7y844wgjg" path="res://Resources/sky_cloud_noise.tres" id="1_i6evw"]
 
@@ -16,13 +16,13 @@ offsets = PackedFloat32Array(0.5, 1)
 colors = PackedColorArray(0, 0, 0, 1, 0.176419, 0.176419, 0.176419, 1)
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_8j60k"]
+generate_mipmaps = false
+noise = ExtResource("1_i6evw")
+color_ramp = SubResource("Gradient_5a7ea")
+seamless = true
 invert = true
 in_3d_space = true
-generate_mipmaps = false
-seamless = true
 normalize = false
-color_ramp = SubResource("Gradient_5a7ea")
-noise = ExtResource("1_i6evw")
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo5ed"]
 sky_top_color = Color(0.0263388, 0.0295508, 0.0746159, 1)

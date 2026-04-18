@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://miu3liiiqtd8"]
+
+[ext_resource type="Script" uid="uid://csvhhkqfm2j8h" path="res://Scripts/hud.gd" id="1_fmlu2"]
+
+[node name="UiManager" type="CanvasLayer" unique_id=1303471063]
+process_mode = 3
+layer = -1
+script = ExtResource("1_fmlu2")

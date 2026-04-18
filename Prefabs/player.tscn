@@ -1,16 +1,10 @@
-[gd_scene load_steps=17 format=3 uid="uid://b55iprda1bad5"]
+[gd_scene format=3 uid="uid://b55iprda1bad5"]
 
 [ext_resource type="Script" uid="uid://6jq2ow0n5yxn" path="res://Scripts/Player/player.gd" id="1_5wxv7"]
 [ext_resource type="Material" uid="uid://daj5dve3g2ro" path="res://Materials/player_colour.tres" id="2_y5hcb"]
-[ext_resource type="Script" uid="uid://csvhhkqfm2j8h" path="res://Scripts/hud.gd" id="3_y5hcb"]
-[ext_resource type="Script" uid="uid://bfvmqvfwxjsob" path="res://Scripts/HUD/game_over.gd" id="4_2nftw"]
-[ext_resource type="Script" uid="uid://clbdbnrmqugh2" path="res://Scripts/HUD/sabotage_screen.gd" id="4_knrd4"]
-[ext_resource type="Texture2D" uid="uid://chncmye5biydy" path="res://Textures/paper_sheet.png" id="5_kgmex"]
-[ext_resource type="Script" uid="uid://ueuqec6274xo" path="res://Scripts/HUD/items.gd" id="6_4qbli"]
-[ext_resource type="Texture2D" uid="uid://csowf611lva87" path="res://Textures/powerboxlowres.png" id="6_08u7w"]
-[ext_resource type="Script" uid="uid://dyj8vx1xau1xf" path="res://Scripts/HUD/puzzle.gd" id="6_hck1p"]
+[ext_resource type="Texture2D" uid="uid://dacn0jtc5fgg2" path="res://Textures/avatar/redhead_player.png" id="5_knrd4"]
 [ext_resource type="PackedScene" uid="uid://81lqxs4in7k5" path="res://Characters/player.tscn" id="8_4qbli"]
-[ext_resource type="AudioStream" uid="uid://dtuutedn3hj63" path="res://Tracks/sfx/feet.ogg" id="11_2xbkd"]
+[ext_resource type="AudioStream" uid="uid://b86dmc7djmv7y" path="res://Tracks/sfx/feet.ogg" id="11_2xbkd"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_8j60k"]
 radius = 0.25
@@ -31,41 +25,57 @@ height = 0.4
 radial_segments = 6
 rings = 3
 
-[sub_resource type="LabelSettings" id="LabelSettings_2nftw"]
-font_size = 24
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knrd4"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.3529412, 0.28627452, 0, 0.5294118)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+corner_detail = 6
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
 
-[node name="Player" type="CharacterBody3D"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hck1p"]
+bg_color = Color(0.5882353, 0.47843137, 0.8784314, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Player" type="CharacterBody3D" unique_id=954441564]
 collision_layer = 2
 collision_mask = 5
 script = ExtResource("1_5wxv7")
 metadata/_edit_group_ = true
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=2909388]
 visible = false
 mesh = SubResource("CapsuleMesh_8j60k")
 surface_material_override/0 = ExtResource("2_y5hcb")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1561515622]
 shape = SubResource("CapsuleShape3D_2xbkd")
 
-[node name="CameraOrbit" type="Node3D" parent="."]
-transform = Transform3D(0.707107, 0.612373, -0.353554, 0, 0.5, 0.866026, 0.707107, -0.612373, 0.353554, 0, 0, 0)
+[node name="Pivot" type="Node3D" parent="." unique_id=1699921561]
 
-[node name="Camera3D" type="Camera3D" parent="CameraOrbit"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 20)
-current = true
-fov = 45.0
-
-[node name="Pivot" type="Node3D" parent="."]
-
-[node name="Model" parent="Pivot" instance=ExtResource("8_4qbli")]
+[node name="Model" parent="Pivot" unique_id=658270655 instance=ExtResource("8_4qbli")]
 transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, -0.5, 0)
 stop_bias = 1.0
-type = "Player"
 
-[node name="Particle" type="CPUParticles3D" parent="Pivot"]
+[node name="Feet" type="AudioStreamPlayer" parent="." unique_id=370772000]
+stream = ExtResource("11_2xbkd")
+volume_db = -9.2
+pitch_scale = 0.92
+bus = &"SFX"
+parameters/looping = true
+
+[node name="Particle" type="CPUParticles3D" parent="." unique_id=1056899203]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.48939, -0.320809)
-emitting = false
 amount = 4
 lifetime = 0.4
 preprocess = 0.2
@@ -76,300 +86,41 @@ draw_order = 1
 mesh = SubResource("SphereMesh_3vpsw")
 emission_shape = 1
 emission_sphere_radius = 0.62
-gravity = Vector3(0, 0, -3.121)
+gravity = Vector3(0, -3, -3.4)
 
-[node name="UI" type="CanvasLayer" parent="."]
-process_mode = 3
-script = ExtResource("3_y5hcb")
+[node name="debugLabel" type="Label3D" parent="." unique_id=1599137785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.610887, 0)
+billboard = 1
+no_depth_test = true
+text = "PLAYER"
+font_size = 72
 
-[node name="Items" type="Control" parent="UI" node_paths=PackedStringArray("ui_manager")]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-script = ExtResource("6_4qbli")
-ui_manager = NodePath("..")
+[node name="CameraOrbit" type="Node3D" parent="." unique_id=909801812]
+transform = Transform3D(1.0000002, 0, 0, 0, 0.5000003, 0.8660263, 0, -0.86602604, 0.5000004, 0, 0, 0)
 
-[node name="List" type="GridContainer" parent="UI/Items"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1635770910]
+anchors_preset = 2
 anchor_top = 1.0
-anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -106.0
-offset_top = -53.0
-offset_right = 106.0
-offset_bottom = -10.0
-grow_horizontal = 2
+offset_left = 75.0
+offset_top = -2.0
+offset_right = 157.0
+offset_bottom = 7.0
 grow_vertical = 0
-columns = 8
+rotation = -1.5707964
+theme_override_styles/background = SubResource("StyleBoxFlat_knrd4")
+theme_override_styles/fill = SubResource("StyleBoxFlat_hck1p")
+value = 50.0
+show_percentage = false
 
-[node name="Passcode" type="Control" parent="UI/Items"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
+[node name="TextureRect" type="TextureRect" parent="." unique_id=988418362]
+anchors_preset = 2
+anchor_top = 1.0
 anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="TextureRect" parent="UI/Items/Passcode"]
-self_modulate = Color(1, 1, 0.435294, 1)
-custom_minimum_size = Vector2(83, 83)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -41.5
-offset_top = -41.5
-offset_right = 41.5
-offset_bottom = 41.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_kgmex")
+offset_top = -80.0
+offset_right = 80.0
+grow_vertical = 0
+texture = ExtResource("5_knrd4")
 expand_mode = 1
-
-[node name="Label" type="Label" parent="UI/Items/Passcode/ColorRect"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloseWindow" type="Button" parent="UI/Items/Passcode/ColorRect"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -18.0
-offset_bottom = 31.0
-grow_horizontal = 0
-text = "X"
-
-[node name="PassPhrase" type="Control" parent="UI/Items"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="ColorRect" type="TextureRect" parent="UI/Items/PassPhrase"]
-self_modulate = Color(0.614557, 0.749272, 0.584167, 1)
-custom_minimum_size = Vector2(190, 93)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -95.0
-offset_top = -46.5
-offset_right = 95.0
-offset_bottom = 46.5
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_kgmex")
-expand_mode = 1
+stretch_mode = 4
 flip_h = true
-flip_v = true
-
-[node name="Label" type="Label" parent="UI/Items/PassPhrase/ColorRect"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -11.5
-offset_right = 20.0
-offset_bottom = 11.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="CloseWindow" type="Button" parent="UI/Items/PassPhrase/ColorRect"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -18.0
-offset_bottom = 31.0
-grow_horizontal = 0
-text = "X"
-
-[node name="SabotageScreen" type="Control" parent="UI"]
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("4_knrd4")
-
-[node name="ColorRect" type="ColorRect" parent="UI/SabotageScreen"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -63.0
-offset_top = -63.0
-offset_right = 63.0
-offset_bottom = 63.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.580392, 0.227451, 0, 0)
-
-[node name="CloseWindow" type="Button" parent="UI/SabotageScreen/ColorRect"]
-layout_mode = 1
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = 3.0
-offset_top = -30.0
-offset_right = 21.0
-offset_bottom = 1.0
-grow_horizontal = 0
-text = "X"
-
-[node name="Sabotage" type="TextureButton" parent="UI/SabotageScreen/ColorRect"]
-z_index = -1
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -35.0
-offset_top = -25.0
-offset_right = 32.0
-offset_bottom = 42.0
-grow_horizontal = 2
-grow_vertical = 2
-texture_normal = ExtResource("6_08u7w")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="Puzzle" type="Control" parent="UI" node_paths=PackedStringArray("ui_manager")]
-visible = false
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("6_hck1p")
-ui_manager = NodePath("..")
-
-[node name="GameOver" type="Control" parent="UI"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("4_2nftw")
-
-[node name="ColorRect" type="ColorRect" parent="UI/GameOver"]
-visible = false
-custom_minimum_size = Vector2(256, 112)
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -128.0
-offset_top = -56.0
-offset_right = 128.0
-offset_bottom = 56.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0, 0.52549)
-
-[node name="Label" type="Label" parent="UI/GameOver"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -90.0
-offset_top = -30.0
-offset_right = 90.0
-offset_bottom = 4.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "You got caught!"
-label_settings = SubResource("LabelSettings_2nftw")
-
-[node name="RestartBtn" type="Button" parent="UI/GameOver"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -96.5
-offset_top = 9.5
-offset_right = -21.5
-offset_bottom = 40.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "RESTART"
-
-[node name="MainMenuBtn" type="Button" parent="UI/GameOver"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -9.0
-offset_top = 9.5
-offset_right = 95.0
-offset_bottom = 40.5
-grow_horizontal = 2
-grow_vertical = 2
-text = "MAIN MENU"
-
-[node name="ReadingMessage" type="Timer" parent="UI/GameOver"]
-wait_time = 2.0
-one_shot = true
-
-[node name="Feet" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("11_2xbkd")
-volume_db = -9.2
-pitch_scale = 0.92
-bus = &"SFX"
-parameters/looping = true
-
-[connection signal="pressed" from="UI/Items/Passcode/ColorRect/CloseWindow" to="UI/Items" method="_on_close_window_pressed"]
-[connection signal="pressed" from="UI/Items/PassPhrase/ColorRect/CloseWindow" to="UI/Items" method="_on_close_window_pressed"]
-[connection signal="pressed" from="UI/SabotageScreen/ColorRect/CloseWindow" to="UI/SabotageScreen" method="_on_close_window_pressed"]
-[connection signal="pressed" from="UI/SabotageScreen/ColorRect/Sabotage" to="UI/SabotageScreen" method="_on_sabotage_pressed"]
-[connection signal="pressed" from="UI/GameOver/RestartBtn" to="UI/GameOver" method="_on_restart_btn_pressed"]
-[connection signal="pressed" from="UI/GameOver/MainMenuBtn" to="UI/GameOver" method="_on_main_menu_btn_pressed"]
-[connection signal="timeout" from="UI/GameOver/ReadingMessage" to="UI/GameOver" method="_on_reading_message_timeout"]

@@ -1,52 +1,50 @@
-extends Node3D
+class_name ModelManager extends Node3D
 
-@export var vector_movement = Vector3.ZERO
+enum types {
+	PLAYER, ENEMY, NULL
+}
+@export_category("Model")
+@export var type: types = types.PLAYER
+@export var animationPlayer: AnimationPlayer
 @export var stop_bias = 0.0
-
-@export var type: String = ""
+@export var vector_movement = Vector3.ZERO
 
 @export_category("Player")
-@export var player_is_busted = false
-@export var player_is_puzzling = false
+@export var player_state: Player.states
 
 @export_category("Enemy")
-@export var enemy_is_fixing = false
-@export var enemy_is_chasing = false
-@export var enemy_is_busting = false
-
-@export var animationPlayer: AnimationPlayer
+@export var enemy_state: Enemy.states
 
 func _physics_process(_delta: float) -> void:
 	if not animationPlayer:
 		return
-	
-	if type == "Player":
-		if player_is_busted:
-			type = ""
+	if type == types.NULL:
+		return
+	if type == types.PLAYER:
+		if player_state == Player.states.BUSTED:
+			type = types.NULL
 			animationPlayer.play("die")
 			stop_bias = 0.5
 			return
-		elif player_is_puzzling:
+		elif player_state == Player.states.PUZZLING:
 			animationPlayer.play("interact-right")
 			return
-	elif type == "Enemy":
-		if enemy_is_busting:
-			type = ""
+	elif type == types.ENEMY:
+		if enemy_state == Enemy.states.BUSTING:
+			type = types.NULL
 			stop_bias = 0.0
 			animationPlayer.play("attack-melee-right")
 			return
-		elif enemy_is_chasing:
+		elif enemy_state == Enemy.states.CHASING:
 			animationPlayer.play("sprint")
 			return
-		elif enemy_is_fixing:
+		elif enemy_state == Enemy.states.FIXING:
 			animationPlayer.play("interact-left")
 			stop_bias = 0.5
 			return
-	elif not type.length():
-		return
 	
 	if self.vector_movement.length() <= stop_bias:
 		animationPlayer.play("idle")
 	elif self.vector_movement.length() > stop_bias:
-		if type == "Player": animationPlayer.play("sprint")
-		else:animationPlayer.play("walk")
+		@warning_ignore("standalone_ternary")
+		animationPlayer.play("sprint") if type == types.PLAYER else animationPlayer.play("walk")

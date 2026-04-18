@@ -5,17 +5,12 @@ signal ObjectBroken(obj: BaseLevelObject)
 signal WonPuzzle(puzzleName: String)
 signal LightsBroken()
 
-@onready var sabotage_ui = $Player/UI/SabotageScreen
-@onready var puzzle_screen = $Player/UI/Puzzle
-@onready var item_ui = $Player/UI/Items
-
-@export var player: Player
-
 var broken_objs = []
 var enemies_chasing = []
 var max_distance_to_obj: float = 8.0
-var lights_level: Array
-var npcList_parent_node3d: Array
+var lights_level: Array = []
+var lighs_on_the_level: Array = [] #Enemy class mentioned it, but it already exists
+var npcList_parent_node3d: Array = []
 var is_game_over = false
 
 func emitBrokenObj(obj: BaseLevelObject):
@@ -30,6 +25,11 @@ func _ready() -> void:
 	Global.connect("GameOver", react_game_over, CONNECT_DEFERRED)
 	
 	npcList_parent_node3d = get_tree().get_nodes_in_group("Enemies")
+	#debug remove enemeis
+	#for x in npcList_parent_node3d:
+		#x.queue_free()
+
+	#lighs_on_the_level = get_tree().get_nodes_in_group("Lights") #	Enemy reference already existed!!! 
 	lights_level = get_tree().get_nodes_in_group("Lights")
 
 func _addBrokenObj(brokenObj: BaseLevelObject):
@@ -38,11 +38,11 @@ func _addBrokenObj(brokenObj: BaseLevelObject):
 	broken_objs.append(brokenObj)
 
 func _physics_process(_delta: float) -> void:
-	if broken_objs.size() > 0:
+	if not broken_objs.is_empty():
 		var idx_to_remove = []
 		var idx_broken = 0
 		for broken in broken_objs:
-			broken = broken as BaseLevelObject
+			#broken = broken as BaseLevelObject
 			if not broken.is_broken:
 				idx_to_remove.append(idx_broken)
 			elif broken.is_getting_fixed_by:
@@ -53,25 +53,7 @@ func _physics_process(_delta: float) -> void:
 			idx_broken += 1
 		for idx in idx_to_remove:
 			broken_objs.remove_at(idx)
-	checkLightNearPlayerIsVisible()
-	
-	if is_game_over:
-		$Audio/GameLoop.volume_db = move_toward($Audio/GameLoop.volume_db, -64, 0.3 * 12)
-		$Audio/Chasing.volume_db = move_toward($Audio/Chasing.volume_db, -80, 2.0 * 12)
-		$Audio/GameOver.volume_db = move_toward($Audio/GameOver.volume_db, -6.2, 0.3 * 12)
-	elif enemies_chasing:
-		if not $Audio/Chasing.playing:
-			$Audio/Chasing.play()
-		$Audio/GameLoop.volume_db = move_toward($Audio/GameLoop.volume_db, -32, 0.3 * 12)
-		$Audio/Chasing.volume_db = move_toward($Audio/Chasing.volume_db, -12.2, 0.5 * 12)
-	else:
-		$Audio/GameLoop.volume_db = move_toward($Audio/GameLoop.volume_db, -16.2, 0.035 * 12)
-		
-		if not $Audio/Chasing.volume_db > -80:
-			$Audio/Chasing.volume_db = move_toward($Audio/Chasing.volume_db, -80, 0.035 * 12)
-		else:
-			$Audio/Chasing.stop()
-		
+	#checkLightNearPlayerIsVisible()
 
 func _assignClosestToFix(brokenObj: BaseLevelObject):
 	if not npcList_parent_node3d:
@@ -80,9 +62,11 @@ func _assignClosestToFix(brokenObj: BaseLevelObject):
 	var npc_idx: int = -1
 	var distance: float = max_distance_to_obj
 	for npc in npcList_parent_node3d:
-		npc = npc as Enemy
+		#if not npc or npc.is_queued_for_deletion(): #So Enemies were supposed to die?!? -- IDK (dont remember)
+			#continue
+		#npc = npc as Enemy
 		var npc_distance_to = npc.global_position.distance_to(brokenObj.global_position)
-		if npc_distance_to <= distance and not npc.to_fix_object_ai and not npc.is_chasing:
+		if npc_distance_to <= distance and not npc.to_fix_object_ai and not npc.state == Enemy.states.CHASING:#is_chasing:
 			distance = npc_distance_to
 			npc_idx = idx
 		idx += 1
@@ -90,44 +74,20 @@ func _assignClosestToFix(brokenObj: BaseLevelObject):
 		return
 	var selected_npc: Enemy = npcList_parent_node3d[npc_idx] as Enemy
 	#print(selected_npc.name, " | found at ", distance, " meters | fixing ",brokenObj.name)
-	if selected_npc.is_fixing:
-		return
-	if selected_npc.is_chasing:
-		return
+	DevTools.consoleText(selected_npc.name, " | found at ", "%.1f" %distance, " meters | fixing ",brokenObj.name)
 	if brokenObj.is_getting_fixed_by == selected_npc:
 		return
+	#if selected_npc.is_fixing:
+		#return
+	#if selected_npc.is_chasing:
+		#return
+		#return
+	#if selected_npc.state == Enemy.states.ROAMING:
 	else:
 		brokenObj.is_getting_fixed_by = selected_npc
 		selected_npc.to_fix_object_ai = brokenObj
 
-func checkLightNearPlayerIsVisible():
-	if not lights_level:
-		print("LEVEL MANAGER HAS NO LIGHTS TO ATTACH TASKS")
-		return
-	var closest_light: Node3D = null
-	var closest_distance_to_player = 8
-	for light in lights_level:
-		if not light:
-			continue
-		var light_loop = light as Node3D
-		var distance = light_loop.global_position.distance_to(global_position)
-		if distance <= closest_distance_to_player:
-			closest_distance_to_player = distance
-			closest_light = light_loop
-	if closest_light:
-		player.is_seen_by_light = closest_light.is_visible_in_tree()
-	else:
-		player.is_seen_by_light = false
-	#print(closest_light, "| is close to player at distance ", closest_distance_to_player)
-
-func startPuzzle(puzzle: GamePuzzle, obj: Node3D, caller: PuzzleCaller):
-	puzzle_screen.addPuzzle(puzzle, obj, caller)
-
-func showSabotageScreen(obj: BaseLevelObject):
-	sabotage_ui.sabotage(obj)
-
 func pickedItem(item: Item):
-	item_ui.new_item(item)
 	if item.obj_to_react and item.obj_to_react.has_method("react"):
 		item.obj_to_react.react()
 	$Audio/PickUpItem.play()

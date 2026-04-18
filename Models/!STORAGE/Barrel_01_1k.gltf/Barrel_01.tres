@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://7bhx6gpooy3p"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://7bhx6gpooy3p"]
 
-[ext_resource type="Texture2D" uid="uid://b3slkc1st6ois" path="res://Models/!STORAGE/Barrel_01_1k.gltf/textures/Barrel_01_explosive_diff_1k.jpg" id="1_fnrda"]
+[ext_resource type="Texture2D" uid="uid://blm0vgx4cpklw" path="res://Models/!STORAGE/Barrel_01_1k.gltf/textures/Barrel_01_explosive_diff_1k.jpg" id="1_fnrda"]
 
 [resource]
 resource_name = "Barrel_01"

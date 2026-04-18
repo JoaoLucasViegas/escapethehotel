@@ -1,8 +1,8 @@
-[gd_scene load_steps=40 format=4 uid="uid://cki7fk1qri0ni"]
+[gd_scene format=4 uid="uid://cki7fk1qri0ni"]
 
 [ext_resource type="Script" uid="uid://e2peevlwxx4t" path="res://Scripts/Characters/model_manager.gd" id="1_8fsil"]
 [ext_resource type="Material" uid="uid://bm0bgfw6qjrxr" path="res://Characters/Material/colormap.tres" id="1_afe2v"]
-[ext_resource type="Texture2D" uid="uid://bmnopjgnog2u4" path="res://Characters/Textures/colormap.png" id="1_o243n"]
+[ext_resource type="Texture2D" uid="uid://67h7ejws03yh" path="res://Characters/Textures/colormap.png" id="1_o243n"]
 [ext_resource type="Animation" uid="uid://duldxyhjheawf" path="res://Characters/Animations/Guard/static.res" id="2_o243n"]
 [ext_resource type="Animation" uid="uid://derhth4ql5tnb" path="res://Characters/Animations/Guard/idle.res" id="3_8fsil"]
 [ext_resource type="Animation" uid="uid://ddevixirfgx3v" path="res://Characters/Animations/Guard/walk.res" id="4_ua7hg"]
@@ -121,15 +121,15 @@ _data = {
 &"wheelchair-sit": ExtResource("27_4vs1j")
 }
 
-[node name="Model" type="Node3D" node_paths=PackedStringArray("animationPlayer")]
+[node name="Model" type="Node3D" unique_id=98643630 node_paths=PackedStringArray("animationPlayer")]
 script = ExtResource("1_8fsil")
 animationPlayer = NodePath("character-male-c2/AnimationPlayer")
 
-[node name="character-male-c2" type="Node3D" parent="."]
+[node name="character-male-c2" type="Node3D" parent="." unique_id=741893342]
 
-[node name="character-male-c" type="Node3D" parent="character-male-c2"]
+[node name="character-male-c" type="Node3D" parent="character-male-c2" unique_id=1150319162]
 
-[node name="Skeleton3D" type="Skeleton3D" parent="character-male-c2/character-male-c"]
+[node name="Skeleton3D" type="Skeleton3D" parent="character-male-c2/character-male-c" unique_id=1194919336]
 bones/0/name = "root"
 bones/0/parent = -1
 bones/0/rest = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
@@ -180,15 +180,15 @@ bones/6/position = Vector3(1.81969e-09, 0.167, 0.0263888)
 bones/6/rotation = Quaternion(0, 0, 0, 1)
 bones/6/scale = Vector3(1, 1, 1)
 
-[node name="body-mesh" type="MeshInstance3D" parent="character-male-c2/character-male-c/Skeleton3D"]
+[node name="body-mesh" type="MeshInstance3D" parent="character-male-c2/character-male-c/Skeleton3D" unique_id=674975858]
 material_override = SubResource("StandardMaterial3D_8fsil")
 mesh = SubResource("ArrayMesh_tu3u7")
+skeleton = NodePath("..")
 
-[node name="head-mesh" type="MeshInstance3D" parent="character-male-c2/character-male-c/Skeleton3D"]
+[node name="head-mesh" type="MeshInstance3D" parent="character-male-c2/character-male-c/Skeleton3D" unique_id=838948229]
 material_override = SubResource("StandardMaterial3D_8fsil")
 mesh = SubResource("ArrayMesh_iti8d")
+skeleton = NodePath("..")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="character-male-c2"]
-libraries = {
-&"": SubResource("AnimationLibrary_vrpb5")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="character-male-c2" unique_id=1398254782]
+libraries/ = SubResource("AnimationLibrary_vrpb5")

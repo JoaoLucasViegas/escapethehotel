@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://1kq1pvayrvpj"]
+[gd_scene format=3 uid="uid://1kq1pvayrvpj"]
 
 [ext_resource type="Script" uid="uid://b5kx0g8joqxl4" path="res://Scripts/ligth_source_dev.gd" id="1_ry3hd"]
 
-[node name="Light" type="MeshInstance3D" groups=["Lights"]]
+[node name="Light" type="MeshInstance3D" unique_id=408274209 groups=["Lights"]]
 sorting_offset = -100.0
 cast_shadow = 0
 visibility_range_end = 64.0

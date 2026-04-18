@@ -1,10 +1,10 @@
-[gd_scene load_steps=20 format=4 uid="uid://6y5b1lpy30ht"]
+[gd_scene format=4 uid="uid://6y5b1lpy30ht"]
 
 [ext_resource type="Script" uid="uid://btpr1g5gvosb7" path="res://Scripts/vault_door.gd" id="1_cpfud"]
 [ext_resource type="Material" uid="uid://jca7hetyir1r" path="res://Materials/vault_colour.tres" id="2_wqxrx"]
-[ext_resource type="Texture2D" uid="uid://1d2cg53auua3" path="res://Models/saferoom_Metal_Aluminum_Anodized_.jpg" id="3_w2his"]
+[ext_resource type="Texture2D" uid="uid://brc2m1hks2evu" path="res://Models/saferoom_Metal_Aluminum_Anodized_.jpg" id="3_w2his"]
 [ext_resource type="Material" uid="uid://d5rupbj8c788" path="res://Materials/transparent_colour.tres" id="4_om8vf"]
-[ext_resource type="AudioStream" uid="uid://cy05pkoset1bo" path="res://Tracks/sfx/pass_correct.ogg" id="5_wqxrx"]
+[ext_resource type="AudioStream" uid="uid://b1lgt6lwu7gga" path="res://Tracks/sfx/pass_correct.ogg" id="5_wqxrx"]
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_7au4d"]
 _surfaces = [{
@@ -210,46 +210,46 @@ shadow_mesh = SubResource("ArrayMesh_dvfxx")
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_1vso6"]
 
-[node name="VaultDoor" type="Node3D"]
+[node name="VaultDoor" type="Node3D" unique_id=1816516489]
 script = ExtResource("1_cpfud")
 open_angle = -45.0
 action_speed = 1.0
 
-[node name="DoorGizmo" type="Node3D" parent="."]
+[node name="DoorGizmo" type="Node3D" parent="." unique_id=1170320521]
 
-[node name="Door" type="Node3D" parent="DoorGizmo"]
+[node name="Door" type="Node3D" parent="DoorGizmo" unique_id=388291527]
 transform = Transform3D(-1.11027e-09, 0, -0.0254, 0, 0.0254, 0, 0.0254, 0, -1.11027e-09, -0.100756, 0, -0.0177822)
 
-[node name="instance_0_006" type="MeshInstance3D" parent="DoorGizmo/Door"]
+[node name="instance_0_006" type="MeshInstance3D" parent="DoorGizmo/Door" unique_id=1401363745]
 transform = Transform3D(0.999999, 0, 0, 0, 0.999999, 0, 0, 0, 0.999999, 0, 0, -98)
 mesh = SubResource("ArrayMesh_i4fjy")
 
-[node name="instance_0_007" type="MeshInstance3D" parent="DoorGizmo/Door/instance_0_006"]
+[node name="instance_0_007" type="MeshInstance3D" parent="DoorGizmo/Door/instance_0_006" unique_id=95034441]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_wqxrx")
 mesh = SubResource("ArrayMesh_pt3ps")
 
-[node name="instance_0_008" type="MeshInstance3D" parent="DoorGizmo/Door/instance_0_006"]
+[node name="instance_0_008" type="MeshInstance3D" parent="DoorGizmo/Door/instance_0_006" unique_id=1824804429]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_wqxrx")
 mesh = SubResource("ArrayMesh_hmc15")
 
-[node name="instance_0_009" type="MeshInstance3D" parent="DoorGizmo/Door/instance_0_006"]
+[node name="instance_0_009" type="MeshInstance3D" parent="DoorGizmo/Door/instance_0_006" unique_id=427272002]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_wqxrx")
 mesh = SubResource("ArrayMesh_dt0r1")
 
-[node name="instance_0_010" type="MeshInstance3D" parent="DoorGizmo/Door/instance_0_006"]
+[node name="instance_0_010" type="MeshInstance3D" parent="DoorGizmo/Door/instance_0_006" unique_id=549175639]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_wqxrx")
 mesh = SubResource("ArrayMesh_qebug")
 
-[node name="instance_0_011" type="MeshInstance3D" parent="DoorGizmo/Door/instance_0_006"]
+[node name="instance_0_011" type="MeshInstance3D" parent="DoorGizmo/Door/instance_0_006" unique_id=1283935879]
 transform = Transform3D(1, 0, -3.55271e-15, 0, 1, 0, 3.55271e-15, 0, 1, 0, 0, 0)
 material_override = ExtResource("2_wqxrx")
 mesh = SubResource("ArrayMesh_o2rbt")
 
-[node name="CSGBox" type="CSGBox3D" parent="DoorGizmo"]
+[node name="CSGBox" type="CSGBox3D" parent="DoorGizmo" unique_id=496991472]
 transform = Transform3D(0.999969, 0, 0, 0, 1, 0, 0, 0, 0.999969, 0.98781, 0, -2.48292)
 material_override = ExtResource("4_om8vf")
 visibility_range_end = 12.0
@@ -257,11 +257,11 @@ visibility_range_fade_mode = 2
 use_collision = true
 size = Vector3(2.21333, 2.1, 4.9957)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="DoorGizmo"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="DoorGizmo" unique_id=490297242]
 visible = false
 mesh = SubResource("CylinderMesh_1vso6")
 
-[node name="PassWon" type="AudioStreamPlayer" parent="."]
+[node name="PassWon" type="AudioStreamPlayer" parent="." unique_id=696261841]
 stream = ExtResource("5_wqxrx")
 volume_db = -10.0
 bus = &"SFX"

@@ -22,19 +22,19 @@ func _ready() -> void:
 		queue_free()
 
 func _physics_process(_delta: float) -> void:
-	if not item_required == null:
+	if item_required:
 		return
 	
 	self.puzzle_label.visible = \
 		self.puzzle_area.is_there_collision and\
 		not is_puzzling
 	
-	if puzzle_area.is_there_collision and not level_manager.player.is_using_ui:
+	if puzzle_area.is_there_collision: #and not level_manager.player.UI_hud.is_using_ui():
 		is_puzzling = false
 	
 	if self.puzzle_label.visible:
 		if Input.is_action_just_pressed("game_interact"):
-			level_manager.startPuzzle(puzzle.instantiate(), object_to_react, self)
+			#level_manager.startPuzzle(puzzle.instantiate(), object_to_react, self)
 			is_puzzling = true
 	
 	if is_done:

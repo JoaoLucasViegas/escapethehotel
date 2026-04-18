@@ -1,9 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmg1xxegbw1xu"]
+[gd_scene format=3 uid="uid://dmg1xxegbw1xu"]
 
 [ext_resource type="Script" uid="uid://b6ybodxuq1k00" path="res://Scripts/Puzzle/word_combiner.gd" id="1_8wybq"]
-[ext_resource type="AudioStream" uid="uid://tt0vplmbkapw" path="res://Tracks/sfx/button_pressed.ogg" id="2_q7n6j"]
+[ext_resource type="AudioStream" uid="uid://dp1hsu5ywm3t4" path="res://Tracks/sfx/button_pressed.ogg" id="2_q7n6j"]
 
-[node name="Key" type="Control"]
+[node name="Key" type="Control" unique_id=1385828240]
 custom_minimum_size = Vector2(40, 0)
 layout_mode = 3
 anchors_preset = 15
@@ -15,7 +15,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_8wybq")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2103516551]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,7 +24,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.431373)
 
-[node name="Words" type="Control" parent="."]
+[node name="Words" type="Control" parent="." unique_id=1683219171]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -38,7 +38,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Label" type="Label" parent="Words"]
+[node name="Label" type="Label" parent="Words" unique_id=1570332350]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -51,7 +51,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Label2" type="Label" parent="Words"]
+[node name="Label2" type="Label" parent="Words" unique_id=112464358]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -64,7 +64,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Label3" type="Label" parent="Words"]
+[node name="Label3" type="Label" parent="Words" unique_id=1107673826]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -77,7 +77,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="Label4" type="Label" parent="Words"]
+[node name="Label4" type="Label" parent="Words" unique_id=1549376617]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -90,7 +90,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 uppercase = true
 
-[node name="UpWord" type="Button" parent="."]
+[node name="UpWord" type="Button" parent="." unique_id=1326872214]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -101,7 +101,7 @@ offset_bottom = 31.0
 grow_horizontal = 2
 text = "/\\"
 
-[node name="DownWord" type="Button" parent="."]
+[node name="DownWord" type="Button" parent="." unique_id=919953010]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -115,7 +115,7 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "\\/"
 
-[node name="KeySound" type="AudioStreamPlayer" parent="."]
+[node name="KeySound" type="AudioStreamPlayer" parent="." unique_id=732195487]
 stream = ExtResource("2_q7n6j")
 volume_db = -12.0
 pitch_scale = 1.3

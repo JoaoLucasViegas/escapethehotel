@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://c2fwakwn1gkx2"]
+
+[ext_resource type="Script" uid="uid://8musrkwse4c5" path="res://Scripts/interaction/area_interact.gd" id="2_1amhj"]
+[ext_resource type="Script" uid="uid://b4oekceacbdpc" path="res://Scripts/level_manager.gd" id="2_tuel0"]
+[ext_resource type="PackedScene" uid="uid://dee5tjwl1wg8v" path="res://Prefabs/camera/camera_follower.tscn" id="9_gejx0"]
+[ext_resource type="Script" uid="uid://bo2o3arbteokt" path="res://Scripts/interaction/interaction_component.gd" id="10_1amhj"]
+[ext_resource type="PackedScene" uid="uid://c85k1j1aeib6j" path="res://Prefabs/puzzles/combine_words.tscn" id="11_lamej"]
+[ext_resource type="Script" uid="uid://8u6vfcsrfk07" path="res://Scripts/interaction/interactables/interaction_ui.gd" id="13_h606a"]
+[ext_resource type="Environment" uid="uid://dyukwcmgie1h5" path="res://Resources/world_environment_custom.tres" id="13_xkql2"]
+[ext_resource type="Script" uid="uid://b74aghpvxh75s" path="res://Scripts/sound/audio_manager.gd" id="24_d54cl"]
+[ext_resource type="AudioStream" uid="uid://pahov2rjenne" path="res://Tracks/sfx/picked_item.ogg" id="25_i8pin"]
+[ext_resource type="AudioStream" uid="uid://dcvs5fvv61mib" path="res://Tracks/gameover.ogg" id="26_d7gm0"]
+[ext_resource type="AudioStream" uid="uid://dgm8epwttf3xs" path="res://Tracks/gamesound.ogg" id="27_njpiq"]
+[ext_resource type="AudioStream" uid="uid://b2sa8dnx0umf2" path="res://Tracks/chase.ogg" id="28_jb1mk"]
+[ext_resource type="PackedScene" uid="uid://b55iprda1bad5" path="res://Prefabs/player.tscn" id="29_enaml"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lamej"]
+transparency = 1
+shading_mode = 0
+albedo_color = Color(1, 1, 1, 0.5294118)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ahq5a"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_1amhj"]
+radius = 1.0
+
+[node name="World" type="Node3D" unique_id=1060038172]
+
+[node name="Map" type="Node3D" parent="." unique_id=450977151]
+
+[node name="Ground" type="CSGBox3D" parent="Map" unique_id=1284422643]
+use_collision = true
+size = Vector3(300, 1, 300)
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="Level" type="Node3D" parent="." unique_id=31587236]
+script = ExtResource("2_tuel0")
+
+[node name="AreaInteract" type="Area3D" parent="Level" unique_id=1223408608 node_paths=PackedStringArray("interaction_component")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.93150234, 0)
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_1amhj")
+interaction_component = NodePath("../../Interactions/InteractionUI")
+label_string = "Press C to Interact"
+metadata/_edit_group_ = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Level/AreaInteract" unique_id=1415031729]
+material_override = SubResource("StandardMaterial3D_lamej")
+mesh = SubResource("BoxMesh_ahq5a")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Level/AreaInteract" unique_id=1178368131]
+shape = SubResource("CylinderShape3D_1amhj")
+
+[node name="Label3D" type="Label3D" parent="Level/AreaInteract" unique_id=1829360539]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+visible = false
+billboard = 1
+no_depth_test = true
+text = "Press E to unlock"
+font_size = 56
+
+[node name="Game" type="Node3D" parent="." unique_id=1633315443]
+
+[node name="Audio" type="Node" parent="Game" unique_id=1830005269]
+script = ExtResource("24_d54cl")
+
+[node name="PickUpItem" type="AudioStreamPlayer" parent="Game/Audio" unique_id=1695005888]
+stream = ExtResource("25_i8pin")
+volume_db = -24.5
+pitch_scale = 0.62
+bus = &"SFX"
+
+[node name="GameOver" type="AudioStreamPlayer" parent="Game/Audio" unique_id=1231108165]
+stream = ExtResource("26_d7gm0")
+volume_db = -80.0
+pitch_scale = 0.76
+bus = &"MainMenu"
+parameters/looping = true
+
+[node name="GameLoop" type="AudioStreamPlayer" parent="Game/Audio" unique_id=1790297528]
+stream = ExtResource("27_njpiq")
+volume_db = -14.2
+autoplay = true
+bus = &"MainMenu"
+parameters/looping = true
+
+[node name="Chasing" type="AudioStreamPlayer" parent="Game/Audio" unique_id=547017487]
+stream = ExtResource("28_jb1mk")
+volume_db = -80.0
+bus = &"MainMenu"
+parameters/looping = true
+
+[node name="Player" parent="Game" unique_id=932145991 instance=ExtResource("29_enaml")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3859, 2.19153, -1.38441)
+collision_layer = 10
+
+[node name="Camera" parent="Game" unique_id=909801812 node_paths=PackedStringArray("to_follow") instance=ExtResource("9_gejx0")]
+to_follow = NodePath("../Player")
+
+[node name="UI" type="CanvasLayer" parent="Game" unique_id=273351018]
+
+[node name="GamePuzzle" parent="Game/UI" unique_id=1809480189 instance=ExtResource("11_lamej")]
+visible = false
+
+[node name="Control" type="Control" parent="Game/UI" unique_id=1522690283]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Game/UI/Control" unique_id=1792331213]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.5
+offset_top = -11.5
+offset_right = 22.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hello!"
+
+[node name="Interactions" type="Node" parent="." unique_id=762220133]
+
+[node name="VaultInteraction" type="Node" parent="Interactions" unique_id=559118776]
+script = ExtResource("10_1amhj")
+
+[node name="InteractionUI" type="Node" parent="Interactions" unique_id=321706901 node_paths=PackedStringArray("UI")]
+script = ExtResource("13_h606a")
+UI = NodePath("../../Game/UI/Control")
+metadata/_custom_type_script = "uid://8u6vfcsrfk07"
+
+[node name="Misc" type="Node" parent="." unique_id=1402739489]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Misc" unique_id=1510517686]
+environment = ExtResource("13_xkql2")
+
+[connection signal="body_entered" from="Level/AreaInteract" to="Level/AreaInteract" method="_on_body_entered"]

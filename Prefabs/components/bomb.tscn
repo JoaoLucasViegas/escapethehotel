@@ -1,8 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://byy5vqjc1gw13"]
+[gd_scene format=3 uid="uid://byy5vqjc1gw13"]
 
 [ext_resource type="Script" uid="uid://dlxgsupmmhnc4" path="res://Scripts/bomb.gd" id="1_fiwhv"]
-[ext_resource type="AudioStream" uid="uid://dntxhgkknlcnj" path="res://Tracks/sfx/explode.ogg" id="2_hb1vx"]
-[ext_resource type="Texture2D" uid="uid://t1u6txo7h3xb" path="res://Textures/boom_texture.png" id="2_hciui"]
+[ext_resource type="AudioStream" uid="uid://dlidatsy3enj1" path="res://Tracks/sfx/explode.ogg" id="2_hb1vx"]
+[ext_resource type="Texture2D" uid="uid://bvtuefi6byqu0" path="res://Textures/boom_texture.png" id="2_hciui"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f3j5t"]
 shading_mode = 0
@@ -23,14 +23,14 @@ height = 2.0
 radial_segments = 8
 rings = 4
 
-[node name="Node3D" type="Node3D"]
+[node name="Node3D" type="Node3D" unique_id=432593520]
 script = ExtResource("1_fiwhv")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=416090293]
 material_override = SubResource("StandardMaterial3D_f3j5t")
 mesh = SubResource("SphereMesh_26lbo")
 
-[node name="Explode" type="AudioStreamPlayer" parent="."]
+[node name="Explode" type="AudioStreamPlayer" parent="." unique_id=801043876]
 stream = ExtResource("2_hb1vx")
 volume_db = 3.0
 bus = &"SFX"

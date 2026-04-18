@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://mbjxr1udmo54"]
+
+[ext_resource type="Script" uid="uid://b6q663w03fu08" path="res://Scripts/developer/dev_tools.gd" id="1_ldkle"]
+[ext_resource type="Script" uid="uid://1edhrwdpexe4" path="res://Scripts/developer/debug_ui.gd" id="2_rucx2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rucx2"]
+bg_color = Color(0.21176471, 0.21960784, 0.043137256, 0.38039216)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="DevTools" type="Node" unique_id=1276146774]
+process_priority = -200
+process_physics_priority = -200
+process_thread_group = 1
+process_thread_group_order = -200
+process_thread_messages = 3
+script = ExtResource("1_ldkle")
+
+[node name="DebugUI" type="Control" parent="." unique_id=893166191]
+z_index = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("2_rucx2")
+
+[node name="Console" type="RichTextLabel" parent="DebugUI" unique_id=94047986]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -142.0
+offset_right = -6.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_rucx2")
+text = "LOREM IPSUM PARSEM LIPSUM LOREM IPSUM PARSEM LIPSUM LOREM IPSUM PARSEM LIPSUM LOREM IPSUM PARSEM LIPSUM LOREM IPSUM PARSEM LIPSUM "
+scroll_following = true
+
+[node name="Viewport" type="Label" parent="DebugUI" unique_id=1985454799]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 25.0
+grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_rucx2")
+text = "LOREM IPSUM PARSEM LIPSUM LOREM IPSUM PARSEM LIPSUM LOREM IPSUM PARSEM LIPSUM LOREM IPSUM PARSEM LIPSUM LOREM IPSUM PARSEM LIPSUM 1234"
+horizontal_alignment = 2
+autowrap_mode = 3
+clip_text = true
+
+[node name="ClearConsole" type="Button" parent="DebugUI" unique_id=1812167290]
+z_index = 10
+z_as_relative = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -57.0
+offset_top = -138.0
+offset_right = -30.0
+offset_bottom = -118.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 8
+text = "clear"
+
+[node name="RestartLevel" type="Button" parent="DebugUI" unique_id=181547200]
+z_index = 10
+z_as_relative = false
+layout_mode = 1
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 61.0
+offset_bottom = 22.0
+theme_override_font_sizes/font_size = 8
+text = "Restart Level"
+
+[connection signal="pressed" from="DebugUI/ClearConsole" to="DebugUI" method="_on_clear_output_button_pressed"]
+[connection signal="pressed" from="DebugUI/RestartLevel" to="DebugUI" method="_on_restart_level_pressed"]

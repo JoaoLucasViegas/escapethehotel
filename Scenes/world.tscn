@@ -1,16 +1,15 @@
-[gd_scene load_steps=50 format=3 uid="uid://boalen2vav7la"]
+[gd_scene format=3 uid="uid://boalen2vav7la"]
 
-[ext_resource type="Environment" uid="uid://cpi16834cvtyk" path="res://Resources/world_environment_game.tres" id="1_xbk3s"]
 [ext_resource type="PackedScene" uid="uid://b55iprda1bad5" path="res://Prefabs/player.tscn" id="2_5a7ea"]
 [ext_resource type="PackedScene" uid="uid://nprkm3o83t30" path="res://Prefabs/main/map/map.tscn" id="2_5ukr8"]
-[ext_resource type="AudioStream" uid="uid://dbnjg03hqr8q1" path="res://Tracks/gamesound.ogg" id="2_hmc15"]
+[ext_resource type="AudioStream" uid="uid://dgm8epwttf3xs" path="res://Tracks/gamesound.ogg" id="2_hmc15"]
 [ext_resource type="PackedScene" uid="uid://d3f0c3cf27e3y" path="res://Prefabs/enemy_base.tscn" id="3_5a7ea"]
 [ext_resource type="Script" uid="uid://b4oekceacbdpc" path="res://Scripts/level_manager.gd" id="4_5ukr8"]
 [ext_resource type="Material" uid="uid://cpaactjle38od" path="res://Materials/hallway_light_colour.tres" id="4_5v1tr"]
-[ext_resource type="AudioStream" uid="uid://dqmyaw1lc2b0m" path="res://Tracks/sfx/picked_item.ogg" id="5_dt0r1"]
-[ext_resource type="AudioStream" uid="uid://m5qfku7qwew1" path="res://Tracks/gameover.ogg" id="5_qebug"]
+[ext_resource type="AudioStream" uid="uid://pahov2rjenne" path="res://Tracks/sfx/picked_item.ogg" id="5_dt0r1"]
+[ext_resource type="AudioStream" uid="uid://dcvs5fvv61mib" path="res://Tracks/gameover.ogg" id="5_qebug"]
 [ext_resource type="PackedScene" uid="uid://6y5b1lpy30ht" path="res://Prefabs/components/vault_door.tscn" id="7_0pcbe"]
-[ext_resource type="AudioStream" uid="uid://b55nn54phstdt" path="res://Tracks/chase.ogg" id="7_o2rbt"]
+[ext_resource type="AudioStream" uid="uid://b2sa8dnx0umf2" path="res://Tracks/chase.ogg" id="7_o2rbt"]
 [ext_resource type="Script" uid="uid://b5kx0g8joqxl4" path="res://Scripts/ligth_source_dev.gd" id="8_0fj1v"]
 [ext_resource type="PackedScene" uid="uid://1kq1pvayrvpj" path="res://Prefabs/components/light_source.tscn" id="8_5v1tr"]
 [ext_resource type="PackedScene" uid="uid://c0p2hb21a51mb" path="res://Prefabs/components/light_switch.tscn" id="9_5v1tr"]
@@ -18,20 +17,22 @@
 [ext_resource type="PackedScene" uid="uid://deht477rygtnl" path="res://Prefabs/puzzles/fork_door.tscn" id="11_ikia7"]
 [ext_resource type="PackedScene" uid="uid://cawow7xuu3xb" path="res://Prefabs/components/unlockable_door.tscn" id="12_7yui6"]
 [ext_resource type="PackedScene" uid="uid://c5brjql2vjsgl" path="res://Prefabs/components/pickable_item.tscn" id="13_c5t2i"]
-[ext_resource type="Texture2D" uid="uid://c0fmgpsw0hy5g" path="res://Textures/fork.svg" id="13_xbk3s"]
-[ext_resource type="Texture2D" uid="uid://ci0rd6vkywgdt" path="res://Textures/paper_yellow.png" id="14_pyn1s"]
-[ext_resource type="Texture2D" uid="uid://chncmye5biydy" path="res://Textures/paper_sheet.png" id="14_yq1aw"]
+[ext_resource type="Texture2D" uid="uid://bsiqc8irt1aua" path="res://Textures/fork.svg" id="13_xbk3s"]
+[ext_resource type="Texture2D" uid="uid://djykvdgdvidjj" path="res://Textures/paper_yellow.png" id="14_pyn1s"]
+[ext_resource type="Texture2D" uid="uid://c205d77bbvwnd" path="res://Textures/paper_sheet.png" id="14_yq1aw"]
 [ext_resource type="PackedScene" uid="uid://cryrtpd4nv8s5" path="res://Prefabs/puzzles/enter_password.tscn" id="15_kn0ld"]
-[ext_resource type="Texture2D" uid="uid://jfuit72p5kbg" path="res://Textures/paper_phrase.png" id="16_no8kt"]
-[ext_resource type="Texture2D" uid="uid://duom0aqqhprhp" path="res://Textures/key.svg" id="17_no8kt"]
+[ext_resource type="Texture2D" uid="uid://ba3nctk7ghklb" path="res://Textures/paper_phrase.png" id="16_no8kt"]
+[ext_resource type="Texture2D" uid="uid://brgc5odkr1bf0" path="res://Textures/key.svg" id="17_no8kt"]
 [ext_resource type="Material" uid="uid://bfuarikpljvbw" path="res://Materials/paper_material.tres" id="17_pt3ps"]
 [ext_resource type="PackedScene" uid="uid://c85k1j1aeib6j" path="res://Prefabs/puzzles/combine_words.tscn" id="17_t2t4p"]
-[ext_resource type="Texture2D" uid="uid://dlg2nwwkecvr4" path="res://Textures/bomb.svg" id="18_i4fjy"]
+[ext_resource type="Texture2D" uid="uid://b25cicckyi6ra" path="res://Textures/bomb.svg" id="18_i4fjy"]
 [ext_resource type="PackedScene" uid="uid://cp38le178s8fj" path="res://Prefabs/puzzles/bomb_puzzle.tscn" id="19_axeuq"]
 [ext_resource type="Material" uid="uid://ca4xoa3rimgys" path="res://Materials/key_material.tres" id="19_hmc15"]
 [ext_resource type="PackedScene" uid="uid://byy5vqjc1gw13" path="res://Prefabs/components/bomb.tscn" id="20_1cojt"]
 [ext_resource type="Script" uid="uid://bjr6hb5v3autd" path="res://Scripts/misc.gd" id="30_3ua1v"]
+[ext_resource type="PackedScene" uid="uid://dee5tjwl1wg8v" path="res://Prefabs/camera/camera_follower.tscn" id="30_r0ikl"]
 [ext_resource type="FastNoiseLite" uid="uid://csla7y844wgjg" path="res://Resources/sky_cloud_noise.tres" id="31_r0ikl"]
+[ext_resource type="Environment" uid="uid://cpi16834cvtyk" path="res://Resources/world_environment_game.tres" id="33_r0ikl"]
 
 [sub_resource type="Curve3D" id="Curve3D_8j60k"]
 closed = true
@@ -129,99 +130,95 @@ size = Vector3(1.5, 1.5, 3.5)
 [sub_resource type="BoxShape3D" id="BoxShape3D_o2rbt"]
 size = Vector3(1.8, 1.8, 1.8)
 
-[node name="World" type="Node3D"]
+[node name="World" type="Node3D" unique_id=1060038172]
 
-[node name="Map" parent="." instance=ExtResource("2_5ukr8")]
+[node name="Map" parent="." unique_id=1281021154 instance=ExtResource("2_5ukr8")]
 
-[node name="Game" type="Node3D" parent="." node_paths=PackedStringArray("player")]
+[node name="Game" type="Node3D" parent="." unique_id=1633315443]
 script = ExtResource("4_5ukr8")
-player = NodePath("Player")
 
-[node name="Audio" type="Node" parent="Game"]
+[node name="Audio" type="Node" parent="Game" unique_id=1830005269]
 
-[node name="PickUpItem" type="AudioStreamPlayer" parent="Game/Audio"]
+[node name="PickUpItem" type="AudioStreamPlayer" parent="Game/Audio" unique_id=1695005888]
 stream = ExtResource("5_dt0r1")
 volume_db = -24.5
 pitch_scale = 0.62
 bus = &"SFX"
 
-[node name="GameOver" type="AudioStreamPlayer" parent="Game/Audio"]
+[node name="GameOver" type="AudioStreamPlayer" parent="Game/Audio" unique_id=1231108165]
 stream = ExtResource("5_qebug")
 volume_db = -80.0
 pitch_scale = 0.76
 bus = &"MainMenu"
 parameters/looping = true
 
-[node name="GameLoop" type="AudioStreamPlayer" parent="Game/Audio"]
+[node name="GameLoop" type="AudioStreamPlayer" parent="Game/Audio" unique_id=1790297528]
 stream = ExtResource("2_hmc15")
 volume_db = -14.2
 autoplay = true
 bus = &"MainMenu"
 parameters/looping = true
 
-[node name="Chasing" type="AudioStreamPlayer" parent="Game/Audio"]
+[node name="Chasing" type="AudioStreamPlayer" parent="Game/Audio" unique_id=547017487]
 stream = ExtResource("7_o2rbt")
 volume_db = -80.0
 bus = &"MainMenu"
 parameters/looping = true
 
-[node name="PlayerSpawn" type="Marker3D" parent="Game"]
+[node name="PlayerSpawn" type="Marker3D" parent="Game" unique_id=1362674938]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.10352, 2.19153, 0.0336809)
 
-[node name="PassphraseSpawn" type="Marker3D" parent="Game"]
+[node name="PassphraseSpawn" type="Marker3D" parent="Game" unique_id=468496643]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.5736, 1.49389, 5.06835)
 
-[node name="Player" parent="Game" instance=ExtResource("2_5a7ea")]
+[node name="Player" parent="Game" unique_id=932145991 groups=["Player"] instance=ExtResource("2_5a7ea")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3859, 2.19153, -1.38441)
+collision_layer = 10
 
-[node name="EnemyPath" type="Node3D" parent="Game"]
+[node name="EnemyPath" type="Node3D" parent="Game" unique_id=1103198921]
 
-[node name="Path3D" type="Path3D" parent="Game/EnemyPath"]
+[node name="Path3D" type="Path3D" parent="Game/EnemyPath" unique_id=1332103585]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.246, 1.25, -2.023)
 curve = SubResource("Curve3D_8j60k")
 
-[node name="Path3D2" type="Path3D" parent="Game/EnemyPath"]
+[node name="Path3D2" type="Path3D" parent="Game/EnemyPath" unique_id=1249822]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.246, 1.25, -2.023)
 curve = SubResource("Curve3D_fo5ed")
 
-[node name="Path3D3" type="Path3D" parent="Game/EnemyPath"]
+[node name="Path3D3" type="Path3D" parent="Game/EnemyPath" unique_id=1775402433]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.246, 1.25, -2.023)
 curve = SubResource("Curve3D_5ukr8")
 
-[node name="Path3D4" type="Path3D" parent="Game/EnemyPath"]
+[node name="Path3D4" type="Path3D" parent="Game/EnemyPath" unique_id=323985665]
 curve = SubResource("Curve3D_0fj1v")
 
-[node name="RegionAI" type="NavigationRegion3D" parent="Game"]
+[node name="RegionAI" type="NavigationRegion3D" parent="Game" unique_id=250992460]
 navigation_mesh = SubResource("NavigationMesh_7yui6")
 
-[node name="EnemyBase" parent="Game/RegionAI" node_paths=PackedStringArray("player", "path_ai", "level_manager") instance=ExtResource("3_5a7ea")]
+[node name="EnemyBase" parent="Game/RegionAI" unique_id=27049862 node_paths=PackedStringArray("path_ai", "level_manager") instance=ExtResource("3_5a7ea")]
 transform = Transform3D(0.758737, 0, -0.651397, 0, 1, 0, 0.651397, 0, 0.758737, 21.0317, 3.39581, -5.36268)
-player = NodePath("../../Player")
 path_ai = NodePath("../../EnemyPath/Path3D")
 level_manager = NodePath("../..")
 timer_waypoint_ai = 2.0
 timer_fixBroken_ai = 10.0
 
-[node name="EnemyBase2" parent="Game/RegionAI" node_paths=PackedStringArray("player", "path_ai", "level_manager") instance=ExtResource("3_5a7ea")]
+[node name="EnemyBase2" parent="Game/RegionAI" unique_id=1925277737 node_paths=PackedStringArray("path_ai", "level_manager") instance=ExtResource("3_5a7ea")]
 transform = Transform3D(0.758737, 0, -0.651397, 0, 1, 0, 0.651397, 0, 0.758737, 0.091958, 3.39581, -19.7895)
-player = NodePath("../../Player")
 path_ai = NodePath("../../EnemyPath/Path3D2")
 level_manager = NodePath("../..")
 speed = 6.5
 timer_waypoint_ai = 0.03
 fixing_broken_multiplier_speed = 1.5
 
-[node name="EnemyBase3" parent="Game/RegionAI" node_paths=PackedStringArray("player", "path_ai", "level_manager") instance=ExtResource("3_5a7ea")]
+[node name="EnemyBase3" parent="Game/RegionAI" unique_id=603338699 node_paths=PackedStringArray("path_ai", "level_manager") instance=ExtResource("3_5a7ea")]
 transform = Transform3D(-0.202702, 0, -0.979241, 0, 1, 0, 0.979241, 0, -0.202702, 21.0634, 3.39581, 18.8257)
-player = NodePath("../../Player")
 path_ai = NodePath("../../EnemyPath/Path3D3")
 level_manager = NodePath("../..")
 timer_waypoint_ai = 2.0
 timer_fixBroken_ai = 10.0
 
-[node name="EnemyBase4" parent="Game/RegionAI" node_paths=PackedStringArray("player", "path_ai", "level_manager") instance=ExtResource("3_5a7ea")]
+[node name="EnemyBase4" parent="Game/RegionAI" unique_id=603215560 node_paths=PackedStringArray("path_ai", "level_manager") instance=ExtResource("3_5a7ea")]
 transform = Transform3D(-0.202702, 0, -0.979241, 0, 1, 0, 0.979241, 0, -0.202702, 19.3818, 3.39581, 6.0739)
-player = NodePath("../../Player")
 path_ai = NodePath("../../EnemyPath/Path3D4")
 level_manager = NodePath("../..")
 speed = 6.0
@@ -229,44 +226,46 @@ timer_waypoint_ai = 4.0
 timer_fixBroken_ai = 10.0
 fixing_broken_multiplier_speed = 0.5
 
-[node name="Map" parent="Game/RegionAI" instance=ExtResource("2_5ukr8")]
+[node name="Map" parent="Game/RegionAI" unique_id=1961500519 instance=ExtResource("2_5ukr8")]
+process_mode = 4
 visible = false
 
-[node name="Doors" type="Node3D" parent="Game"]
+[node name="Doors" type="Node3D" parent="Game" unique_id=311510095]
 
-[node name="DoorAccOffice" parent="Game/Doors" instance=ExtResource("12_7yui6")]
+[node name="DoorAccOffice" parent="Game/Doors" unique_id=1935174745 instance=ExtResource("12_7yui6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.6787, 1.06, -12.2695)
+is_unlocked = true
 
-[node name="DoorBedroom" parent="Game/Doors" instance=ExtResource("12_7yui6")]
+[node name="DoorBedroom" parent="Game/Doors" unique_id=1486101064 instance=ExtResource("12_7yui6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.355, 1.1, 6.35)
 is_unlocked = true
 
-[node name="DoorStorage" parent="Game/Doors" instance=ExtResource("12_7yui6")]
+[node name="DoorStorage" parent="Game/Doors" unique_id=1464839321 instance=ExtResource("12_7yui6")]
 transform = Transform3D(-0.00418881, 0, 0.999991, 0, 1, 0, -0.999991, 0, -0.00418881, -0.838639, 1.11609, -4.77378)
 open_angle = 90.0
 
-[node name="DoorChief" parent="Game/Doors" instance=ExtResource("12_7yui6")]
+[node name="DoorChief" parent="Game/Doors" unique_id=106038555 instance=ExtResource("12_7yui6")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5.86281, 1.04022, 3.75778)
+is_unlocked = true
 
-[node name="DoorVault" parent="Game/Doors" instance=ExtResource("7_0pcbe")]
+[node name="DoorVault" parent="Game/Doors" unique_id=2064725750 instance=ExtResource("7_0pcbe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.8607, 0, -7.2069)
 
-[node name="DoorFinal" parent="Game/Doors" instance=ExtResource("12_7yui6")]
+[node name="DoorFinal" parent="Game/Doors" unique_id=1365239052 instance=ExtResource("12_7yui6")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.331, 1, -22.0066)
 is_final = true
 
-[node name="CSGBox" parent="Game/Doors/DoorFinal/DoorGizmo" index="1"]
+[node name="CSGBox" parent="Game/Doors/DoorFinal/DoorGizmo" parent_id_path=PackedInt32Array(1365239052, 229175930) index="1" unique_id=2063716020]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.991761)
-size = Vector3(0.245508, 2.1, 2.08002)
 
-[node name="Label3D" parent="Game/Doors/DoorFinal" index="2"]
+[node name="Label3D" parent="Game/Doors/DoorFinal" index="2" unique_id=1903772776]
 text = "Escape"
 
-[node name="Lights" type="Node3D" parent="Game"]
+[node name="Lights" type="Node3D" parent="Game" unique_id=1039559434]
 
-[node name="Inside" type="Node3D" parent="Game/Lights"]
+[node name="Inside" type="Node3D" parent="Game/Lights" unique_id=1778713821]
 
-[node name="HallLight1" type="MeshInstance3D" parent="Game/Lights/Inside" groups=["Lights"]]
+[node name="HallLight1" type="MeshInstance3D" parent="Game/Lights/Inside" unique_id=1690078137 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58031, 3.8, -1.67876)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -276,7 +275,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight2" type="MeshInstance3D" parent="Game/Lights/Inside" groups=["Lights"]]
+[node name="HallLight2" type="MeshInstance3D" parent="Game/Lights/Inside" unique_id=689867367 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.41969, 3.8, -1.67876)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -286,7 +285,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight3" type="MeshInstance3D" parent="Game/Lights/Inside" groups=["Lights"]]
+[node name="HallLight3" type="MeshInstance3D" parent="Game/Lights/Inside" unique_id=318629392 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4197, 3.8, -1.67876)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -296,7 +295,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight4" type="MeshInstance3D" parent="Game/Lights/Inside" groups=["Lights"]]
+[node name="HallLight4" type="MeshInstance3D" parent="Game/Lights/Inside" unique_id=816551990 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58031, 3.8, -10.6788)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -306,7 +305,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight5" type="MeshInstance3D" parent="Game/Lights/Inside" groups=["Lights"]]
+[node name="HallLight5" type="MeshInstance3D" parent="Game/Lights/Inside" unique_id=1927603035 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5803, 3.8, -1.67876)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -316,7 +315,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight6" type="MeshInstance3D" parent="Game/Lights/Inside" groups=["Lights"]]
+[node name="HallLight6" type="MeshInstance3D" parent="Game/Lights/Inside" unique_id=1889107273 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58031, 3.8, 7.32124)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -326,9 +325,9 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="Top" type="Node3D" parent="Game/Lights"]
+[node name="Top" type="Node3D" parent="Game/Lights" unique_id=187086326]
 
-[node name="Top" type="MeshInstance3D" parent="Game/Lights/Top" groups=["Lights"]]
+[node name="Top" type="MeshInstance3D" parent="Game/Lights/Top" unique_id=333969874 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4197, 3.8, -1.67876)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -338,7 +337,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight13" type="MeshInstance3D" parent="Game/Lights/Top" groups=["Lights"]]
+[node name="HallLight13" type="MeshInstance3D" parent="Game/Lights/Top" unique_id=66504301 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4197, 3.8, -11.6788)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -348,7 +347,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight14" type="MeshInstance3D" parent="Game/Lights/Top" groups=["Lights"]]
+[node name="HallLight14" type="MeshInstance3D" parent="Game/Lights/Top" unique_id=35351888 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4197, 3.8, -18.6788)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -358,7 +357,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight15" type="MeshInstance3D" parent="Game/Lights/Top" groups=["Lights"]]
+[node name="HallLight15" type="MeshInstance3D" parent="Game/Lights/Top" unique_id=1897120485 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4197, 3.8, -18.6788)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -368,7 +367,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight16" type="MeshInstance3D" parent="Game/Lights/Top" groups=["Lights"]]
+[node name="HallLight16" type="MeshInstance3D" parent="Game/Lights/Top" unique_id=2039002801 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4197, 3.8, -18.6788)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -378,7 +377,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight17" type="MeshInstance3D" parent="Game/Lights/Top" groups=["Lights"]]
+[node name="HallLight17" type="MeshInstance3D" parent="Game/Lights/Top" unique_id=1405092274 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.5803, 3.8, -18.6788)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -388,7 +387,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight18" type="MeshInstance3D" parent="Game/Lights/Top" groups=["Lights"]]
+[node name="HallLight18" type="MeshInstance3D" parent="Game/Lights/Top" unique_id=1781548424 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5803, 3.8, -18.6788)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -398,7 +397,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight19" type="MeshInstance3D" parent="Game/Lights/Top" groups=["Lights"]]
+[node name="HallLight19" type="MeshInstance3D" parent="Game/Lights/Top" unique_id=1492748511 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5803, 3.8, -18.6788)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -408,7 +407,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight20" type="MeshInstance3D" parent="Game/Lights/Top" groups=["Lights"]]
+[node name="HallLight20" type="MeshInstance3D" parent="Game/Lights/Top" unique_id=1762502198 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5803, 3.8, -9.67876)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -418,7 +417,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight21" type="MeshInstance3D" parent="Game/Lights/Top" groups=["Lights"]]
+[node name="HallLight21" type="MeshInstance3D" parent="Game/Lights/Top" unique_id=1024178369 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5803, 3.8, -1.67876)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -428,9 +427,9 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="Bottom" type="Node3D" parent="Game/Lights"]
+[node name="Bottom" type="Node3D" parent="Game/Lights" unique_id=2092248837]
 
-[node name="Bottom" type="MeshInstance3D" parent="Game/Lights/Bottom" groups=["Lights"]]
+[node name="Bottom" type="MeshInstance3D" parent="Game/Lights/Bottom" unique_id=415246541 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.5803, 3.8, 15.3212)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -440,7 +439,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight22" type="MeshInstance3D" parent="Game/Lights/Bottom" groups=["Lights"]]
+[node name="HallLight22" type="MeshInstance3D" parent="Game/Lights/Bottom" unique_id=1622166769 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5803, 3.8, 6.32124)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -450,7 +449,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight23" type="MeshInstance3D" parent="Game/Lights/Bottom" groups=["Lights"]]
+[node name="HallLight23" type="MeshInstance3D" parent="Game/Lights/Bottom" unique_id=395329799 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5803, 3.8, 14.3212)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -460,7 +459,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight7" type="MeshInstance3D" parent="Game/Lights/Bottom" groups=["Lights"]]
+[node name="HallLight7" type="MeshInstance3D" parent="Game/Lights/Bottom" unique_id=1643180387 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58031, 3.8, 15.3212)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -470,7 +469,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight8" type="MeshInstance3D" parent="Game/Lights/Bottom" groups=["Lights"]]
+[node name="HallLight8" type="MeshInstance3D" parent="Game/Lights/Bottom" unique_id=1842057415 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4197, 3.8, 15.3212)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -480,7 +479,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight9" type="MeshInstance3D" parent="Game/Lights/Bottom" groups=["Lights"]]
+[node name="HallLight9" type="MeshInstance3D" parent="Game/Lights/Bottom" unique_id=1016049456 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.4197, 3.8, 15.3212)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -490,7 +489,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight10" type="MeshInstance3D" parent="Game/Lights/Bottom" groups=["Lights"]]
+[node name="HallLight10" type="MeshInstance3D" parent="Game/Lights/Bottom" unique_id=119225776 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4197, 3.8, 15.3212)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -500,7 +499,7 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="HallLight11" type="MeshInstance3D" parent="Game/Lights/Bottom" groups=["Lights"]]
+[node name="HallLight11" type="MeshInstance3D" parent="Game/Lights/Bottom" unique_id=1795822656 groups=["Lights"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.4197, 3.8, 7.32124)
 sorting_offset = -100.0
 material_override = ExtResource("4_5v1tr")
@@ -510,151 +509,151 @@ visibility_range_end = 32.0
 script = ExtResource("8_0fj1v")
 metadata/_custom_type_script = "uid://b5kx0g8joqxl4"
 
-[node name="Rooms" type="Node3D" parent="Game/Lights"]
+[node name="Rooms" type="Node3D" parent="Game/Lights" unique_id=175313983]
 
-[node name="KitchenLight" parent="Game/Lights/Rooms" instance=ExtResource("8_5v1tr")]
+[node name="KitchenLight" parent="Game/Lights/Rooms" unique_id=1768147963 instance=ExtResource("8_5v1tr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.794, 3.8, 6.584)
 material_override = SubResource("StandardMaterial3D_5v1tr")
 
-[node name="AccOffice" parent="Game/Lights/Rooms" instance=ExtResource("8_5v1tr")]
+[node name="AccOffice" parent="Game/Lights/Rooms" unique_id=193688480 instance=ExtResource("8_5v1tr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.224, 1.5, -9.966)
 
-[node name="Bedroom" parent="Game/Lights/Rooms" instance=ExtResource("8_5v1tr")]
+[node name="Bedroom" parent="Game/Lights/Rooms" unique_id=292994060 instance=ExtResource("8_5v1tr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.738, 1.5, 6.493)
 
-[node name="ChiefOffice" parent="Game/Lights/Rooms" instance=ExtResource("8_5v1tr")]
+[node name="ChiefOffice" parent="Game/Lights/Rooms" unique_id=1992567483 instance=ExtResource("8_5v1tr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.953, 1.5, 6.362)
 
-[node name="Light" parent="Game/Lights/Rooms" instance=ExtResource("8_5v1tr")]
+[node name="Light" parent="Game/Lights/Rooms" unique_id=2145035744 instance=ExtResource("8_5v1tr")]
 transform = Transform3D(0.83147, -0.55557, 0, 0.55557, 0.83147, 0, 0, 0, 1, -22.0227, 1.5, -9.515)
 
-[node name="Light2" parent="Game/Lights/Rooms" instance=ExtResource("8_5v1tr")]
+[node name="Light2" parent="Game/Lights/Rooms" unique_id=8641409 instance=ExtResource("8_5v1tr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.6753, 0, -9.5153)
 
-[node name="Switches" type="Node3D" parent="Game"]
+[node name="Switches" type="Node3D" parent="Game" unique_id=472969958]
 
-[node name="MeshInstance3D" parent="Game/Switches" node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("9_5v1tr")]
+[node name="MeshInstance3D" parent="Game/Switches" unique_id=441578605 node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("9_5v1tr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.03133, 1.07221, 0.777659)
 level_manager = NodePath("../..")
 obj_to_react = NodePath("../../Lights/Inside")
 
-[node name="MeshInstance3D2" parent="Game/Switches" node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("9_5v1tr")]
+[node name="MeshInstance3D2" parent="Game/Switches" unique_id=1419920946 node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("9_5v1tr")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -5.55367, 1.07221, 11.7322)
 level_manager = NodePath("../..")
 obj_to_react = NodePath("../../Lights/Bottom")
 
-[node name="MeshInstance3D4" parent="Game/Switches" node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("9_5v1tr")]
+[node name="MeshInstance3D4" parent="Game/Switches" unique_id=1014390612 node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("9_5v1tr")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -17.231, 1.07221, 1.8319)
 level_manager = NodePath("../..")
 obj_to_react = NodePath("../../Lights/Top")
 
-[node name="MeshInstance3D3" parent="Game/Switches" node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("9_5v1tr")]
+[node name="MeshInstance3D3" parent="Game/Switches" unique_id=2066355029 node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("9_5v1tr")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.255023, 1.07221, -15.0961)
 level_manager = NodePath("../..")
 obj_to_react = NodePath("../../Lights/Rooms")
 
-[node name="Pickables" type="Node3D" parent="Game"]
+[node name="Pickables" type="Node3D" parent="Game" unique_id=118141681]
 
-[node name="Fork" parent="Game/Pickables" node_paths=PackedStringArray("level_manager") instance=ExtResource("13_c5t2i")]
+[node name="Fork" parent="Game/Pickables" unique_id=1122630048 node_paths=PackedStringArray("level_manager") instance=ExtResource("13_c5t2i")]
 transform = Transform3D(0.860964, 0, 0.508666, 0, 1, 0, -0.508666, 0, 0.860964, -9.72139, 1.41547, 9.30852)
 level_manager = NodePath("../..")
 item_icon = ExtResource("13_xbk3s")
 item_name = "Fork"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Game/Pickables/Fork"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Game/Pickables/Fork" unique_id=668271385]
 transform = Transform3D(-0.623934, 0, -0.781477, 0, 1, 0, 0.781477, 0, -0.623934, 0, 0, 0)
 material_override = SubResource("StandardMaterial3D_pt3ps")
 mesh = SubResource("PlaneMesh_hmc15")
 
-[node name="PasswordOffice" parent="Game/Pickables" node_paths=PackedStringArray("level_manager") instance=ExtResource("13_c5t2i")]
+[node name="PasswordOffice" parent="Game/Pickables" unique_id=1734101037 node_paths=PackedStringArray("level_manager") instance=ExtResource("13_c5t2i")]
 transform = Transform3D(0.297941, 0, 0.954584, 0, 1, 0, -0.954584, 0, 0.297941, 6.80343, 1.36071, -6.77728)
 level_manager = NodePath("../..")
 item_icon = ExtResource("14_pyn1s")
 item_name = "Sheet"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Game/Pickables/PasswordOffice"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Game/Pickables/PasswordOffice" unique_id=906525172]
 transform = Transform3D(-0.00170902, -0.994751, 0.102309, 0.00874435, 0.102291, 0.994716, -0.99996, 0.00259461, 0.00852363, -0.00754309, -0.105259, -0.0190144)
 material_override = SubResource("StandardMaterial3D_dt0r1")
 mesh = SubResource("QuadMesh_t2t4p")
 
-[node name="Passphrase" parent="Game/Pickables" node_paths=PackedStringArray("level_manager", "item_spawn_point") instance=ExtResource("13_c5t2i")]
+[node name="Passphrase" parent="Game/Pickables" unique_id=1482344818 node_paths=PackedStringArray("level_manager", "item_spawn_point") instance=ExtResource("13_c5t2i")]
 transform = Transform3D(0.0797292, 0, -0.996817, 0, 1, 0, 0.996817, 0, 0.0797292, 12.7845, 1.27872, 8.20158)
 level_manager = NodePath("../..")
 item_icon = ExtResource("16_no8kt")
 item_name = "Phrase"
 item_spawn_point = NodePath("../../PassphraseSpawn")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Game/Pickables/Passphrase"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Game/Pickables/Passphrase" unique_id=812373568]
 material_override = ExtResource("17_pt3ps")
 mesh = SubResource("PlaneMesh_dt0r1")
 
-[node name="KeyStorage" parent="Game/Pickables" node_paths=PackedStringArray("level_manager") instance=ExtResource("13_c5t2i")]
+[node name="KeyStorage" parent="Game/Pickables" unique_id=373144059 node_paths=PackedStringArray("level_manager") instance=ExtResource("13_c5t2i")]
 transform = Transform3D(0.0626416, -0.154227, -0.986048, 0.00977808, 0.988036, -0.153917, 0.997988, 0, 0.0634001, 6.93041, 1.18166, 10.2493)
 level_manager = NodePath("../..")
 item_icon = ExtResource("17_no8kt")
 item_name = "Storage"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Game/Pickables/KeyStorage"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Game/Pickables/KeyStorage" unique_id=1182268106]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.118171, 0)
 material_override = ExtResource("19_hmc15")
 mesh = SubResource("PlaneMesh_yq1aw")
 
-[node name="KeyExit" parent="Game/Pickables" node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("13_c5t2i")]
+[node name="KeyExit" parent="Game/Pickables" unique_id=476508131 node_paths=PackedStringArray("level_manager", "obj_to_react") instance=ExtResource("13_c5t2i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.8614, 0, -9.72993)
 level_manager = NodePath("../..")
 item_icon = ExtResource("17_no8kt")
 item_name = "Exit"
 obj_to_react = NodePath("../../Doors/DoorFinal")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Game/Pickables/KeyExit"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Game/Pickables/KeyExit" unique_id=649989336]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.315855, 0.0450797, -0.0258474)
 material_override = ExtResource("19_hmc15")
 mesh = SubResource("PlaneMesh_qebug")
 
-[node name="Bomb" parent="Game/Pickables" node_paths=PackedStringArray("level_manager") instance=ExtResource("13_c5t2i")]
+[node name="Bomb" parent="Game/Pickables" unique_id=328217 node_paths=PackedStringArray("level_manager") instance=ExtResource("13_c5t2i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.01607, 0, -11.9003)
 level_manager = NodePath("../..")
 item_icon = ExtResource("18_i4fjy")
 item_name = "Bomb"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Game/Pickables/Bomb"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Game/Pickables/Bomb" unique_id=771312161]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.142, 0)
 material_override = SubResource("StandardMaterial3D_o2rbt")
 mesh = SubResource("PlaneMesh_1vso6")
 
-[node name="Puzzles" type="Node3D" parent="Game"]
+[node name="Puzzles" type="Node3D" parent="Game" unique_id=273604647]
 
-[node name="AccPuzzle" parent="Game/Puzzles" node_paths=PackedStringArray("level_manager", "object_to_react", "item_required") instance=ExtResource("10_0fj1v")]
+[node name="AccPuzzle" parent="Game/Puzzles" unique_id=225111365 node_paths=PackedStringArray("level_manager", "object_to_react", "item_required") instance=ExtResource("10_0fj1v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.0038, 1.03076, -11.876)
 level_manager = NodePath("../..")
 object_to_react = NodePath("../../Doors/DoorAccOffice")
 puzzle = ExtResource("11_ikia7")
 item_required = NodePath("../../Pickables/Fork")
 
-[node name="ChiefPuzzle" parent="Game/Puzzles" node_paths=PackedStringArray("level_manager", "object_to_react") instance=ExtResource("10_0fj1v")]
+[node name="ChiefPuzzle" parent="Game/Puzzles" unique_id=109251988 node_paths=PackedStringArray("level_manager", "object_to_react") instance=ExtResource("10_0fj1v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.80953, 1.01815, 2.41956)
 level_manager = NodePath("../..")
 object_to_react = NodePath("../../Doors/DoorChief")
 puzzle = ExtResource("15_kn0ld")
 
-[node name="SafePuzzle" parent="Game/Puzzles" node_paths=PackedStringArray("level_manager", "object_to_react") instance=ExtResource("10_0fj1v")]
+[node name="SafePuzzle" parent="Game/Puzzles" unique_id=678973628 node_paths=PackedStringArray("level_manager", "object_to_react") instance=ExtResource("10_0fj1v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3648, 1.06869, 4.93055)
 level_manager = NodePath("../..")
 object_to_react = NodePath("../../Pickables/Passphrase")
 puzzle = ExtResource("15_kn0ld")
 is_secondary = true
 
-[node name="VaultPuzzle" parent="Game/Puzzles" node_paths=PackedStringArray("level_manager", "object_to_react") instance=ExtResource("10_0fj1v")]
+[node name="VaultPuzzle" parent="Game/Puzzles" unique_id=2075422285 node_paths=PackedStringArray("level_manager", "object_to_react") instance=ExtResource("10_0fj1v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.2917, 0.809732, -9.64207)
 level_manager = NodePath("../..")
 object_to_react = NodePath("../../Doors/DoorVault")
 puzzle = ExtResource("17_t2t4p")
 
-[node name="CollisionShape3D" parent="Game/Puzzles/VaultPuzzle/AreaSight" index="0"]
+[node name="CollisionShape3D" parent="Game/Puzzles/VaultPuzzle/AreaSight" parent_id_path=PackedInt32Array(2075422285, 1172595126) index="0" unique_id=2138851909]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.24472)
 shape = SubResource("BoxShape3D_1vso6")
 
-[node name="StoragePuzzle" parent="Game/Puzzles" node_paths=PackedStringArray("level_manager", "object_to_react", "item_required") instance=ExtResource("10_0fj1v")]
+[node name="StoragePuzzle" parent="Game/Puzzles" unique_id=681612090 node_paths=PackedStringArray("level_manager", "object_to_react", "item_required") instance=ExtResource("10_0fj1v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1357, 0.449456, -4.77705)
 level_manager = NodePath("../..")
 object_to_react = NodePath("../../Doors/DoorStorage")
@@ -662,33 +661,36 @@ puzzle = ExtResource("11_ikia7")
 item_required = NodePath("../../Pickables/KeyStorage")
 is_secondary = true
 
-[node name="BombPuzzle" parent="Game/Puzzles" node_paths=PackedStringArray("level_manager", "object_to_react", "item_required") instance=ExtResource("10_0fj1v")]
+[node name="BombPuzzle" parent="Game/Puzzles" unique_id=27407283 node_paths=PackedStringArray("level_manager", "object_to_react", "item_required") instance=ExtResource("10_0fj1v")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.46111, 0.328486, -20.2838)
 level_manager = NodePath("../..")
 object_to_react = NodePath("../../Bomb")
 puzzle = ExtResource("19_axeuq")
 item_required = NodePath("../../Pickables/Bomb")
 
-[node name="CollisionShape3D" parent="Game/Puzzles/BombPuzzle/AreaSight" index="0"]
+[node name="CollisionShape3D" parent="Game/Puzzles/BombPuzzle/AreaSight" parent_id_path=PackedInt32Array(27407283, 1172595126) index="0" unique_id=2138851909]
 shape = SubResource("BoxShape3D_o2rbt")
 
-[node name="Label3D" parent="Game/Puzzles/BombPuzzle" index="1"]
+[node name="Label3D" parent="Game/Puzzles/BombPuzzle" index="1" unique_id=1668087563]
 text = "Press E to explode"
 
-[node name="Bomb" parent="Game" node_paths=PackedStringArray("obj_to_react") instance=ExtResource("20_1cojt")]
+[node name="Bomb" parent="Game" unique_id=1267419596 node_paths=PackedStringArray("obj_to_react") instance=ExtResource("20_1cojt")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.27805, 0.777, -21.8974)
 boom_scale = 4.0
 boom_speed = 16.0
 boom_fade_speed = 12.0
 obj_to_react = NodePath("../Doors/DoorFinal")
 
-[node name="Misc" type="Node" parent="."]
+[node name="Camera" parent="Game" unique_id=909801812 node_paths=PackedStringArray("to_follow") instance=ExtResource("30_r0ikl")]
+to_follow = NodePath("../Player")
+
+[node name="Misc" type="Node" parent="." unique_id=1126529037]
 script = ExtResource("30_3ua1v")
 cloud_noise = ExtResource("31_r0ikl")
 cloud_mov_speed = 1.5
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="Misc"]
-environment = ExtResource("1_xbk3s")
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Misc" unique_id=1471639416]
+environment = ExtResource("33_r0ikl")
 
 [editable path="Game/Doors/DoorFinal"]
 [editable path="Game/Puzzles/VaultPuzzle"]

@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://hqe7recx6hmw"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://hqe7recx6hmw"]
 
-[ext_resource type="Texture2D" uid="uid://bo27welfx0akd" path="res://Models/!KITCHEN/CoffeeCart_01_1k.gltf/textures/CoffeeCart_01_cart_diff_1k.jpg" id="1_pciut"]
+[ext_resource type="Texture2D" uid="uid://bk4q5h74e2ib5" path="res://Models/!KITCHEN/CoffeeCart_01_1k.gltf/textures/CoffeeCart_01_cart_diff_1k.jpg" id="1_pciut"]
 
 [resource]
 resource_name = "CoffeeCart_01_cart"

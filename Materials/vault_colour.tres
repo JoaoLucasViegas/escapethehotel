@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://jca7hetyir1r"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://jca7hetyir1r"]
 
-[ext_resource type="Texture2D" uid="uid://1d2cg53auua3" path="res://Models/saferoom_Metal_Aluminum_Anodized_.jpg" id="1_05au2"]
+[ext_resource type="Texture2D" uid="uid://brc2m1hks2evu" path="res://Models/saferoom_Metal_Aluminum_Anodized_.jpg" id="1_05au2"]
 
 [resource]
 resource_name = "Metal_Aluminum_Anodized_.001"

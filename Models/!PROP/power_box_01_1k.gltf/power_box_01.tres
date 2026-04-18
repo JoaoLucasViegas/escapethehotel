@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://demxtlqf0hty1"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://demxtlqf0hty1"]
 
-[ext_resource type="Texture2D" uid="uid://bc81lba4bq5c5" path="res://Models/!PROP/power_box_01_1k.gltf/textures/power_box_01_diff_1k.jpg" id="1_3r64q"]
+[ext_resource type="Texture2D" uid="uid://iwye1iv2irhw" path="res://Models/!PROP/power_box_01_1k.gltf/textures/power_box_01_diff_1k.jpg" id="1_3r64q"]
 
 [resource]
 resource_name = "power_box_01"

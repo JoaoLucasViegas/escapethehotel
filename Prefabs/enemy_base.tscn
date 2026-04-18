@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://d3f0c3cf27e3y"]
+[gd_scene format=3 uid="uid://d3f0c3cf27e3y"]
 
 [ext_resource type="Script" uid="uid://b3qrk3aaehrj4" path="res://Scripts/enemy_base.gd" id="1_5bd2m"]
 [ext_resource type="Material" uid="uid://dceq5ehog4ad1" path="res://Materials/enemy_colour.tres" id="1_d01cf"]
@@ -32,99 +32,112 @@ size = Vector3(0.5, 0.5, 0.5)
 
 [sub_resource type="BoxMesh" id="BoxMesh_dwi75"]
 
-[node name="EnemyBase" type="CharacterBody3D" groups=["Enemies"]]
+[node name="EnemyBase" type="CharacterBody3D" unique_id=256920799 groups=["Enemies"]]
 collision_layer = 4
 collision_mask = 7
 script = ExtResource("1_5bd2m")
 
-[node name="CheckCorridorTimer" type="Timer" parent="."]
+[node name="CheckCorridorTimer" type="Timer" parent="." unique_id=912684356]
 one_shot = true
 
-[node name="FixBrokenTimer" type="Timer" parent="."]
+[node name="FixBrokenTimer" type="Timer" parent="." unique_id=405023184]
 one_shot = true
 
-[node name="ChasingTimer" type="Timer" parent="."]
+[node name="ChasingTimer" type="Timer" parent="." unique_id=1637042358]
 wait_time = 10.0
 one_shot = true
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1331368528]
 shape = SubResource("CapsuleShape3D_dwi75")
 
-[node name="CatchPlayer" type="Area3D" parent="."]
+[node name="CatchPlayer" type="Area3D" parent="." unique_id=1839079115]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("3_pc5sd")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CatchPlayer"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CatchPlayer" unique_id=1647477664]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 shape = SubResource("CylinderShape3D_5bd2m")
 debug_color = Color(0, 0.505882, 0.592157, 1)
 
-[node name="RayCast3D" type="RayCast3D" parent="."]
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1088792352]
 collision_mask = 3
 hit_from_inside = true
 
-[node name="Pivot" type="Node3D" parent="."]
+[node name="Pivot" type="Node3D" parent="." unique_id=274800493]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Pivot" unique_id=813654558]
 visible = false
 material_override = ExtResource("1_d01cf")
 mesh = SubResource("BoxMesh_fo5ed")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Pivot/MeshInstance3D"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Pivot/MeshInstance3D" unique_id=29778897]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00653934, 0.659362, 0.391069)
 material_override = SubResource("StandardMaterial3D_5bd2m")
 mesh = SubResource("BoxMesh_pc5sd")
 skeleton = NodePath("../../..")
 
-[node name="LineOfSightArea" type="Area3D" parent="Pivot"]
+[node name="LineOfSightArea" type="Area3D" parent="Pivot" unique_id=2032104658]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("3_pc5sd")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/LineOfSightArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/LineOfSightArea" unique_id=976155664]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 9)
 shape = SubResource("BoxShape3D_pc5sd")
 
-[node name="FootStepsArea" type="Area3D" parent="Pivot"]
+[node name="FootStepsArea" type="Area3D" parent="Pivot" unique_id=501094486]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("3_pc5sd")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/FootStepsArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/FootStepsArea" unique_id=1369320169]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)
 shape = SubResource("SphereShape3D_dwi75")
 
-[node name="WayPointArea" type="Area3D" parent="Pivot"]
+[node name="WayPointArea" type="Area3D" parent="Pivot" unique_id=918935837]
 collision_layer = 0
 collision_mask = 4
 monitorable = false
 script = ExtResource("3_pc5sd")
 metadata/_custom_type_script = "uid://dk4er8tnnh2k3"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/WayPointArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Pivot/WayPointArea" unique_id=1281493274]
 shape = SubResource("BoxShape3D_dwi75")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Pivot/WayPointArea"]
-visible = false
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Pivot/WayPointArea" unique_id=718481456]
 mesh = SubResource("BoxMesh_dwi75")
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Pivot"]
+[node name="debugLabel" type="Label3D" parent="Pivot/WayPointArea/MeshInstance3D2" unique_id=1493769025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.610887, 0)
+billboard = 1
+no_depth_test = true
+text = "EnemyBase"
+font_size = 72
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Pivot" unique_id=408577796]
 transform = Transform3D(-1, 1.51808e-08, -8.60946e-08, 0, 0.984808, 0.173648, 8.74228e-08, 0.173648, -0.984808, 0, 0.5, 0)
+visible = false
 light_energy = 20.0
 spot_range = 6.5
 spot_attenuation = 0.0
 
-[node name="Model" parent="Pivot" instance=ExtResource("4_dwi75")]
+[node name="Model" parent="Pivot" unique_id=1078401839 instance=ExtResource("4_dwi75")]
 transform = Transform3D(1.8, 0, 0, 0, 2.5, 0, 0, 0, 1.8, 0, -1, 0)
-type = "Enemy"
 
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1978615468]
 path_desired_distance = 0.62
 target_desired_distance = 0.9
 simplify_path = true
 simplify_epsilon = 0.01
+
+[node name="debugLabel" type="Label3D" parent="." unique_id=1905821427]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.610887, 0)
+billboard = 1
+no_depth_test = true
+text = "EnemyBase"
+font_size = 72
 
 [connection signal="timeout" from="CheckCorridorTimer" to="." method="_on_check_corridor_timer_timeout"]
 [connection signal="timeout" from="FixBrokenTimer" to="." method="_on_fix_broken_timer_timeout"]

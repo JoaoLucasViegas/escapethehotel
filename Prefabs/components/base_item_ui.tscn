@@ -1,11 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://caodtvdsgx2se"]
+[gd_scene format=3 uid="uid://caodtvdsgx2se"]
 
 [ext_resource type="Script" uid="uid://thmt6xcmil4p" path="res://Scripts/base_item_ui.gd" id="1_iib71"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_s1bff"]
 font_size = 12
 
-[node name="BaseItemUI" type="Control"]
+[node name="BaseItemUI" type="Control" unique_id=1770292748]
 custom_minimum_size = Vector2(50, 0)
 layout_mode = 3
 anchors_preset = 15
@@ -17,7 +17,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("1_iib71")
 
-[node name="texture" type="TextureRect" parent="."]
+[node name="texture" type="TextureRect" parent="." unique_id=89660053]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -28,7 +28,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 expand_mode = 1
 
-[node name="label" type="Label" parent="."]
+[node name="label" type="Label" parent="." unique_id=1179108834]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -38,7 +38,7 @@ text = "Exit Key"
 label_settings = SubResource("LabelSettings_s1bff")
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1782755994]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0

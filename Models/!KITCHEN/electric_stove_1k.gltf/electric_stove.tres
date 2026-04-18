@@ -1,6 +1,6 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://ci0beaw1pjy50"]
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://ci0beaw1pjy50"]
 
-[ext_resource type="Texture2D" uid="uid://bombaf267xymg" path="res://Models/!KITCHEN/electric_stove_1k.gltf/textures/electric_stove_diff_1k.jpg" id="1_co1y1"]
+[ext_resource type="Texture2D" uid="uid://c8tn4f23dty8f" path="res://Models/!KITCHEN/electric_stove_1k.gltf/textures/electric_stove_diff_1k.jpg" id="1_co1y1"]
 
 [resource]
 resource_name = "electric_stove"

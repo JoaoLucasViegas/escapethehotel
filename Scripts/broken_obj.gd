@@ -12,12 +12,14 @@ var called_to_fix = false
 var is_getting_fixed_by: Enemy
 
 func _ready() -> void:
+	$Switch.volume_db = -80
 	if not level_manager:
 		print(name, " HAS NO LEVEL MANAGER ATTACHED TO CONTINUE EXISTING")
 		queue_free()
 
 func _physics_process(delta: float) -> void:
 	$Switch.volume_db = move_toward($Switch.volume_db, -9.2, 10 * delta)
+	$Sprite3D.visible = is_broken
 	
 	if is_broken and not called_to_fix:
 		self.called_to_fix = true
@@ -34,9 +36,10 @@ func _physics_process(delta: float) -> void:
 	
 	self.sabotage_label.visible = \
 		self.sabotage_area.is_there_collision and \
-		not self.is_broken and \
-		not level_manager.player.is_using_ui
+		not self.is_broken# and \
+		#not level_manager.player.UI_hud.is_using_ui()
 	
 	if not self.is_broken and self.sabotage_label.visible:
 		if Input.is_action_just_pressed("game_interact"):
-			self.level_manager.showSabotageScreen(self)
+			#self.level_manager.showSabotageScreen(self)
+			pass

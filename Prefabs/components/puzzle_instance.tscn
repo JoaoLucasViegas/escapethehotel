@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://tc8rjo5gifrj"]
+[gd_scene format=3 uid="uid://tc8rjo5gifrj"]
 
 [ext_resource type="Script" uid="uid://dwg4r36bl4kni" path="res://Scripts/puzzle_instance.gd" id="1_7ig4a"]
 [ext_resource type="Script" uid="uid://dk4er8tnnh2k3" path="res://Scripts/line_of_sight.gd" id="1_gfhdx"]
@@ -9,26 +9,27 @@ size = Vector3(1.5, 1.5, 3.26849)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_7ig4a"]
 
-[node name="PuzzleInstance" type="Node3D"]
+[node name="PuzzleInstance" type="Node3D" unique_id=1135548737]
 script = ExtResource("1_7ig4a")
 
-[node name="AreaSight" type="Area3D" parent="."]
+[node name="AreaSight" type="Area3D" parent="." unique_id=1172595126]
 collision_layer = 0
 collision_mask = 10
 script = ExtResource("1_gfhdx")
 metadata/_custom_type_script = "uid://dk4er8tnnh2k3"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaSight"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AreaSight" unique_id=2138851909]
 shape = SubResource("BoxShape3D_7ig4a")
 
-[node name="Label3D" type="Label3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+[node name="Label3D" type="Label3D" parent="." unique_id=1668087563]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 visible = false
 billboard = 1
+no_depth_test = true
 text = "Press E to unlock"
-font_size = 224
+font_size = 56
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=495597132]
 visible = false
 material_override = ExtResource("3_k67cf")
 mesh = SubResource("CylinderMesh_7ig4a")

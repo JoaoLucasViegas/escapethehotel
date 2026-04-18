@@ -16,4 +16,5 @@ func _physics_process(_delta: float) -> void:
 		self.queue_free()
 
 func _on_leave_puzzle_pressed() -> void:
-	self.queue_free()
+	hide()
+	#self.queue_free()

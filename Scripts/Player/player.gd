@@ -4,74 +4,107 @@ extends CharacterBody3D
 @onready var pivot = $Pivot
 @onready var model_manager = $Pivot/Model
 
+@onready var camera_3d = get_viewport().get_camera_3d()
+@onready var camera_orbit = $CameraOrbit
+
+@onready var feet_sfx = $Feet
+@onready var feet_particle = $Particle
+
+#@export var UI_hud: UIManager
+
+#debug
+@onready var debug_label = $debugLabel
+
 const SPEED = 9.0
 const JUMP_VELOCITY = 4.5
 
+enum states {
+	FREE, BUSTED, PUZZLING, NULL
+}
+var state: states = states.FREE
+
 var is_seen_by_light = false
-var is_using_ui = false
-var is_busted = false
+var stamina_booster: float = 100.0
 
 func _physics_process(delta: float) -> void:
+	debug_label.visible = DevTools.is_debugging
+	debug_label.text = name
 	
-	if is_busted:
+	#debug_label.text += str("\n POS: ", global_position)
+	#debug_label.text += str("\n IS SEEN BY LIGHT: ", is_seen_by_light)
+	#debug_label.text += str("\n IS BUSTED: ", is_busted)
+	
+	if state == states.BUSTED:# is_busted:
 		set_collision_layer_value(2, false)
 		velocity = Vector3(0, 0, 0).normalized()
 		model_manager.player_is_busted = true
 		move_and_slide()
 		walkStop()
-		$CameraOrbit/Camera3D.fov = move_toward($CameraOrbit/Camera3D.fov, 80, SPEED * 0.15 * delta)
-		$CameraOrbit/Camera3D.position.z = move_toward($CameraOrbit/Camera3D.position.z, 3, SPEED * 0.3 * delta)
+		camera_3d.fov = move_toward(camera_3d.fov, 80, SPEED * 0.15 * delta)
+		camera_3d.position.z = move_toward(camera_3d.position.z, 3, SPEED * 0.3 * delta)
 		
-		$CameraOrbit.rotation_degrees.y -= SPEED * 1.5 * delta
-		#$CameraOrbit/Camera3D.look_at($Pivot.global_position, Vector3.UP, true)
+		camera_orbit.rotation_degrees.y -= SPEED * 1.5 * delta
+		#camera_3d.look_at($Pivot.global_position, Vector3.UP, true)
 		return
 	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += get_gravity().y * 2 * delta
 	
-	# Handle jump.
-	if is_on_floor():
-		if Input.is_action_just_pressed("ui_accept") and not is_using_ui:
-			velocity.y = JUMP_VELOCITY
+	$ProgressBar.value = stamina_booster
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var input_dir := Input.get_vector("move_l", "move_r", "move_u", "move_d", 0.5).rotated(-$CameraOrbit.rotation.y)
+	var input_dir := Input.get_vector("move_l", "move_r", "move_u", "move_d", 0.5)#.rotated(-camera_orbit.rotation.y)
 	var direction := (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		walkSteps()
-		$Feet.pitch_scale = randf_range(0.9, 1.1)
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		feet_sfx.pitch_scale = randf_range(0.9, 1.1)
+		velocity.x = lerpf(velocity.x, direction.x * SPEED, ease(1, .5))
+		velocity.z = lerpf(velocity.z, direction.z * SPEED, ease(1, .5))
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		walkStop()
-	is_using_ui = \
-		$UI/SabotageScreen.visible \
-		or $UI/Puzzle.visible
-	if is_using_ui:
-		velocity = Vector3(0, velocity.y, 0).normalized()
-		if Input.is_action_just_pressed("ui_cancel"):
-			$UI.clearHUD()
-			is_using_ui = !is_using_ui
-	model_manager.player_is_puzzling = is_using_ui
 	
-	var vector_look_at = Vector3.ZERO.slerp(Vector3(direction.x, 0, direction.z).normalized()/2, .001)
+	if is_on_floor():
+		#Acitvate booster:
+		if Input.is_action_pressed("move_boost"):
+			if velocity != Vector3.ZERO:# and not UI_hud.is_using_ui():
+			#velocity.y = JUMP_VELOCITY
+				stamina_booster -= delta * (1+stamina_booster*50/100)
+				velocity = velocity * (1+(stamina_booster*.86/100))
+		#	feet_particle.amount = 8
+		elif not Input.is_action_pressed("move_boost"):
+			if stamina_booster <= 100:
+				stamina_booster += ((860.0/100.0)+stamina_booster/100.0) * delta
+				stamina_booster = clampf(stamina_booster, 0, 100)
+		#	feet_particle.amount = 4
+	
+	#if UI_hud.is_using_ui():
+		#state = states.PUZZLING
+		#velocity = Vector3(0, velocity.y, 0).normalized()
+		#if Input.is_action_just_pressed("ui_cancel"):
+			#UI_hud.clearHUD()
+			#UI_hud.disable_ui_gameplay()
+	
+	var vector_look_at = Vector3.ZERO.slerp(Vector3(direction.x, 0, direction.z).normalized()/2, 1.0)
 	if not global_position.is_equal_approx(position + vector_look_at):
-		pivot.look_at(position + vector_look_at, Vector3.UP, true)
+		pivot.look_at(
+			lerp(pivot.global_position, position + vector_look_at, 0.86),
+			Vector3.UP, true)
 
 	move_and_slide()
 	
 	model_manager.vector_movement = velocity
+	model_manager.player_state = state
 
 func walkSteps():
-	if $Feet.playing:
+	if feet_sfx.playing:
 		return
-	$Feet.pitch_scale = randf_range(0.9, 1.1)
-	$Feet.play()
-	$Pivot/Particle.emitting = true
+	feet_sfx.pitch_scale = randf_range(0.9, 1.1)
+	feet_sfx.play()
+	feet_particle.emitting = true
 func walkStop():
-	$Feet.stop()
-	$Pivot/Particle.emitting = false
+	feet_sfx.stop()
+	feet_particle.emitting = false

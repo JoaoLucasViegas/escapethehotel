@@ -1,16 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://botdooo7sta7a"]
+[gd_scene format=3 uid="uid://botdooo7sta7a"]
 
 [ext_resource type="Script" uid="uid://bjr6hb5v3autd" path="res://Scripts/misc.gd" id="1_wnwpm"]
 [ext_resource type="FastNoiseLite" uid="uid://csla7y844wgjg" path="res://Resources/sky_cloud_noise.tres" id="2_dvc1u"]
 [ext_resource type="Environment" uid="uid://cpi16834cvtyk" path="res://Resources/world_environment_game.tres" id="3_dvc1u"]
 
-[node name="Misc" type="Node"]
+[node name="Misc" type="Node" unique_id=1629489242]
 script = ExtResource("1_wnwpm")
 cloud_noise = ExtResource("2_dvc1u")
 cloud_mov_speed = 1.5
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=46847284]
 environment = ExtResource("3_dvc1u")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1355669961]
 transform = Transform3D(-0.992277, -0.0818112, 0.0932372, -0.0731558, 0.992999, 0.0927477, -0.100172, 0.0852106, -0.991315, 0, 3, 0)

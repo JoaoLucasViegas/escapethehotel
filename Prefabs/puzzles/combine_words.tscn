@@ -1,11 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://c85k1j1aeib6j"]
+[gd_scene format=3 uid="uid://c85k1j1aeib6j"]
 
 [ext_resource type="Script" uid="uid://cyrhbnduaff2g" path="res://Scripts/Puzzle/combine_words.gd" id="1_hb03o"]
 [ext_resource type="Script" uid="uid://bd5wayefwldhm" path="res://Scripts/Puzzle/puzzle_sample.gd" id="1_j1nje"]
 [ext_resource type="PackedScene" uid="uid://dmg1xxegbw1xu" path="res://Prefabs/puzzles/word_combiner.tscn" id="2_jehsb"]
-[ext_resource type="AudioStream" uid="uid://bfmyn1jjc7qic" path="res://Tracks/sfx/pass_wrong.ogg" id="6_q0q1f"]
+[ext_resource type="AudioStream" uid="uid://c2qi5k8b3in78" path="res://Tracks/sfx/pass_wrong.ogg" id="6_q0q1f"]
 
-[node name="GamePuzzle" type="Control"]
+[node name="GamePuzzle" type="Control" unique_id=1809480189]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,7 +14,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_j1nje")
 
-[node name="CombineWords" type="Control" parent="."]
+[node name="CombineWords" type="Control" parent="." unique_id=2127995081]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -23,7 +23,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hb03o")
 
-[node name="Keys" type="GridContainer" parent="CombineWords"]
+[node name="Keys" type="GridContainer" parent="CombineWords" unique_id=1383653745]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -38,19 +38,19 @@ grow_horizontal = 2
 grow_vertical = 2
 columns = 4
 
-[node name="Key1" parent="CombineWords/Keys" instance=ExtResource("2_jehsb")]
+[node name="Key1" parent="CombineWords/Keys" unique_id=688197871 instance=ExtResource("2_jehsb")]
 layout_mode = 2
 
-[node name="Key2" parent="CombineWords/Keys" instance=ExtResource("2_jehsb")]
+[node name="Key2" parent="CombineWords/Keys" unique_id=1835879683 instance=ExtResource("2_jehsb")]
 layout_mode = 2
 
-[node name="Key3" parent="CombineWords/Keys" instance=ExtResource("2_jehsb")]
+[node name="Key3" parent="CombineWords/Keys" unique_id=963350528 instance=ExtResource("2_jehsb")]
 layout_mode = 2
 
-[node name="Key4" parent="CombineWords/Keys" instance=ExtResource("2_jehsb")]
+[node name="Key4" parent="CombineWords/Keys" unique_id=1394669316 instance=ExtResource("2_jehsb")]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="CombineWords"]
+[node name="Button" type="Button" parent="CombineWords" unique_id=1842712356]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -65,7 +65,7 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "SUBMIT"
 
-[node name="LeavePuzzle" type="Button" parent="CombineWords"]
+[node name="LeavePuzzle" type="Button" parent="CombineWords" unique_id=1444119229]
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
@@ -77,7 +77,7 @@ offset_bottom = 43.0
 grow_horizontal = 0
 text = "X"
 
-[node name="PassError" type="AudioStreamPlayer" parent="CombineWords"]
+[node name="PassError" type="AudioStreamPlayer" parent="CombineWords" unique_id=276140736]
 stream = ExtResource("6_q0q1f")
 volume_db = -24.0
 pitch_scale = 0.92
