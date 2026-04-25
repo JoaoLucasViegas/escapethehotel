@@ -1,8 +1,19 @@
 [gd_scene format=3 uid="uid://miu3liiiqtd8"]
 
 [ext_resource type="Script" uid="uid://csvhhkqfm2j8h" path="res://Scripts/hud.gd" id="1_fmlu2"]
+[ext_resource type="Texture2D" uid="uid://6hb4yi4c3mug" path="res://Textures/HUD/distort.png" id="2_kgtxe"]
 
 [node name="UiManager" type="CanvasLayer" unique_id=1303471063]
 process_mode = 3
 layer = -1
 script = ExtResource("1_fmlu2")
+
+[node name="ChaseEffect" type="TextureRect" parent="." unique_id=1060722143]
+modulate = Color(0, 0.48235294, 0.7058824, 0.27058825)
+z_index = -5
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kgtxe")

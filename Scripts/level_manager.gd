@@ -38,54 +38,53 @@ func _addBrokenObj(brokenObj: BaseLevelObject):
 	broken_objs.append(brokenObj)
 
 func _physics_process(_delta: float) -> void:
-	if not broken_objs.is_empty():
-		var idx_to_remove = []
-		var idx_broken = 0
-		for broken in broken_objs:
-			#broken = broken as BaseLevelObject
-			if not broken.is_broken:
-				idx_to_remove.append(idx_broken)
-			elif broken.is_getting_fixed_by:
-				idx_broken += 1
-				continue
-			else:
-				_assignClosestToFix(broken)
-			idx_broken += 1
-		for idx in idx_to_remove:
-			broken_objs.remove_at(idx)
+	check_tasks()
+	#if broken_objs.size():
+		#assignClosestToFix()
 	#checkLightNearPlayerIsVisible()
 
-func _assignClosestToFix(brokenObj: BaseLevelObject):
-	if not npcList_parent_node3d:
-		return
-	var idx: int = 0
-	var npc_idx: int = -1
-	var distance: float = max_distance_to_obj
-	for npc in npcList_parent_node3d:
-		#if not npc or npc.is_queued_for_deletion(): #So Enemies were supposed to die?!? -- IDK (dont remember)
-			#continue
-		#npc = npc as Enemy
-		var npc_distance_to = npc.global_position.distance_to(brokenObj.global_position)
-		if npc_distance_to <= distance and not npc.to_fix_object_ai and not npc.state == Enemy.states.CHASING:#is_chasing:
-			distance = npc_distance_to
-			npc_idx = idx
-		idx += 1
-	if distance >= max_distance_to_obj:
-		return
-	var selected_npc: Enemy = npcList_parent_node3d[npc_idx] as Enemy
-	#print(selected_npc.name, " | found at ", distance, " meters | fixing ",brokenObj.name)
-	DevTools.consoleText(selected_npc.name, " | found at ", "%.1f" %distance, " meters | fixing ",brokenObj.name)
-	if brokenObj.is_getting_fixed_by == selected_npc:
-		return
-	#if selected_npc.is_fixing:
-		#return
-	#if selected_npc.is_chasing:
-		#return
-		#return
-	#if selected_npc.state == Enemy.states.ROAMING:
+func check_tasks():
+	var guards_roaming = []
+	var guards_chasing = []
+	var guards_fixing = []
+	var guards_busting = []
+	for guard in npcList_parent_node3d:
+		guard = guard as Enemy
+		if guard.state == Enemy.states.ROAMING:
+			guards_roaming.append(guard)
+		elif guard.state == Enemy.states.CHASING:
+			guards_chasing.append(guard)
+		elif guard.state == Enemy.states.FIXING:
+			guards_fixing.append(guard)
+		elif guard.state == Enemy.states.BUSTING:
+			guards_busting.append(guard)
+
+	$UiManager.change_chase_visible(not guards_chasing.is_empty())
+	
+	if not guards_busting.is_empty():
+		$Audio.play_gameover()
+	elif not guards_chasing.is_empty():
+		$Audio.play_enemies_chasing()
 	else:
-		brokenObj.is_getting_fixed_by = selected_npc
-		selected_npc.to_fix_object_ai = brokenObj
+		$Audio.play_level_track()
+	
+	# fix lights
+	for broken_obj in broken_objs:
+		broken_obj = broken_obj as BaseLevelObject
+		if not broken_obj.is_broken:
+			continue
+		for guard in guards_roaming:
+			guard = guard as Enemy
+			if broken_obj.is_getting_fixed_by == guard:
+				broken_obj.is_getting_fixed_by = null
+			var distance = guard.global_position.distance_to(broken_obj.global_position)
+			if distance <= max_distance_to_obj and not broken_obj.is_getting_fixed_by:
+				DevTools.consoleText(guard.name, " | found at ", "%.1f" %distance, " meters | fixing ", broken_obj.name)
+				broken_obj.is_getting_fixed_by = guard
+				guard.to_fix_object_ai = broken_obj
+				
+	# toggle lantern
+
 
 func pickedItem(item: Item):
 	if item.obj_to_react and item.obj_to_react.has_method("react"):

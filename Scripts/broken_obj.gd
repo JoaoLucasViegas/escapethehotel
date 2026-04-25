@@ -30,9 +30,10 @@ func _physics_process(delta: float) -> void:
 		self.called_to_fix = false
 	if obj_to_react:
 		self.obj_to_react.visible = not is_broken
-	if is_getting_fixed_by:
-		if not is_getting_fixed_by.to_fix_object_ai == self:
-			is_getting_fixed_by = null
+	if is_getting_fixed_by and not is_broken:
+		is_getting_fixed_by = null
+		
+		#if not is_getting_fixed_by.to_fix_object_ai == self:
 	
 	self.sabotage_label.visible = \
 		self.sabotage_area.is_there_collision and \
@@ -43,3 +44,7 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("game_interact"):
 			#self.level_manager.showSabotageScreen(self)
 			pass
+
+func fixed():
+	is_broken = false
+	is_getting_fixed_by = null

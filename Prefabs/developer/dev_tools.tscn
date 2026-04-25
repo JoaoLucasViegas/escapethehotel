@@ -45,7 +45,7 @@ mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_rucx2")
 text = "LOREM IPSUM PARSEM LIPSUM LOREM IPSUM PARSEM LIPSUM LOREM IPSUM PARSEM LIPSUM LOREM IPSUM PARSEM LIPSUM LOREM IPSUM PARSEM LIPSUM "
-scroll_following = true
+autowrap_mode = 0
 
 [node name="Viewport" type="Label" parent="DebugUI" unique_id=1985454799]
 layout_mode = 1

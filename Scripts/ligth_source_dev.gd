@@ -11,13 +11,17 @@ var is_static = false
 func _ready() -> void:
 	#is_dynamic = Global.is_dynamic
 	is_static = Global.is_static
+	makeLightsDynamic()
 
 func _physics_process(_delta: float) -> void:
 	#if is_dynamic and is_static:
-	if is_static:
-		makeLightsMixed()
-	else:
-		makeLightsDynamic()
+	#if is_static:
+		#makeLightsMixed()
+	#else:
+		##makeLightsMixed()
+		##makeLightsStatic()
+		#makeLightsDynamic()
+	pass
 
 func makeLightsDynamic():
 	self.mesh = null
