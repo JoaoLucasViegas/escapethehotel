@@ -1,38 +1,41 @@
-# Escape the Hotel update 0.2.0
-### Created by GbManki - April 13th, 2026
+# Atualização Escape the Hotel 0.2.0
+### Criado por GbManki - 13 de abril de 2026
 
-### Flags table:
+### Tabela de símbolos:
 
-	⚠️ Important
-	✅️ Completed/Finished/Done 
-	♾️ Developing/Working
-	🛠️ To Develop/Not Developed yet
+⚠️ Importante
 
-## Main issues:
+✅️ Concluído/Finalizado/Terminado
 
-|FLAG|ISSUE|DESCRIPTION|PROBABLE FIX|FIX OBSERVATIONS|STATUS|
+♾️ Em Desenvolvimento/Trabalhando
+
+🛠️ A Desenvolver/Ainda Não Desenvolvido
+
+## Principais problemas:
+
+|Símbolo|Problema|Descrição|Possível correção|Observações sobre a correção|Status|
 |-|-|-|-|-|-|
-|✅️|Poor camera positioning|It seems like the stylistic decision of isometric angle isn't that great for overall gameplay|Try different angles or different level designs/maps might fix it|Implemented Lateral/Top-down rigid camera. It seems to work |100% Done |
-|♾️|Missing dev tools|Missing tools for better development such as debug menu and so on in-game|Implement such tool|-|25% Done|
-|⚠️|Game has no plot/objective|Gameplay is too repetitive cause it doesn't have soul yet, it's just hide-and-seek game|I thought about making a "thief" game, but in a more "feminine" way. Girl goes to places to collect items so she can build something; Of course, it's all ideas now, but it's better than nothing. Maybe focus on "coop" stylish, even if it's just LAN or even dual controls/split-screen ideas|-|Undone|
-|⚠️|Game design is wrong|Since it was a GameJam project, most of the important aspects of making it suitable for long-term ideas is flawed/unfixable the way it was left|Reimplement, rewrite and remanage the whole game design for better development speed and quality|-|Undone|
-|⚠️|No hud at all|Hud is missing for players|Make UI HUD|-|Undone|
-|⚠️|No in-game tasks/objectives route|Player is disoriented on where to go, where to look, what to do|Make trademarking easier to naviaget, make game easier to "play"|-|Undone|
-|⚠️|Laggy gameplay 20fps or average that|Game is too simple to have such poor performance|Improve workflow of assets, LOD and overall optimizations|-|Undone|
-|⚠️|No feeling of "caught"|Player has no awareness of what's surrouding him, neither feels thrill of doing things secretly|Either improve UI, AI or overall level design so you see more of the map -- camera position can be an issue too, maybe less "isometric"|-|Undone|
-|🛠️|AI is too dumb|AI is not aware of the surroundings or environment|Improve it to some extent|-|Undone|
-|🛠️|Poor UX (level design)|Players don't care about escaping the hotel... the main plot isn't there, you're just roaming around and being chased|Develop better/different levels might get it working|-|Undone|
-|🛠️|Poor implementation of puzzles (they work, but are not simple)|Repetitive tasks, non clear "ids" and not so funny joke|Maybe just make in-game puzzles instead of 2d ones, and if so, try less difficult puzzles since 2d isn't the main plot anymore|-|Undone|
-|🛠️|Doors still working after busted|Player still be able to interact with the doors and probably collectable items, as long as they're near|Improve items/interaction system|-|Undone|
+|✅️|Posicionamento ruim da câmera|A decisão estilística de usar uma perspectiva isométrica parece não ser a ideal para a jogabilidade em geral|Tente ângulos diferentes ou designs/mapas de níveis diferentes para resolver o problema|Implementada câmera rígida lateral/de cima para baixo. Parece funcionar |100% Concluído |
+|♾️|Ferramentas de desenvolvimento ausentes|Ferramentas ausentes para um melhor desenvolvimento, como menu de depuração e outras no jogo|Implementar essas ferramentas|-|25% Concluído|
+|⚠️|O jogo não tem enredo/objetivo|A jogabilidade é muito repetitiva porque ainda não tem alma, é apenas um jogo de esconde-esconde|Pensei em fazer um jogo de "ladra", mas de uma forma mais "feminina". Uma garota vai a lugares para coletar itens para que possa construir algo; Claro, são apenas ideias por enquanto, mas é melhor do que nada. Talvez focar em um estilo "cooperativo", mesmo que seja apenas em LAN ou até mesmo com controles duplos/tela dividida|-|Desfeito|
+|⚠️|O design do jogo está errado|Como era um projeto de Game Jam, a maioria dos aspectos importantes para torná-lo adequado para ideias de longo prazo está falha/irrecuperável da forma como foi deixado|Reimplementar, reescrever e gerenciar todo o design do jogo para melhor velocidade e qualidade de desenvolvimento|-|Desfeito|
+|⚠️|Sem HUD|O HUD está faltando para os jogadores|Criar HUD de interface do usuário|-|Desfeito|
+|⚠️|Sem rotas para tarefas/objetivos no jogo|O jogador fica desorientado sobre para onde ir, para onde olhar e o que fazer|Facilitar a navegação na área de registro de marcas e tornar o jogo mais fácil de jogar|-|Desfeito|
+|⚠️|Jogabilidade lenta, com média de 20 fps|O jogo é muito simples para ter um desempenho tão ruim|Melhorar o fluxo de trabalho de recursos, LOD e otimizações gerais|-|Desfeito|
+|⚠️|Sem sensação de "pego"|O jogador não tem noção do que o rodeia, nem sente a emoção de agir secretamente|Melhorar a interface do usuário, a IA ou o design geral dos níveis para que se veja mais do mapa -- a posição da câmera também pode ser um problema, talvez menos "isométrica"|-|Desfeito|
+|🛠️|IA muito burra|A IA não tem noção do ambiente|Melhorar até certo ponto|-|Desfeito|
+|🛠️|Experiência do usuário ruim (design de níveis)|Os jogadores não se importam em escapar do hotel... a trama principal não existe, você está apenas vagando e sendo perseguido|Desenvolver níveis melhores/diferentes pode resolver o problema|-|Desfeito|
+|🛠️|Implementação ruim de quebra-cabeças (funcionam, mas não são simples)|Tarefas repetitivas, "IDs" pouco claros e piadas sem graça|Talvez seja melhor criar quebra-cabeças dentro do jogo em vez de quebra-cabeças 2D e, nesse caso, tentar quebra-cabeças menos difíceis, já que o 2D não é mais o foco principal|-|Desfeito|
+|🛠️|Portas ainda funcionam após serem quebradas|O jogador ainda poderá interagir com as portas e provavelmente com os itens coletáveis, contanto que estejam por perto|Melhorar o sistema de itens/interação|-|Desfeito|
 |-|-|-|-|-|-|
 
-## Main ideas for this update:
-|FLAG|IDEA|DESCRIPTION|PROBABLE APPROACH|CONCLUSION/AFTERMATH|STATUS|
+## Principais ideias para esta atualização:
+|SÍMBOLO|IDEIA|DESCRIÇÃO|PROVÁVEL ABORDAGEM|CONCLUSÃO/CONSEQUÊNCIAS|STATUS|
 |-|-|-|-|-|-|
-|♾️|Make a new level|Maybe flat or two floors or just more guards|Overcooked but also overall "adventure" game level design|Testing reimplement the whole level build system so it's not rigged|Testing|
-|♾️|Make gameplay fully on keyboard|Like a console game such as Donkey Kong, Diddy Kong, Zelda or whatever that was on SNES, N64 and so on|-|It's been quite fun, even more compared with gaming only with emulators, which evolves around just the keyboards. It also makes it easier to "cap" what can be used and how to use it properly, meaning more thought is given to new ideas to fit the inputs|Testing|
-|🛠️|Make powerboxes fully "understandable" so you do know where and what it turns off|Add UI or some info in-game so you can fully be aware of what to do|Maybe include a map before the beginning or literally make some "lines" be drawn in-game/3d so the player knows what it toggles|-| Not tested|
-|🛠️|Makes in game pause menu, or some "inventory" menu|Add game pause menu, inventory or some "interactive" UI for players to rest, or "pause" mid game|-|-|Not tested|
-|🛠️|Make 3d items instead of 2d only|Improve resolution or add some stylish 3d aspect|-|-|Not tested|
-|🛠️|Make keys/passes instant tools|Locked doors are imeddiatly unlocked after getting the pass/key|-|-|Not tested|
+|♾️|Criar um novo nível|Talvez plano, com dois andares ou apenas mais guardas|Design de nível exagerado, mas também com a essência de um jogo de "aventura"|Testando a reimplementação de todo o sistema de construção de níveis para que não seja manipulado|Testando|
+|♾️|Tornar a jogabilidade totalmente no teclado|Como um jogo de console tipo Donkey Kong, Diddy Kong, Zelda ou qualquer outro que existia no SNES, N64 e assim por diante|-|Tem sido bem divertido, ainda mais comparado a jogar apenas com emuladores, que giram em torno dos teclados. Também facilita "limitar" o que pode ser usado e como usar corretamente, o que significa que mais ideias são pensadas para se adequar às entradas|Testando|
+|🛠️|Torne as caixas de energia totalmente "compreensíveis" para que você saiba onde e o que elas desligam|Adicione uma interface de usuário ou algumas informações no jogo para que você saiba exatamente o que fazer|Talvez inclua um mapa antes do início ou literalmente faça com que algumas "linhas" sejam desenhadas no jogo/3D para que o jogador saiba o que elas ativam|-| Não testado|
+|🛠️|Crie um menu de pausa no jogo ou algum menu de "inventário"|Adicione um menu de pausa, inventário ou alguma interface de usuário "interativa" para os jogadores descansarem ou "pausarem" no meio do jogo|-|-|Não testado|
+|🛠️|Crie itens em 3D em vez de apenas 2D|Melhore a resolução ou adicione algum aspecto 3D estiloso|-|-|Não testado|
+|🛠️|Faça com que chaves/passes se tornem ferramentas instantâneas|Portas trancadas são destrancadas imediatamente após obter o passe/chave|-|-|Não testado|
 |-|-|-|-|-|-|
