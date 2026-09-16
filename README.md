@@ -1,3 +1,5 @@
+<img src="Textures/game_logo.png" alt="gamelogo" align="center">
+
 # Atualização Escape the Hotel 0.2.0
 ### Criado por GbManki - 13 de abril de 2026
 
